@@ -3,7 +3,7 @@ CC = gcc -Wall -Wextra -Werror
 
 NAME = corewar
 
-COREWAR = ui.c vm.c
+COREWAR = ui.c vm.c process.c environment.c cycle.c
 
 OBJECTS = $(subst .c,.o,$(COREWAR))
 
