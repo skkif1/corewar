@@ -1,14 +1,16 @@
 #include "op.h"
 
-t_env g_env;
+t_env *g_env;
 
 int main()
 {
 
     init_screen();
 
+
     init_env();
-    add_new_player();
+    t_list *players = NULL;
+    register_players(players);
     start_cycle();
 
     getch();

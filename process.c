@@ -1,10 +1,21 @@
 #include "op.h"
 
-t_process *init_new_process()
-{
-    static unsigned int name;
-    static int color;
+t_env *g_env;
 
+void add_new_process(int position, t_player *player)
+{
+
+    t_process *process = NULL;
+    process = init_new_process(player);
+    process->registers[0] = player->player_number;
+    process->color = player->color;
+    process->counter = (unsigned int) position;
+    process->live = 0;
+    ft_lstadd(&g_env->procesesses, ft_lstnew(process, sizeof(t_process)));
+};
+
+t_process *init_new_process(t_player *player)
+{
     t_process *process;
 
     process = (t_process*)malloc(sizeof(t_process));
@@ -15,10 +26,8 @@ t_process *init_new_process()
         process->registers[i] = 0;
         i++;
     }
-    process->registers[0] = name++;
+    process->registers[0] = player->player_number;
     process->carry = 0;
-    process->color = color + 3;
-    color++;
     return process;
 }
 
@@ -35,3 +44,6 @@ void process_to_string(t_process *process)
         i++;
     }
 }
+
+
+
