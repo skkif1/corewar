@@ -19,11 +19,11 @@ void register_players(t_list *players)
     player->color = 3;
 
     player->code = malloc(sizeof(char) * 5);
-    player->code[0] = 3;
-    player->code[1] = 112;
-    player->code[2] = 1;
-    player->code[3] = 0;
-    player->code[4] = 42;
+    player->code[0] = 1;
+    player->code[1] = 255;
+    player->code[2] = 255;
+    player->code[3] = 255;
+    player->code[4] = 255;
     player->code[5] = '\0';
 
 
@@ -36,22 +36,25 @@ void register_players(t_list *players)
 
 
     player2->code = malloc(sizeof(char) * 5);
-    player2->code[0] = 3;
-    player2->code[1] = 112;
-    player2->code[2] = 1;
-    player2->code[3] = 0;
-    player2->code[4] = 42;
+    player2->code[0] = 1;
+    player2->code[1] = 255;
+    player2->code[2] = 255;
+    player2->code[3] = 255;
+    player2->code[4] = 253;
     player2->code[5] = '\0';
 
     ft_lstadd(&players, ft_lstnew(player2, sizeof(t_player)));
 
     g_env->player_in_game = 2;
 
+    g_env->players = players;
+
     while (players)
     {
         add_new_player(players->content);
         players = players->next;
     }
+
 
 }
 

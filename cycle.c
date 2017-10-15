@@ -4,29 +4,17 @@ t_env *g_env;
 
 void do_operation(t_process *process)
 {
-    process->counter++;
-    if (process->counter == MEM_SIZE)
-        process->counter = 0;
+    int operation = get_operation(process);
+
+    if (operation != -1) {
+        init_operation(operation, process);
+    }
+//    if (process->counter >= MEM_SIZE)
+//        process->counter = 0;
     place_cursor(process);
 }
 
 
-
-int lst_size(t_list *list)
-{
-    t_list *temp;
-    int i;
-
-    i = 0;
-    temp = list;
-
-    while (temp)
-    {
-        i++;
-        temp = temp->next;
-    }
-    return i;
-}
 
 int delete_process(t_list* node_ptr)
 {
@@ -50,7 +38,7 @@ int check_processes()
 
 
     nbr_flag = 0;
-    processes = g_env->procesesses;
+    processes = g_env->processes;
 
     while (processes)
     {
@@ -66,7 +54,6 @@ int check_processes()
                     nbr_flag++;
                 ((t_process*)processes->content)->live = 0;
                 ((t_process*)processes->content)->carry = 0;
-                ((t_process*)processes->content)->last_live = 0;
         }
             processes = processes->next;
     }
@@ -83,7 +70,7 @@ void start_cycle()
 
     while (1)
     {
-        temp = g_env->procesesses;
+        temp = g_env->processes;
         while (temp)
         {
             do_operation(temp->content);
@@ -91,7 +78,7 @@ void start_cycle()
         }
         rewrite_memory(g_env->global_field);
         g_env->cycle++;
-        usleep(3000);
+        usleep(100000);
         if (i++ == g_env->cycle_to_die)
         {
             i = 0;
@@ -99,5 +86,6 @@ void start_cycle()
                 break;
             continue;
         }
+        screen_cycle_status();
     }
 }
