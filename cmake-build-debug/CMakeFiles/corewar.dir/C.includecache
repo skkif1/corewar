@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/nfs/2016/o/omotyliu/git/corewar/arg_parser.c
+op.h
+/nfs/2016/o/omotyliu/git/corewar/op.h
+
 /nfs/2016/o/omotyliu/git/corewar/cycle.c
 op.h
 /nfs/2016/o/omotyliu/git/corewar/op.h

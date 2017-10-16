@@ -86,6 +86,6 @@ void start_cycle()
                 break;
             continue;
         }
-//        screen_cycle_status();
+        screen_cycle_status();
     }
 }

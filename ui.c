@@ -1,77 +1,71 @@
 #include "op.h"
 
 
-int mem_row_len = 64 * 3;
-int mem_col_len = MEM_SIZE / 64;
+int g_mem_row_len = 64 * 3;
+int g_mem_col_len = MEM_SIZE / 64;
 
 static int colors[MEM_SIZE];
 static WINDOW *memory;
 static WINDOW *stat;
 
-WINDOW *create_memory_window()
-{
+WINDOW *create_memory_window() {
 
-    WINDOW *wraper = newwin(mem_col_len + 2, mem_row_len + 2, MARGIN, MARGIN);
-    WINDOW *memory = newwin(mem_col_len, mem_row_len, MARGIN + 1, MARGIN + 1);
+    WINDOW *wraper = newwin(g_mem_col_len + 2, g_mem_row_len + 2, MARGIN, MARGIN);
+    WINDOW *memory = newwin(g_mem_col_len, g_mem_row_len, MARGIN + 1, MARGIN + 1);
     wrefresh(wraper);
     wrefresh(memory);
     return memory;
 }
 
-WINDOW *create_stat_window()
-{
+WINDOW *create_stat_window() {
 
-    WINDOW *wrapper = newwin(mem_col_len + 2, 60, MARGIN, mem_row_len + 10);
-    WINDOW *stat = newwin(mem_col_len - 2, 60 - 2, MARGIN + 1, mem_row_len + 11);
+    WINDOW *wrapper = newwin(g_mem_col_len + 2, 60, MARGIN, g_mem_row_len + 10);
+    WINDOW *stat = newwin(g_mem_col_len - 2, 60 - 2, MARGIN + 1, g_mem_row_len + 11);
     wrefresh(wrapper);
     wrefresh(stat);
     return stat;
 }
 
 
-void register_color_changes(int start, int len, int color)
-{
+void register_color_changes(int start, int len, int color) {
     int i = 0;
 
-    while(i < len)
-    {
+    while (i < len) {
         colors[start + i] = color;
         i++;
     };
 }
 
 
-void rewrite_memory(unsigned char *buff)
-{
-        wmove(memory, 0, 0);
-        int i = 0;
-        while (i < MEM_SIZE)
-        {
-            if (colors[i] > 1000)
-            {
-                wattron(memory, COLOR_PAIR(colors[i] / 1000 + 1));
-                wprintw(memory, "%.2X", buff[i]);
-                wattroff(memory, COLOR_PAIR(colors[i] / 1000 + 1));
-                wprintw(memory, " ");
-                colors[i] = colors[i] % 1000;
-            } else
-            {
-                wattron(memory, COLOR_PAIR(colors[i]));
-                wprintw(memory, "%.2X", buff[i]);
-                wattroff(memory, COLOR_PAIR(colors[i]));
-                wprintw(memory, " ");
-            }
-            i++;
+void rewrite_memory(unsigned char *buff) {
+
+    if (!g_env->vis)
+        return;
+    wmove(memory, 0, 0);
+    int i = 0;
+    while (i < MEM_SIZE) {
+        if (colors[i] > 1000) {
+            wattron(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+            wprintw(memory, "%.2X", buff[i]);
+            wattroff(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+            wprintw(memory, " ");
+            colors[i] = colors[i] % 1000;
+        } else {
+            wattron(memory, COLOR_PAIR(colors[i]));
+            wprintw(memory, "%.2X", buff[i]);
+            wattroff(memory, COLOR_PAIR(colors[i]));
+            wprintw(memory, " ");
         }
-        wrefresh(memory);
+        i++;
+    }
+    wrefresh(memory);
 }
 
-void init_def_color()
-{
+void init_def_color() {
     int i = 0;
 
     start_color();
-    init_pair(1, COLOR_CYAN,  COLOR_BLACK); // frame color
+    init_pair(1, COLOR_CYAN, COLOR_BLACK); // frame color
     init_pair(2, COLOR_WHITE, COLOR_BLACK); // initial field color
     init_pair(3, COLOR_GREEN, COLOR_BLACK); // player 1 color
     init_pair(4, COLOR_BLACK, COLOR_GREEN); // player 1 cursor color
@@ -90,10 +84,9 @@ void init_def_color()
         colors[i++] = 2;
 }
 
-void init_screen()
-{
+void init_screen() {
     initscr();
-    signal (SIGWINCH, NULL);
+    signal(SIGWINCH, NULL);
     init_def_color();
     chtype background = '.' | COLOR_PAIR(1);
     bkgd(background);
@@ -102,14 +95,12 @@ void init_screen()
     stat = create_stat_window();
 }
 
-void place_cursor(t_process *process)
-{
+void place_cursor(t_process *process) {
 
     colors[process->counter] = process->color * 1000 + colors[process->counter];
 }
 
-void dell_window()
-{
+void dell_window() {
     delwin(memory);
     delwin(stat);
     endwin();

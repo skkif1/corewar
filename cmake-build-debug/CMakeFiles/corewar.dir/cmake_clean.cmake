@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/corewar.dir/ui.c.o"
   "CMakeFiles/corewar.dir/vm.c.o"
   "CMakeFiles/corewar.dir/util.c.o"
+  "CMakeFiles/corewar.dir/arg_parser.c.o"
   "corewar.pdb"
   "corewar"
 )

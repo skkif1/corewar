@@ -53,6 +53,7 @@ typedef char	t_arg_type;
 # define COREWAR_EXEC_MAGIC		0xea83f3
 
 
+
 typedef struct		s_op
 {
     char			*name;
@@ -96,9 +97,6 @@ typedef struct		player_s
     int color;
 }					t_player;
 
-
-
-
 typedef struct		env_s
 {
     t_list *processes;
@@ -107,6 +105,7 @@ typedef struct		env_s
     unsigned int cycle;
     int cycle_to_die;
     t_list *players;
+    char vis;
 
 }					t_env;
 
@@ -151,5 +150,9 @@ void start_cycle();
 int lst_size(t_list *list);
 void screen_cycle_status();
 int get_opcode_by_name(char *name);
+
+
+//parse arg
+void parse_args(int argc, char **argv);
 
 #endif //COREWAR_OP_H

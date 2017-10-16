@@ -123,6 +123,33 @@ corewar/fast:
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/build
 .PHONY : corewar/fast
 
+arg_parser.o: arg_parser.c.o
+
+.PHONY : arg_parser.o
+
+# target to build an object file
+arg_parser.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/arg_parser.c.o
+.PHONY : arg_parser.c.o
+
+arg_parser.i: arg_parser.c.i
+
+.PHONY : arg_parser.i
+
+# target to preprocess a source file
+arg_parser.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/arg_parser.c.i
+.PHONY : arg_parser.c.i
+
+arg_parser.s: arg_parser.c.s
+
+.PHONY : arg_parser.s
+
+# target to generate assembly for a file
+arg_parser.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/arg_parser.c.s
+.PHONY : arg_parser.c.s
+
 cycle.o: cycle.c.o
 
 .PHONY : cycle.o
@@ -375,6 +402,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... corewar"
+	@echo "... arg_parser.o"
+	@echo "... arg_parser.i"
+	@echo "... arg_parser.s"
 	@echo "... cycle.o"
 	@echo "... cycle.i"
 	@echo "... cycle.s"

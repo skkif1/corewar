@@ -35,22 +35,24 @@ int get_opcode_by_name(char *name)
 
 void screen_cycle_status()
 {
+    if (g_env->vis)
+        return;
     t_list* temp = g_env->players;
-    printf("we have %d players in game \n", lst_size(temp));
+    ft_printf("we have %d players in game \n", lst_size(temp));
     t_player *player;
 
     while (temp)
     {
         player = temp->content;
-        printf("%s number is %u \n", (char *) player->player_name, player->player_number);
-        printf("his last live was on %d cycle\n", player->last_live);
-        printf("his color %d \n", player->color);
-        printf("------------------------------------------\n");
+        ft_printf("%s number is %u \n", (char *) player->player_name, player->player_number);
+        ft_printf("his last live was on %d cycle\n", player->last_live);
+        ft_printf("his color %d \n", player->color);
+        ft_printf("------------------------------------------\n");
         temp = temp->next;
     }
 
-    printf("allready passed cycles is %d \n", g_env->cycle);
-    printf("in game there are %d processes\n", lst_size(g_env->processes));
+    ft_printf("allready passed cycles is %d \n", g_env->cycle);
+    ft_printf("in game there are %d processes\n", lst_size(g_env->processes));
 
     temp = g_env->processes;
     t_process *process;
@@ -58,13 +60,12 @@ void screen_cycle_status()
     while (temp)
     {
         process = temp->content;
-        printf("process %u: \n", process->registers[0]);
-        printf("process PC is on %u \n", process->counter);
-        printf("process say live %d times in current period \n", process->live);
-        printf("process current operation is %s\n", process->current_op);
-        printf("cycles to execute current op is %d \n", process->cycle_to_execute);
-        printf("|||||||||||||||||||||||||||||||||||||||\n\n");
-
+        ft_printf("process %u: \n", process->registers[0]);
+        ft_printf("process PC is on %u \n", process->counter);
+        ft_printf("process say live %d times in current period \n", process->live);
+        ft_printf("process current operation is %s\n", process->current_op);
+        ft_printf("cycles to execute current op is %d \n", process->cycle_to_execute);
+        ft_printf("|||||||||||||||||||||||||||||||||||||||\n\n");
 
         temp = temp->next;
     }

@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/nfs/2016/o/omotyliu/git/corewar/arg_parser.c">
+			<Option target="corewar"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/omotyliu/git/corewar/cycle.c">
 			<Option target="corewar"/>
 		</Unit>
