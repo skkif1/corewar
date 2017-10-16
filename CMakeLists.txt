@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
         cycle.c
-        cycles.c
         environment.c
         live.c
         op.h

@@ -5,7 +5,7 @@ t_env *g_env;
 int main()
 {
 
-//    init_screen();
+    init_screen();
 
 
     init_env();
@@ -13,6 +13,6 @@ int main()
     register_players(players);
     start_cycle();
 
-//    getch();
-//    dell_window();
+    getch();
+    dell_window();
 }

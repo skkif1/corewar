@@ -17,6 +17,21 @@ int lst_size(t_list *list)
     return i;
 }
 
+int get_opcode_by_name(char *name)
+{
+    int i;
+
+    i = 0;
+
+    while (i < 16)
+    {
+        if (!strcmp(name, g_tab[i].name))
+            return i;
+        i++;
+    }
+    ft_printf("no such command");
+    exit(1);
+}
 
 void screen_cycle_status()
 {

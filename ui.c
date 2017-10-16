@@ -43,30 +43,27 @@ void register_color_changes(int start, int len, int color)
 
 void rewrite_memory(unsigned char *buff)
 {
-    if (buff)
-        ;
-
-//        wmove(memory, 0, 0);
-//        int i = 0;
-//        while (i < MEM_SIZE)
-//        {
-//            if (colors[i] > 1000)
-//            {
-//                wattron(memory, COLOR_PAIR(colors[i] / 1000 + 1));
-//                wprintw(memory, "%.2X", buff[i]);
-//                wattroff(memory, COLOR_PAIR(colors[i] / 1000 + 1));
-//                wprintw(memory, " ");
-//                colors[i] = colors[i] % 1000;
-//            } else
-//            {
-//                wattron(memory, COLOR_PAIR(colors[i]));
-//                wprintw(memory, "%.2X", buff[i]);
-//                wattroff(memory, COLOR_PAIR(colors[i]));
-//                wprintw(memory, " ");
-//            }
-//            i++;
-//        }
-//        wrefresh(memory);
+        wmove(memory, 0, 0);
+        int i = 0;
+        while (i < MEM_SIZE)
+        {
+            if (colors[i] > 1000)
+            {
+                wattron(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+                wprintw(memory, "%.2X", buff[i]);
+                wattroff(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+                wprintw(memory, " ");
+                colors[i] = colors[i] % 1000;
+            } else
+            {
+                wattron(memory, COLOR_PAIR(colors[i]));
+                wprintw(memory, "%.2X", buff[i]);
+                wattroff(memory, COLOR_PAIR(colors[i]));
+                wprintw(memory, " ");
+            }
+            i++;
+        }
+        wrefresh(memory);
 }
 
 void init_def_color()

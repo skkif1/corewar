@@ -150,5 +150,6 @@ void start_cycle();
 //util
 int lst_size(t_list *list);
 void screen_cycle_status();
+int get_opcode_by_name(char *name);
 
 #endif //COREWAR_OP_H

@@ -43,9 +43,8 @@ void live(t_process *process)
         process->live++;
         player = find_player(process->registers[0]);
         player->last_live = (g_env->cycle + 1);
-        process->counter += 4;
     }
-
+    process->counter += 5;
 }
 
 

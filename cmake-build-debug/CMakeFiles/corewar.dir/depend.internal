@@ -5,240 +5,10 @@ CMakeFiles/corewar.dir/cycle.c.o
  /nfs/2016/o/omotyliu/git/corewar/cycle.c
  /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
  /nfs/2016/o/omotyliu/git/corewar/op.h
-CMakeFiles/corewar.dir/cycles.c.o
- /nfs/2016/o/omotyliu/git/corewar/cycles.c
 CMakeFiles/corewar.dir/environment.c.o
  /nfs/2016/o/omotyliu/git/corewar/environment.c
  /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
  /nfs/2016/o/omotyliu/git/corewar/op.h
-CMakeFiles/corewar.dir/libft/char_handler.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/char_handler.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_append.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_append.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_atoi.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_atoi.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_bzero.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_bzero.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_isalnum.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_isalnum.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_isalpha.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_isalpha.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_isascii.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_isascii.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_isdigit.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_isdigit.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_isprint.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_isprint.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_itoa.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_itoa.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstadd.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstadd.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstadd_end.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstadd_end.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstdel.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstdel.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstdelone.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstdelone.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstiter.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstiter.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstmap.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstmap.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstnew.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstnew.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_lstsort.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_lstsort.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memalloc.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memalloc.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memccpy.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memccpy.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memchr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memchr.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memcmp.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memcmp.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memcpy.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memcpy.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memdel.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memdel.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memmove.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memmove.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_memset.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_memset.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_printf.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.c
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
-CMakeFiles/corewar.dir/libft/ft_putchar.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putchar.c
-CMakeFiles/corewar.dir/libft/ft_putchar_fd.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putchar_fd.c
-CMakeFiles/corewar.dir/libft/ft_putendl.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putendl.c
-CMakeFiles/corewar.dir/libft/ft_putendl_fd.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putendl_fd.c
-CMakeFiles/corewar.dir/libft/ft_putnbr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putnbr.c
-CMakeFiles/corewar.dir/libft/ft_putnbr_fd.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putnbr_fd.c
-CMakeFiles/corewar.dir/libft/ft_putstr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putstr.c
-CMakeFiles/corewar.dir/libft/ft_putstr_fd.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_putstr_fd.c
-CMakeFiles/corewar.dir/libft/ft_redup.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_redup.c
-CMakeFiles/corewar.dir/libft/ft_renew.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_renew.c
-CMakeFiles/corewar.dir/libft/ft_strcat.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strcat.c
-CMakeFiles/corewar.dir/libft/ft_strchr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strchr.c
-CMakeFiles/corewar.dir/libft/ft_strclr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strclr.c
-CMakeFiles/corewar.dir/libft/ft_strcmp.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strcmp.c
-CMakeFiles/corewar.dir/libft/ft_strcpy.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strcpy.c
-CMakeFiles/corewar.dir/libft/ft_strdel.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strdel.c
-CMakeFiles/corewar.dir/libft/ft_strdup.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strdup.c
-CMakeFiles/corewar.dir/libft/ft_strequ.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strequ.c
-CMakeFiles/corewar.dir/libft/ft_striter.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_striter.c
-CMakeFiles/corewar.dir/libft/ft_striteri.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_striteri.c
-CMakeFiles/corewar.dir/libft/ft_strjoin.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strjoin.c
-CMakeFiles/corewar.dir/libft/ft_strlcat.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strlcat.c
-CMakeFiles/corewar.dir/libft/ft_strlen.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strlen.c
-CMakeFiles/corewar.dir/libft/ft_strmap.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strmap.c
-CMakeFiles/corewar.dir/libft/ft_strmapi.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strmapi.c
-CMakeFiles/corewar.dir/libft/ft_strncat.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strncat.c
-CMakeFiles/corewar.dir/libft/ft_strncmp.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strncmp.c
-CMakeFiles/corewar.dir/libft/ft_strncpy.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strncpy.c
-CMakeFiles/corewar.dir/libft/ft_strnequ.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strnequ.c
-CMakeFiles/corewar.dir/libft/ft_strnew.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strnew.c
-CMakeFiles/corewar.dir/libft/ft_strnstr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strnstr.c
-CMakeFiles/corewar.dir/libft/ft_strrchr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strrchr.c
-CMakeFiles/corewar.dir/libft/ft_strsplit.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strsplit.c
-CMakeFiles/corewar.dir/libft/ft_strstr.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strstr.c
-CMakeFiles/corewar.dir/libft/ft_strsub.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strsub.c
-CMakeFiles/corewar.dir/libft/ft_strtrim.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_strtrim.c
-CMakeFiles/corewar.dir/libft/ft_tolower.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_tolower.c
-CMakeFiles/corewar.dir/libft/ft_toupper.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_toupper.c
-CMakeFiles/corewar.dir/libft/get_modif.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/get_modif.c
-CMakeFiles/corewar.dir/libft/get_next_line.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/get_next_line.c
-CMakeFiles/corewar.dir/libft/num_list.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/num_list.c
-CMakeFiles/corewar.dir/libft/number.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/number.c
-CMakeFiles/corewar.dir/libft/number_handler.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/number_handler.c
-CMakeFiles/corewar.dir/libft/parse.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/parse.c
-CMakeFiles/corewar.dir/libft/str_handler.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/str_handler.c
-CMakeFiles/corewar.dir/libft/string.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/string.c
-CMakeFiles/corewar.dir/libft/util.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/util.c
-CMakeFiles/corewar.dir/libft/util_bonus.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/util_bonus.c
-CMakeFiles/corewar.dir/libft/wide_str.c.o
- /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
- /nfs/2016/o/omotyliu/git/corewar/libft/wide_str.c
 CMakeFiles/corewar.dir/live.c.o
  /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
  /nfs/2016/o/omotyliu/git/corewar/live.c
@@ -255,6 +25,14 @@ CMakeFiles/corewar.dir/process.c.o
  /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
  /nfs/2016/o/omotyliu/git/corewar/op.h
  /nfs/2016/o/omotyliu/git/corewar/process.c
+CMakeFiles/corewar.dir/ui.c.o
+ /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
+ /nfs/2016/o/omotyliu/git/corewar/op.h
+ /nfs/2016/o/omotyliu/git/corewar/ui.c
+CMakeFiles/corewar.dir/util.c.o
+ /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
+ /nfs/2016/o/omotyliu/git/corewar/op.h
+ /nfs/2016/o/omotyliu/git/corewar/util.c
 CMakeFiles/corewar.dir/vm.c.o
  /nfs/2016/o/omotyliu/git/corewar/libft/ft_printf.h
  /nfs/2016/o/omotyliu/git/corewar/op.h

@@ -9,8 +9,8 @@ void do_operation(t_process *process)
     if (operation != -1) {
         init_operation(operation, process);
     }
-//    if (process->counter >= MEM_SIZE)
-//        process->counter = 0;
+    if (process->counter >= MEM_SIZE)
+        process->counter = process->counter - MEM_SIZE;
     place_cursor(process);
 }
 
@@ -86,6 +86,6 @@ void start_cycle()
                 break;
             continue;
         }
-        screen_cycle_status();
+//        screen_cycle_status();
     }
 }
