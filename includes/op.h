@@ -2,7 +2,7 @@
 #define COREWAR_OP_H
 
 #include <panel.h>
-#include "../../libft/includes/ft_printf.h"
+#include "../libft/includes/ft_printf.h"
 
 
 #define IND_SIZE				2
@@ -106,6 +106,8 @@ typedef struct		env_s
     int cycle_to_die;
     t_list *players;
     char vis;
+    char vis_run;
+    int vis_delay;
 
 }					t_env;
 
@@ -132,6 +134,7 @@ void register_color_changes(int start, int len, int color);
 void init_screen();
 void dell_window();
 void place_cursor(t_process *process);
+void manage_ui();
 
 //process function
 void add_new_process(int position, t_player *player);

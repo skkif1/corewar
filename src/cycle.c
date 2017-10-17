@@ -70,6 +70,7 @@ void start_cycle()
 
     while (1)
     {
+        manage_ui();
         temp = g_env->processes;
         while (temp)
         {
@@ -78,7 +79,6 @@ void start_cycle()
         }
         rewrite_memory(g_env->global_field);
         g_env->cycle++;
-        usleep(100000);
         if (i++ == g_env->cycle_to_die)
         {
             i = 0;

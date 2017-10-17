@@ -86,4 +86,6 @@ void init_env()
     ft_memset(g_env->global_field, 0, MEM_SIZE);
     g_env->cycle_to_die = CYCLE_TO_DIE;
     g_env->cycle = 0;
+    g_env->vis_delay = 1000;
+    g_env->vis_run = 0;
 }

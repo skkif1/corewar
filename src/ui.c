@@ -107,4 +107,49 @@ void dell_window() {
 }
 
 
+void pause_war()
+{
+    int button;
+
+    while(1)
+    {
+        button = getch();
+        if (button == 119)
+        {
+            g_env->vis_run = 1;
+            return;
+        }
+        move(0,0);
+    }
+}
+
+void manage_ui()
+{
+    int button;
+    static int per_second;
+
+    if (!g_env->vis)
+        return;
+
+    if (!g_env->vis_run)
+        pause_war();
+    move(0,0);
+
+    timeout(g_env->vis_delay);
+    button = getch();
+
+    if (button == 119)
+        g_env->vis_run = 0;
+    if (button == 115)
+    {
+        per_second = (per_second == 100) ? 100 : ++per_second;
+        g_env->vis_delay = 1000 / per_second;
+    } else
+    if (button == 97)
+    {
+        per_second = (per_second == 1) ? 1 : --per_second;
+        g_env->vis_delay = 1000 / per_second;
+    }
+    move(0,0);
+}
 

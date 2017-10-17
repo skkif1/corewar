@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/2016/v/vrudakov/corewar
+CMAKE_SOURCE_DIR = /nfs/2016/o/omotyliu/git/corewar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/2016/v/vrudakov/corewar/cmake-build-debug
+CMAKE_BINARY_DIR = /nfs/2016/o/omotyliu/git/corewar/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/v/vrudakov/corewar/cmake-build-debug/CMakeFiles /nfs/2016/v/vrudakov/corewar/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/o/omotyliu/git/corewar/cmake-build-debug/CMakeFiles /nfs/2016/o/omotyliu/git/corewar/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/v/vrudakov/corewar/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/o/omotyliu/git/corewar/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,276 @@ corewar/fast:
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/build
 .PHONY : corewar/fast
 
+src/arg_parser.o: src/arg_parser.c.o
+
+.PHONY : src/arg_parser.o
+
+# target to build an object file
+src/arg_parser.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/arg_parser.c.o
+.PHONY : src/arg_parser.c.o
+
+src/arg_parser.i: src/arg_parser.c.i
+
+.PHONY : src/arg_parser.i
+
+# target to preprocess a source file
+src/arg_parser.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/arg_parser.c.i
+.PHONY : src/arg_parser.c.i
+
+src/arg_parser.s: src/arg_parser.c.s
+
+.PHONY : src/arg_parser.s
+
+# target to generate assembly for a file
+src/arg_parser.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/arg_parser.c.s
+.PHONY : src/arg_parser.c.s
+
+src/cycle.o: src/cycle.c.o
+
+.PHONY : src/cycle.o
+
+# target to build an object file
+src/cycle.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/cycle.c.o
+.PHONY : src/cycle.c.o
+
+src/cycle.i: src/cycle.c.i
+
+.PHONY : src/cycle.i
+
+# target to preprocess a source file
+src/cycle.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/cycle.c.i
+.PHONY : src/cycle.c.i
+
+src/cycle.s: src/cycle.c.s
+
+.PHONY : src/cycle.s
+
+# target to generate assembly for a file
+src/cycle.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/cycle.c.s
+.PHONY : src/cycle.c.s
+
+src/environment.o: src/environment.c.o
+
+.PHONY : src/environment.o
+
+# target to build an object file
+src/environment.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/environment.c.o
+.PHONY : src/environment.c.o
+
+src/environment.i: src/environment.c.i
+
+.PHONY : src/environment.i
+
+# target to preprocess a source file
+src/environment.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/environment.c.i
+.PHONY : src/environment.c.i
+
+src/environment.s: src/environment.c.s
+
+.PHONY : src/environment.s
+
+# target to generate assembly for a file
+src/environment.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/environment.c.s
+.PHONY : src/environment.c.s
+
+src/live.o: src/live.c.o
+
+.PHONY : src/live.o
+
+# target to build an object file
+src/live.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/live.c.o
+.PHONY : src/live.c.o
+
+src/live.i: src/live.c.i
+
+.PHONY : src/live.i
+
+# target to preprocess a source file
+src/live.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/live.c.i
+.PHONY : src/live.c.i
+
+src/live.s: src/live.c.s
+
+.PHONY : src/live.s
+
+# target to generate assembly for a file
+src/live.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/live.c.s
+.PHONY : src/live.c.s
+
+src/operation.o: src/operation.c.o
+
+.PHONY : src/operation.o
+
+# target to build an object file
+src/operation.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/operation.c.o
+.PHONY : src/operation.c.o
+
+src/operation.i: src/operation.c.i
+
+.PHONY : src/operation.i
+
+# target to preprocess a source file
+src/operation.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/operation.c.i
+.PHONY : src/operation.c.i
+
+src/operation.s: src/operation.c.s
+
+.PHONY : src/operation.s
+
+# target to generate assembly for a file
+src/operation.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/operation.c.s
+.PHONY : src/operation.c.s
+
+src/operation_exec.o: src/operation_exec.c.o
+
+.PHONY : src/operation_exec.o
+
+# target to build an object file
+src/operation_exec.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/operation_exec.c.o
+.PHONY : src/operation_exec.c.o
+
+src/operation_exec.i: src/operation_exec.c.i
+
+.PHONY : src/operation_exec.i
+
+# target to preprocess a source file
+src/operation_exec.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/operation_exec.c.i
+.PHONY : src/operation_exec.c.i
+
+src/operation_exec.s: src/operation_exec.c.s
+
+.PHONY : src/operation_exec.s
+
+# target to generate assembly for a file
+src/operation_exec.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/operation_exec.c.s
+.PHONY : src/operation_exec.c.s
+
+src/process.o: src/process.c.o
+
+.PHONY : src/process.o
+
+# target to build an object file
+src/process.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/process.c.o
+.PHONY : src/process.c.o
+
+src/process.i: src/process.c.i
+
+.PHONY : src/process.i
+
+# target to preprocess a source file
+src/process.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/process.c.i
+.PHONY : src/process.c.i
+
+src/process.s: src/process.c.s
+
+.PHONY : src/process.s
+
+# target to generate assembly for a file
+src/process.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/process.c.s
+.PHONY : src/process.c.s
+
+src/ui.o: src/ui.c.o
+
+.PHONY : src/ui.o
+
+# target to build an object file
+src/ui.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/ui.c.o
+.PHONY : src/ui.c.o
+
+src/ui.i: src/ui.c.i
+
+.PHONY : src/ui.i
+
+# target to preprocess a source file
+src/ui.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/ui.c.i
+.PHONY : src/ui.c.i
+
+src/ui.s: src/ui.c.s
+
+.PHONY : src/ui.s
+
+# target to generate assembly for a file
+src/ui.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/ui.c.s
+.PHONY : src/ui.c.s
+
+src/util.o: src/util.c.o
+
+.PHONY : src/util.o
+
+# target to build an object file
+src/util.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/util.c.o
+.PHONY : src/util.c.o
+
+src/util.i: src/util.c.i
+
+.PHONY : src/util.i
+
+# target to preprocess a source file
+src/util.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/util.c.i
+.PHONY : src/util.c.i
+
+src/util.s: src/util.c.s
+
+.PHONY : src/util.s
+
+# target to generate assembly for a file
+src/util.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/util.c.s
+.PHONY : src/util.c.s
+
+src/vm.o: src/vm.c.o
+
+.PHONY : src/vm.o
+
+# target to build an object file
+src/vm.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/vm.c.o
+.PHONY : src/vm.c.o
+
+src/vm.i: src/vm.c.i
+
+.PHONY : src/vm.i
+
+# target to preprocess a source file
+src/vm.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/vm.c.i
+.PHONY : src/vm.c.i
+
+src/vm.s: src/vm.c.s
+
+.PHONY : src/vm.s
+
+# target to generate assembly for a file
+src/vm.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/vm.c.s
+.PHONY : src/vm.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +402,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... corewar"
+	@echo "... src/arg_parser.o"
+	@echo "... src/arg_parser.i"
+	@echo "... src/arg_parser.s"
+	@echo "... src/cycle.o"
+	@echo "... src/cycle.i"
+	@echo "... src/cycle.s"
+	@echo "... src/environment.o"
+	@echo "... src/environment.i"
+	@echo "... src/environment.s"
+	@echo "... src/live.o"
+	@echo "... src/live.i"
+	@echo "... src/live.s"
+	@echo "... src/operation.o"
+	@echo "... src/operation.i"
+	@echo "... src/operation.s"
+	@echo "... src/operation_exec.o"
+	@echo "... src/operation_exec.i"
+	@echo "... src/operation_exec.s"
+	@echo "... src/process.o"
+	@echo "... src/process.i"
+	@echo "... src/process.s"
+	@echo "... src/ui.o"
+	@echo "... src/ui.i"
+	@echo "... src/ui.s"
+	@echo "... src/util.o"
+	@echo "... src/util.i"
+	@echo "... src/util.s"
+	@echo "... src/vm.o"
+	@echo "... src/vm.i"
+	@echo "... src/vm.s"
 .PHONY : help
 
 
