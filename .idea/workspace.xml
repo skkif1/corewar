@@ -11,132 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cfa1527-d94f-4587-86c0-9a27564954d7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/C.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/cycle.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/environment.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/char_handler.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_append.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_atoi.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_bzero.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isalnum.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isalpha.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isascii.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isdigit.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isprint.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_itoa.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstadd.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstadd_end.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstdel.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstdelone.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstiter.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstmap.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstnew.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstsort.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memalloc.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memccpy.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memchr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memcmp.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memcpy.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memdel.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memmove.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memset.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_printf.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putchar.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putchar_fd.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putendl.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putendl_fd.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putnbr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putnbr_fd.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putstr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putstr_fd.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_redup.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_renew.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strcat.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strchr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strclr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strcmp.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strcpy.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strdel.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strdup.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strequ.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_striter.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_striteri.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strjoin.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strlcat.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strlen.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strmap.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strmapi.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strncat.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strncmp.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strncpy.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strnequ.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strnew.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strnstr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strrchr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strsplit.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strstr.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strsub.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strtrim.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_tolower.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_toupper.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/get_modif.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/get_next_line.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/num_list.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/number.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/number_handler.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/parse.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/str_handler.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/string.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/util.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/util_bonus.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/wide_str.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/live.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/operation.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/operation_exec.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/process.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/vm.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/corewar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cycle.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/environment.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/live.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/op.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/operation.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/operation_exec.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/process.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ui.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/util.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vm.c" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/libftprintf.a" afterPath="$PROJECT_DIR$/libft/libftprintf.a" />
+    <list default="true" id="4cfa1527-d94f-4587-86c0-9a27564954d7" name="Default" comment="ncurses game logic separation by -n flag">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -147,126 +23,62 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44072524">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ft_printf.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/libft/ft_printf.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="live.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/live.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="operation.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/operation.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="operation_exec.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/operation_exec.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="process.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/process.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ui.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ui.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="util.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/util.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="vm.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/vm.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="environment.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/environment.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cycle.c" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/cycle.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cycle.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cycle.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+              <folding>
+                <marker date="1508252431204" expanded="true" signature="1318:1818" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ui.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="715">
+              <caret line="106" column="1" lean-forward="false" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="op.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/op.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="130" column="17" lean-forward="false" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+              <folding>
+                <marker date="1508252431176" expanded="true" signature="1906:2078" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arg_parser.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arg_parser.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -280,29 +92,21 @@
         <option value="$PROJECT_DIR$/vm.h" />
         <option value="$PROJECT_DIR$/libft/environment.c" />
         <option value="$PROJECT_DIR$/libft/ft_lstadd_end.c" />
-        <option value="$PROJECT_DIR$/environment.c" />
         <option value="$PROJECT_DIR$/operation.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/util.c.c" />
         <option value="$PROJECT_DIR$/process.c" />
         <option value="$PROJECT_DIR$/operation_exec.c" />
         <option value="$PROJECT_DIR$/live.c" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/arg_parser.c" />
-        <option value="$PROJECT_DIR$/cycle.c" />
         <option value="$PROJECT_DIR$/vm.c" />
-        <option value="$PROJECT_DIR$/op.h" />
         <option value="$PROJECT_DIR$/util.c" />
+        <option value="$PROJECT_DIR$/cycle.c" />
+        <option value="$PROJECT_DIR$/op.h" />
+        <option value="$PROJECT_DIR$/environment.c" />
         <option value="$PROJECT_DIR$/ui.c" />
-        <option value="$PROJECT_DIR$/src/vm.c" />
-        <option value="$PROJECT_DIR$/src/util.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/ui.c" />
-        <option value="$PROJECT_DIR$/src/process.c" />
-        <option value="$PROJECT_DIR$/src/operation_exec.c" />
-        <option value="$PROJECT_DIR$/src/operation.c" />
-        <option value="$PROJECT_DIR$/src/live.c" />
-        <option value="$PROJECT_DIR$/src/environment.c" />
-        <option value="$PROJECT_DIR$/src/cycle.c" />
       </list>
     </option>
   </component>
@@ -342,6 +146,11 @@
             <path>
               <item name="corewar" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="corewar" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corewar" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="corewar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -357,6 +166,503 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Makefile</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/cmake_clean.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.make</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/progress.make</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/Makefile</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/corewar.cbp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/corewar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/Makefile</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/libftprintf.a</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/._.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ft_printf.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/includes/op.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/._.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/includes/ft_printf.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/char_handler.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_append.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_atoi.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_bzero.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_isalnum.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_isalpha.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_isascii.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_isdigit.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_isprint.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_itoa.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstadd.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstadd_end.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstdel.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstdelone.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstiter.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstmap.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstnew.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_lstsort.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memalloc.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memccpy.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memchr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memcmp.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memcpy.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memdel.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memmove.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_memset.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_printf.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putchar.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putchar_fd.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putendl.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putendl_fd.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putnbr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putnbr_fd.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putstr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_putstr_fd.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_redup.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_renew.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strcat.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strchr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strclr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strcmp.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strcpy.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strdel.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strdup.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strequ.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_striter.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_striteri.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strjoin.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strlcat.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strlen.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strmap.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strmapi.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strncat.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strncmp.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strncpy.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strnequ.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strnew.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strnstr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strrchr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strsplit.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strstr.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strsub.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_strtrim.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_tolower.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/ft_toupper.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/get_modif.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/get_next_line.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/num_list.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/number.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/number_handler.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/parse.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/str_handler.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/string.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/util.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/util_bonus.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/obj/wide_str.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/._.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/char_handler.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_append.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_atoi.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_bzero.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_isalnum.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_isalpha.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_isascii.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_isdigit.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_isprint.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_itoa.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstadd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstadd_end.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstdel.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstdelone.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstiter.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstmap.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstnew.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_lstsort.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memalloc.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memccpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memchr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memcmp.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memcpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memdel.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memmove.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_memset.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_printf.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putchar.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putchar_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putendl.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putendl_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putnbr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putnbr_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putstr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_putstr_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_redup.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_renew.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strcat.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strchr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strclr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strcmp.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strcpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strdel.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strdup.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strequ.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_striter.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_striteri.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strjoin.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strlcat.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strlen.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strmap.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strmapi.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strncat.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strncmp.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strncpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strnequ.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strnew.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strnstr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strrchr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strsplit.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strstr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strsub.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_strtrim.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_tolower.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/ft_toupper.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/get_modif.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/get_next_line.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/num_list.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/number.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/number_handler.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/parse.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/str_handler.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/string.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/util.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/util_bonus.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/src/wide_str.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/arg_parser.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/cycle.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/environment.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/live.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/operation.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/operation_exec.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/process.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/ui.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/util.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/obj/vm.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/arg_parser.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/cycle.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/environment.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/live.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/operation.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/operation_exec.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/process.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ui.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/util.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/vm.c</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/arg_parser.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/C.includecache</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/cycle.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.internal</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/environment.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/char_handler.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_append.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_atoi.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_bzero.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isalnum.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isalpha.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isascii.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isdigit.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_isprint.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_itoa.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstadd.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstadd_end.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstdel.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstdelone.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstiter.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstmap.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstnew.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_lstsort.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memalloc.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memccpy.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memchr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memcmp.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memcpy.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memdel.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memmove.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_memset.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_printf.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putchar.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putchar_fd.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putendl.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putendl_fd.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putnbr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putnbr_fd.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putstr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_putstr_fd.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_redup.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_renew.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strcat.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strchr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strclr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strcmp.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strcpy.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strdel.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strdup.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strequ.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_striter.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_striteri.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strjoin.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strlcat.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strlen.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strmap.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strmapi.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strncat.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strncmp.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strncpy.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strnequ.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strnew.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strnstr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strrchr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strsplit.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strstr.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strsub.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_strtrim.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_tolower.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/ft_toupper.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/get_modif.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/get_next_line.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/num_list.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/number.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/number_handler.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/parse.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/str_handler.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/string.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/util.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/util_bonus.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/libft/wide_str.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/live.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/operation.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/operation_exec.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/process.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/vm.c.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cycle.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/environment.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/_DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/__.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/char_handler.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_append.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_atoi.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_bzero.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_isalnum.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_isalpha.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_isascii.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_isdigit.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_isprint.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_itoa.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstadd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstadd_end.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstdel.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstdelone.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstiter.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstmap.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstnew.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_lstsort.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memalloc.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memccpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memchr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memcmp.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memcpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memdel.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memmove.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_memset.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_printf.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_printf.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_printf.h.gch</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putchar.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putchar_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putendl.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putendl_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putnbr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putnbr_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putstr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_putstr_fd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_redup.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_renew.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strcat.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strchr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strclr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strcmp.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strcpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strdel.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strdup.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strequ.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_striter.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_striteri.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strjoin.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strlcat.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strlen.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strmap.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strmapi.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strncat.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strncmp.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strncpy.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strnequ.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strnew.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strnstr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strrchr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strsplit.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strstr.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strsub.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_strtrim.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_tolower.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/ft_toupper.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/get_modif.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/get_next_line.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/num_list.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/number.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/number_handler.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/parse.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/str_handler.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/string.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/util.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/util_bonus.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/libft/wide_str.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/live.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/op.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/operation.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/operation_exec.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/process.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ui.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/util.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/vm.c</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -401,8 +707,8 @@
       <workItem from="1507728312445" duration="8669000" />
       <workItem from="1508063447363" duration="16627000" />
       <workItem from="1508084923557" duration="6614000" />
-      <workItem from="1508165976039" duration="8756000" />
-      <workItem from="1508231133503" duration="407000" />
+      <workItem from="1508165976039" duration="9098000" />
+      <workItem from="1508243190098" duration="7418000" />
     </task>
     <task id="LOCAL-00001" summary="start ui, process">
       <created>1507558991086</created>
@@ -439,11 +745,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508173586704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ncurses game logic separation by -n flag">
+      <created>1508179909500</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1508179909500</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82114000" />
+    <option name="totallyTimeSpent" value="89467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -453,12 +766,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3269934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28749084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1923921" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28749084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40746158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40746158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41550842" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -482,7 +795,8 @@
     <MESSAGE value="game logic (cycles life) + ui" />
     <MESSAGE value="segfoult in ui TODO: loging cycle state" />
     <MESSAGE value="ncurses + game logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="ncurses + game logic" />
+    <MESSAGE value="ncurses game logic separation by -n flag" />
+    <option name="LAST_COMMIT_MESSAGE" value="ncurses game logic separation by -n flag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -491,11 +805,83 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui.c" />
-    <entry file="file://$PROJECT_DIR$/op.h" />
-    <entry file="file://$PROJECT_DIR$/vm.c" />
-    <entry file="file://$PROJECT_DIR$/environment.c" />
-    <entry file="file://$PROJECT_DIR$/process.c" />
+    <entry file="file://$PROJECT_DIR$/process.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cycle.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_lstdel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_lstdelone.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/op.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vm.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="5" lean-forward="false" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_lstdel.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -510,11 +896,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cycle.c" />
-    <entry file="file://$PROJECT_DIR$/ui.c" />
-    <entry file="file://$PROJECT_DIR$/ui.c" />
-    <entry file="file://$PROJECT_DIR$/op.h" />
-    <entry file="file://$PROJECT_DIR$/cycle.c" />
+    <entry file="file://$PROJECT_DIR$/cycle.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="23" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/op.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cycle.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -522,7 +943,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vm.c" />
+    <entry file="file://$PROJECT_DIR$/vm.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vm.h" />
     <entry file="file://$PROJECT_DIR$/libft/ft_lstadd.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -601,18 +1029,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process.c" />
-    <entry file="file://$PROJECT_DIR$/cycles.c" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/process.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/operation.c" />
-    <entry file="file://$PROJECT_DIR$/operation_exec.c" />
+    <entry file="file://$PROJECT_DIR$/cycles.c" />
+    <entry file="file://$PROJECT_DIR$/operation_exec.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -620,97 +1053,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arg_parser.c" />
     <entry file="file://$PROJECT_DIR$/libft/ft_printf.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/environment.c" />
-    <entry file="file://$PROJECT_DIR$/vm.c" />
-    <entry file="file://$PROJECT_DIR$/live.c" />
-    <entry file="file://$PROJECT_DIR$/cycle.c" />
-    <entry file="file://$PROJECT_DIR$/op.h" />
-    <entry file="file://$PROJECT_DIR$/util.c" />
-    <entry file="file://$PROJECT_DIR$/ui.c" />
-    <entry file="file://$PROJECT_DIR$/libft/ft_printf.c">
+    <entry file="file://$PROJECT_DIR$/vm.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/live.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vm.c">
+    <entry file="file://$PROJECT_DIR$/operation.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="75">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util.c">
+    <entry file="file://$PROJECT_DIR$/cycle.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="1035">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui.c">
+    <entry file="file://$PROJECT_DIR$/libft/ft_printf.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="1087">
+          <caret line="101" column="27" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/process.c">
+    <entry file="file://$PROJECT_DIR$/util.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="930">
+          <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/operation_exec.c">
+    <entry file="file://$PROJECT_DIR$/arg_parser.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/operation.c">
+    <entry file="file://$PROJECT_DIR$/op.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="670">
+          <caret line="109" column="4" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/live.c">
+    <entry file="file://$PROJECT_DIR$/environment.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="1249">
+          <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/environment.c">
+    <entry file="file://$PROJECT_DIR$/ui.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="158" column="1" lean-forward="true" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arg_parser.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cycle.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        <state relative-caret-position="760">
+          <caret line="89" column="5" lean-forward="false" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+          <folding>
+            <marker date="1508252431204" expanded="true" signature="1318:1818" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/op.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="130" column="17" lean-forward="false" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+          <folding>
+            <marker date="1508252431176" expanded="true" signature="1906:2078" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="106" column="1" lean-forward="false" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
           <folding />
         </state>
       </provider>
