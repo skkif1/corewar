@@ -82,6 +82,39 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/includes/op.h">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/arg_parser.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/cycle.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/environment.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/live.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/operation.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/operation_exec.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/process.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/ui.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/util.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vrudakov/corewar/src/vm.c">
+			<Option target="corewar"/>
+		</Unit>
 		<Unit filename="/nfs/2016/v/vrudakov/corewar/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

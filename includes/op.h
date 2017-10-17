@@ -2,7 +2,7 @@
 #define COREWAR_OP_H
 
 #include <panel.h>
-#include "../../libft/includes/ft_printf.h"
+#include "../libft/includes/ft_printf.h"
 
 
 #define IND_SIZE				2

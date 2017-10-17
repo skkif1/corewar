@@ -4,15 +4,17 @@ project(corewar)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        cycle.c
-        environment.c
-        live.c
-        op.h
-        operation.c
-        operation_exec.c
-        process.c
-        ui.c
-        vm.c util.c arg_parser.c)
+        includes/op.h
+        src/cycle.c
+        src/environment.c
+        src/live.c
+        src/operation.c
+        src/operation_exec.c
+        src/process.c
+        src/ui.c
+        src/vm.c
+        src/util.c
+        src/arg_parser.c)
 
 add_executable(corewar ${SOURCE_FILES})
 target_link_libraries(corewar ${CMAKE_SOURCE_DIR}/libft/libftprintf.a -lcurses)
