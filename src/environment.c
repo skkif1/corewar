@@ -2,6 +2,14 @@
 
 t_env *g_env;
 
+void    register_players_auto(t_list *players)
+{
+    char    *file;
+
+    file = NULL;
+
+    while (get_next_line())
+}
 
 void register_players(t_list *players)
 {
