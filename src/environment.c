@@ -8,7 +8,7 @@ void    register_players_auto(t_list *players)
 
     file = NULL;
 
-    while (get_next_line())
+//    while (get_next_line());
 }
 
 void register_players(t_list *players)
@@ -96,4 +96,5 @@ void init_env()
     g_env->cycle = 0;
     g_env->vis_delay = 1000;
     g_env->vis_run = 0;
+	g_env->player_files = NULL;
 }

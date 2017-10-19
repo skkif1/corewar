@@ -99,16 +99,16 @@ typedef struct		player_s
 
 typedef struct		env_s
 {
-    t_list *processes;
-    unsigned char global_field[MEM_SIZE];
-    int player_in_game;
-    unsigned int cycle;
-    int cycle_to_die;
-    t_list *players;
-    char vis;
-    char vis_run;
-    int vis_delay;
-
+    t_list 			*processes;
+    unsigned char 	global_field[MEM_SIZE];
+    int 			player_in_game;
+    unsigned int 	cycle;
+    int 			cycle_to_die;
+    t_list 			*players;
+    char 			vis;
+    char 			vis_run;
+    int 			vis_delay;
+	t_list			*player_files;
 }					t_env;
 
 extern void (*operation[16])(t_process *process);
