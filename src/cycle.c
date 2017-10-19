@@ -68,6 +68,7 @@ void start_cycle()
     int i;
     i = 0;
 
+
     while (1)
     {
         manage_ui();
@@ -78,6 +79,7 @@ void start_cycle()
             temp = temp->next;
         }
         rewrite_memory(g_env->global_field);
+        rewrite_stat();
         g_env->cycle++;
         if (i++ == g_env->cycle_to_die)
         {

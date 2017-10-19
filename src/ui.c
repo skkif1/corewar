@@ -36,6 +36,32 @@ void register_color_changes(int start, int len, int color) {
     };
 }
 
+void rewrite_stat()
+{
+	t_list *temp;
+
+	if (!g_env->vis)
+		return;
+
+	wmove(stat, 0, 0);
+	wprintw(stat,"\n");
+	wprintw(stat,"CYCLE PER SECOND: %d \n", 10);
+	wprintw(stat,"CYCLE TO DIE: %d \n", 1000 / g_env->vis_delay);
+
+	wprintw(stat,"players:\n");
+
+	temp = g_env->players;
+	while (temp)
+	{
+		wprintw(stat, "% 10s\n", ((t_player*)temp->content)->player_name);
+		temp = temp->next;
+	}
+	wprintw(stat,"cycle: %u\n", g_env->cycle);
+
+
+	wrefresh(stat);
+}
+
 
 void rewrite_memory(unsigned char *buff) {
 
@@ -99,6 +125,7 @@ void place_cursor(t_process *process) {
 
     colors[process->counter] = process->color * 1000 + colors[process->counter];
 }
+
 
 void dell_window() {
     delwin(memory);

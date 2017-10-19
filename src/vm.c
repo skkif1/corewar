@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 
     t_list *players = NULL;
     register_players(players);
-    start_cycle();
+	start_cycle();
 
     if(g_env->vis)
     {

@@ -135,6 +135,9 @@ void init_screen();
 void dell_window();
 void place_cursor(t_process *process);
 void manage_ui();
+void rewrite_stat();
+
+
 
 //process function
 void add_new_process(int position, t_player *player);
