@@ -39,6 +39,7 @@ void register_color_changes(int start, int len, int color) {
 void rewrite_stat()
 {
 	t_list *temp;
+	t_player *player;
 
 	if (!g_env->vis)
 		return;
@@ -47,18 +48,23 @@ void rewrite_stat()
 	wprintw(stat,"\n");
 	wprintw(stat,"CYCLE PER SECOND: %d \n", 10);
 	wprintw(stat,"CYCLE TO DIE: %d \n", 1000 / g_env->vis_delay);
+	wprintw(stat,"CYCLE DELTA: %d \n", CYCLE_DELTA);
+	wprintw(stat,"NBR LIVE: %d \n\n", NBR_LIVE);
+//	wprintw(stat,"PROCESSES: %d \n\n", g_env->processes_number);
+	wprintw(stat,"CYCLE: %u\n\n", g_env->cycle);
 
-	wprintw(stat,"players:\n");
+	wprintw(stat,"PLAYERS:\n");
 
 	temp = g_env->players;
 	while (temp)
 	{
-		wprintw(stat, "% 10s\n", ((t_player*)temp->content)->player_name);
+		player = temp->content;
+		wattron(stat, COLOR_PAIR(player->color));
+		wprintw(stat, "name: %s\n", player->player_name);
+		wattroff(stat, COLOR_PAIR(player->color));
+		wprintw(stat, "     last live: %d\n", player->last_live);
 		temp = temp->next;
 	}
-	wprintw(stat,"cycle: %u\n", g_env->cycle);
-
-
 	wrefresh(stat);
 }
 
