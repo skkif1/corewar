@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-cmake-build-debug
-.idea
-._.DS_Store
-obj/ld.o
-obj/sti.o
-=======
 cmake-build-debug/
 *.idea/
 *._.DS_Store
 *.DS_Store
 champs/
->>>>>>> origin/Vrudakov
