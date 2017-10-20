@@ -33,6 +33,23 @@ int get_opcode_by_name(char *name)
     exit(1);
 }
 
+unsigned int bytes_to_int(const unsigned char *bytes, int size)
+{
+	unsigned int l = 0;
+	int i;
+
+    i = 0;
+
+    while (i < size)
+    {
+        l += bytes[i] & 0xFF;
+        l <<= 8;
+        i++;
+    }
+	return l;
+}
+
+
 void screen_cycle_status()
 {
     if (g_env->vis)

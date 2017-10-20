@@ -79,8 +79,6 @@ void start_cycle()
             do_operation(temp->content);
             temp = temp->next;
         }
-        rewrite_memory(g_env->global_field);
-        rewrite_stat();
         if (i++ == g_env->cycle_to_die)
         {
             i = 0;
@@ -89,6 +87,8 @@ void start_cycle()
             continue;
         }
 		g_env->cycle++;
-		screen_cycle_status();
+		rewrite_memory(g_env->global_field);
+		rewrite_stat();
+		//screen_cycle_status();
 	}
 }
