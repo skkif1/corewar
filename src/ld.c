@@ -9,12 +9,15 @@ void ld(t_process *process)
 	coding_byte = g_env->global_field[process->counter + 1];
 	if (coding_byte == 144)
 	{
-		value = bytes_to_int(&g_env->global_field[process->counter + T_REG + 1], 4);
+		value = bytes_to_int(&g_env->global_field[process->counter + T_REG + 1], DIR_SIZE);
 		reqistry = g_env->global_field[process->counter + T_REG + DIR_SIZE + T_REG];
-		process->registers[reqistry] = value;
 		process->counter += T_REG + DIR_SIZE + T_REG + 1;
-	} else
+	}if(coding_byte == 208)
 	{
-		//using sti
+		value = bytes_to_int(&g_env->global_field[process->counter + T_REG + 1], IND_SIZE);
+		ft_memcpy(&value, &g_env->global_field[process->counter + value], IND_SIZE);
+		reqistry = g_env->global_field[process->counter + T_REG + IND_SIZE + T_REG];
+		process->counter += T_REG + IND_SIZE + T_REG + 1;
 	}
+	process->registers[reqistry] = value;
 }
