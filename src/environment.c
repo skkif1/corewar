@@ -23,10 +23,10 @@ void register_players(t_list *players)
 
     ft_memcpy(player->player_name, "zork", ft_strlen("zork"));
     player->player_number = 4294967295;
-    player->code_len = 12;
+    player->code_len = 19;
     player->color = 3;
 
-    player->code = malloc(sizeof(char) * 5);
+    player->code = malloc(sizeof(char) * 20);
     player->code[0] = 1;
     player->code[1] = 255;
     player->code[2] = 255;
@@ -34,12 +34,19 @@ void register_players(t_list *players)
     player->code[4] = 255;
     player->code[5] = 2;
     player->code[6] = 144;
-    player->code[7] = 0;
-    player->code[8] = 0;
-    player->code[9] = 4;
-    player->code[10] = 0;
+    player->code[7] = 255;
+    player->code[8] = 255;
+    player->code[9] = 255;
+    player->code[10] = 255;
     player->code[11] = 4;
-    player->code[12] = '\0';
+    player->code[12] = 11;
+    player->code[13] = 104;
+    player->code[14] = 4;
+    player->code[15] = 0;
+    player->code[16] = 20;
+    player->code[17] = 0;
+    player->code[18] = 20;
+    player->code[19] = '\0';
 
 
     ft_lstadd(&players, ft_lstnew(player, sizeof(t_player)));

@@ -40,12 +40,27 @@ unsigned int bytes_to_int(const unsigned char *bytes, int size)
 
     i = 0;
 
-    while (i < size)
-    {
-        l += bytes[i] & 0xFF;
-        l <<= 8;
-        i++;
-    }
+	if (size == 4)
+	{
+
+		l = (unsigned char)(bytes[0]) << 24 |
+			(unsigned char)(bytes[1]) << 16 |
+			(unsigned char)(bytes[2]) << 8 |
+			(unsigned char)(bytes[3]);
+	} else
+	{
+
+		l = (unsigned char)(bytes[0]) << 8 |
+			(unsigned char)(bytes[1]);
+	}
+
+
+//	while (i < size)
+//    {
+//        l += bytes[i] & 0xFF;
+//        l <<= 8;
+//        i++;
+//    }
 	return l;
 }
 
