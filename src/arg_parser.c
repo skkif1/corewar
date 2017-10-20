@@ -16,15 +16,15 @@ void parse_args(int argc, char **argv)
     while (i < argc)
 	{
 		if (ft_strstr(argv[i], ".cor"))
-			ft_lstadd(&g_env->player_files, ft_lstnew(argv[i], sizeof(argv[i]) + 1));
+			ft_lstadd_end(&g_env->player_files, ft_lstnew(argv[i], ft_strlen(argv[i]) + 1));
 		i++;
 	}
-//	t_list	*plist;
-//
+	t_list	*plist;
+
 //	plist = g_env->player_files;
 //	while (plist)
 //	{
-//
+//		printf("|%s|\n", plist->content);
 //		plist = plist->next;
 //	}
 }
