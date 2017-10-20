@@ -18,4 +18,3 @@ set(SOURCE_FILES
 
 add_executable(corewar ${SOURCE_FILES})
 target_link_libraries(corewar ${CMAKE_SOURCE_DIR}/libft/libftprintf.a -lcurses)
-
