@@ -68,17 +68,17 @@ void start_cycle()
     int i;
     i = 0;
 
+
     while (1)
     {
-        manage_ui();
+        if(!manage_ui())
+			continue;
         temp = g_env->processes;
         while (temp)
         {
             do_operation(temp->content);
             temp = temp->next;
         }
-        rewrite_memory(g_env->global_field);
-        g_env->cycle++;
         if (i++ == g_env->cycle_to_die)
         {
             i = 0;
@@ -86,6 +86,9 @@ void start_cycle()
                 break;
             continue;
         }
-        screen_cycle_status();
-    }
+		g_env->cycle++;
+		rewrite_memory(g_env->global_field);
+		rewrite_stat();
+		//screen_cycle_status();
+	}
 }

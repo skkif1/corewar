@@ -4,15 +4,17 @@
 int get_opcode(t_process *process)
 {
     int op = (g_env->global_field[process->counter])  - 1;
-    if (op >= 0 && op <= 16)
-        return op;
+	if (op >= 0 && op <= 16)
+	{
+		return op;
+	}
+
     return -1;
 }
 
 int get_operation(t_process *process)
 {
     int op;
-
 
     if (process->current_op == 0)
     {
@@ -38,6 +40,5 @@ int get_operation(t_process *process)
 void init_operation(int command, t_process *process)
 {
     operation[command](process);
-    printf("\n\n\n");
     process->current_op = 0;
 }
