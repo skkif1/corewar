@@ -2,6 +2,7 @@
 
 t_env *g_env;
 
+<<<<<<< HEAD
 static int	ap_basecheck(char c, int base)
 {
 	if (base <= 10)
@@ -67,6 +68,16 @@ void    register_players_auto(t_list *players)
 	}
 	exit(111);
 }
+=======
+//void    register_players_auto(t_list *players)
+//{
+//    char    *file;
+//
+//    file = NULL;
+//
+////    while (get_next_line());
+//}
+>>>>>>> c5f80abca0e7a395ff6decfbfa4ca91c2c1ad17b
 
 void register_players(t_list *players)
 {

@@ -119,7 +119,8 @@ extern t_env *g_env;
 //comands
 
 void live(t_process *process);
-
+void ld(t_process *process);
+void sti(t_process *process);
 
 //operation_exec function
 
@@ -134,7 +135,9 @@ void register_color_changes(int start, int len, int color);
 void init_screen();
 void dell_window();
 void place_cursor(t_process *process);
-void manage_ui();
+int manage_ui();
+void rewrite_stat();
+
 
 //process function
 void add_new_process(int position, t_player *player);
@@ -153,6 +156,7 @@ void start_cycle();
 int lst_size(t_list *list);
 void screen_cycle_status();
 int get_opcode_by_name(char *name);
+unsigned int bytes_to_int(const unsigned char *bytes, int size);
 
 
 //parse arg
