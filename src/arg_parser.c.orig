@@ -13,6 +13,7 @@ void parse_args(int argc, char **argv)
 			g_env->vis = 0;
     }
 
+<<<<<<< HEAD
     while (i < argc)
 	{
 		if (ft_strstr(argv[i], ".cor"))
@@ -21,6 +22,17 @@ void parse_args(int argc, char **argv)
 	}
 	t_list	*plist;
 
+=======
+//    while (i < argc)
+//	{
+//		if (ft_strstr(argv[i], ".cor"))
+//			ft_lstadd(&g_env->player_files, ft_lstnew(argv[i], sizeof(argv[i]) + 1));
+//		i++;
+//	}
+
+//	t_list	*plist;
+//
+>>>>>>> c5f80abca0e7a395ff6decfbfa4ca91c2c1ad17b
 //	plist = g_env->player_files;
 //	while (plist)
 //	{
