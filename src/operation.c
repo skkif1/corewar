@@ -27,7 +27,7 @@ t_op    g_tab[17] =
                 {0, 0, {0}, 0, 0, 0, 0, 0}
         };
 
-void (*operation[16])(t_process *process) = {live, ld, NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL, sti};
+void (*operation[16])(t_process *process) = {live, ld, st, add, sub, and,NULL,NULL,NULL,NULL, sti};
 
 
 

@@ -80,28 +80,26 @@ void register_players(t_list *players)
 
     ft_memcpy(player->player_name, "zork", ft_strlen("zork"));
     player->player_number = 4294967295;
-    player->code_len = 17;
+    player->code_len = 10;
     player->color = 3;
 
     player->code = malloc(sizeof(char) * 20);
-    player->code[0] = 1;
-    player->code[1] = 255;
-    player->code[2] = 255;
-    player->code[3] = 255;
-    player->code[4] = 255;
-    player->code[5] = 2;
-    player->code[6] = 208;
-    player->code[7] = 0;
+//    player->code[0] = 1;
+//    player->code[1] = 255;
+//    player->code[2] = 255;
+//    player->code[3] = 255;
+//    player->code[4] = 255;
+    player->code[0] = 5;
+    player->code[1] = 84;
+    player->code[2] = 1;
+    player->code[3] = 2;
+    player->code[4] = 1;
+    player->code[5] = 3;
+    player->code[6] = 112;
+    player->code[7] = 1;
     player->code[8] = 0;
-    player->code[9] = 4;
-    player->code[10] = 11;
-    player->code[11] = 104;
-    player->code[12] = 4;
-    player->code[13] = 0;
-    player->code[14] = 20;
-    player->code[15] = 0;
-    player->code[16] = 20;
-    player->code[17] = '\0';
+	player->code[9] = 42;
+    player->code[10] = '\0';
 
 
     ft_lstadd(&players, ft_lstnew(player, sizeof(t_player)));
@@ -153,7 +151,6 @@ void add_new_player(t_player *player)
     }
     register_color_changes(start - player->code_len, player->code_len, player->color);
     rewrite_memory(g_env->global_field);
-
 }
 
 

@@ -121,12 +121,19 @@ extern t_env *g_env;
 void live(t_process *process);
 void ld(t_process *process);
 void sti(t_process *process);
+void st(t_process *process);
+void add(t_process *process);
+void sub(t_process *process);
+void and(t_process *process);
 
 //operation_exec function
 
 int get_operation(t_process *process);
 void init_operation(int command, t_process *process);
 
+
+//coding byte parser
+int get_value_by_coding_byte(char coding_byte, char parm_number,  const unsigned char *memory, unsigned int *value);
 
 
 //ui functions
