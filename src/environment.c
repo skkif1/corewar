@@ -2,71 +2,71 @@
 
 t_env *g_env;
 
-static int	ap_basecheck(char c, int base)
-{
-	if (base <= 10)
-		return (c >= '0' && c <= ('9' + base - 10));
-	return ((c >= '0' && c <= '9') ||
-			(c >= 'A' && c <= ('A' + base - 10)) ||
-			(c >= 'a' && c <= ('a' + base - 10)));
-}
+//static int	ap_basecheck(char c, int base)
+//{
+//	if (base <= 10)
+//		return (c >= '0' && c <= ('9' + base - 10));
+//	return ((c >= '0' && c <= '9') ||
+//			(c >= 'A' && c <= ('A' + base - 10)) ||
+//			(c >= 'a' && c <= ('a' + base - 10)));
+//}
+//
+//int			ft_atoi_base(const char *str, int str_base)
+//{
+//	int i;
+//	int	sign;
+//	int atoi;
+//
+//	i = 0;
+//	atoi = 0;
+//	if (str_base < 2 || str_base > 16)
+//		return (0);
+//	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+//		i++;
+//	sign = (str[i] == '-') ? -1 : 1;
+//	if (str[i] == '+' || str[i] == '-')
+//		i++;
+//	while (ap_basecheck(str[i], str_base))
+//	{
+//		if (str[i] - 'a' >= 0)
+//			atoi = atoi * str_base + (str[i] - 'a' + 10);
+//		else if (str[i] - 'A' >= 0)
+//			atoi = atoi * str_base + (str[i] - 'A' + 10);
+//		else
+//			atoi = atoi * str_base + (str[i] - '0');
+//		i++;
+//	}
+//	return (sign * atoi);
+//}
+//
+//void	error_exit(char *str)
+//{
+//
+//}
 
-int			ft_atoi_base(const char *str, int str_base)
-{
-	int i;
-	int	sign;
-	int atoi;
-
-	i = 0;
-	atoi = 0;
-	if (str_base < 2 || str_base > 16)
-		return (0);
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	sign = (str[i] == '-') ? -1 : 1;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (ap_basecheck(str[i], str_base))
-	{
-		if (str[i] - 'a' >= 0)
-			atoi = atoi * str_base + (str[i] - 'a' + 10);
-		else if (str[i] - 'A' >= 0)
-			atoi = atoi * str_base + (str[i] - 'A' + 10);
-		else
-			atoi = atoi * str_base + (str[i] - '0');
-		i++;
-	}
-	return (sign * atoi);
-}
-
-void	error_exit(char *str)
-{
-
-}
-
-void    register_players_auto(t_list *players)
-{
-    char    file[6000];
-	t_list  *fd_l;
-	int 	fd,size;
-
-	fd_l = g_env->player_files;
-	while (fd_l)
-	{
-		ft_putstr(fd_l->content);
-		ft_putstr("\n");
-		if ((fd = open(fd_l->content, O_RDONLY)) < 0)
-			exit(EXIT_FAILURE);
-		while (read(fd, file, 1 ))
-		{
-			printf("%x\n", ft_atoi_base(&file[0], 16));
-		}
-		size = lseek(fd, 0, SEEK_END);
-		printf("-%d\n",size);
-		fd_l = fd_l->next;
-	}
-	exit(111);
-}
+//void    register_players_auto(t_list *players)
+//{
+//    char    file[6000];
+//	t_list  *fd_l;
+//	int 	fd,size;
+//
+//	fd_l = g_env->player_files;
+//	while (fd_l)
+//	{
+//		ft_putstr(fd_l->content);
+//		ft_putstr("\n");
+//		if ((fd = open(fd_l->content, O_RDONLY)) < 0)
+//			exit(EXIT_FAILURE);
+//		while (read(fd, file, 1 ))
+//		{
+//			printf("%x\n", ft_atoi_base(&file[0], 16));
+//		}
+//		size = lseek(fd, 0, SEEK_END);
+//		printf("-%d\n",size);
+//		fd_l = fd_l->next;
+//	}
+//	exit(111);
+//}
 
 void register_players(t_list *players)
 {

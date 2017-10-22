@@ -19,7 +19,7 @@ void parse_args(int argc, char **argv)
 			ft_lstadd_end(&g_env->player_files, ft_lstnew(argv[i], ft_strlen(argv[i]) + 1));
 		i++;
 	}
-	t_list	*plist;
+//	t_list	*plist;
 
 //	plist = g_env->player_files;
 //	while (plist)
