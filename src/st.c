@@ -15,6 +15,7 @@ void st(t_process *process)
 	{
 		address = bytes_to_int(&g_env->global_field[process->counter + T_REG + 2], IND_SIZE);
 		address = process->counter + (address % IDX_MOD);
+		value = big_to_little(value);
 		ft_memcpy(&g_env->global_field[address], &value, DIR_SIZE);
 		register_color_changes(address, 4, process->color);
 		rewrite_memory(g_env->global_field);

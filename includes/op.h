@@ -78,7 +78,7 @@ typedef struct		header_s
 typedef struct		process_s
 {
     char *name;
-    unsigned int registers[REG_NUMBER];
+	unsigned int registers[REG_NUMBER];
     char carry;
     unsigned int counter;
     int color;
@@ -125,6 +125,8 @@ void st(t_process *process);
 void add(t_process *process);
 void sub(t_process *process);
 void and(t_process *process);
+void zjmp(t_process *process);
+void ldi(t_process *process);
 
 //operation_exec function
 
@@ -134,6 +136,8 @@ void init_operation(int command, t_process *process);
 
 //coding byte parser
 int get_value_by_coding_byte(char coding_byte, char parm_number,  const unsigned char *memory, unsigned int *value);
+void get_arg_types(int *mass, char coding_byte);
+int check_param(int *mass);
 
 
 //ui functions
@@ -164,6 +168,7 @@ int lst_size(t_list *list);
 void screen_cycle_status();
 int get_opcode_by_name(char *name);
 unsigned int bytes_to_int(const unsigned char *bytes, int size);
+unsigned int big_to_little(unsigned int value);
 
 
 //parse arg

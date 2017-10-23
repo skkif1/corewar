@@ -1,8 +1,5 @@
 #include"../includes/op.h"
 
-/*
- * modify carry flag
- * */
 
 void add(t_process *process)
 {
