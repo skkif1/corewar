@@ -14,22 +14,6 @@ void do_operation(t_process *process)
     place_cursor(process);
 }
 
-
-
-int delete_process(t_list* node_ptr)
-{
-    if (node_ptr->next)
-    {
-        t_list *temp = node_ptr->next;
-        node_ptr->content    = temp->content;
-        node_ptr->next    = temp->next;
-        free(temp);
-        return 0;
-    } else
-    return 1;
-}
-
-
 int check_processes()
 {
 
@@ -44,16 +28,16 @@ int check_processes()
     {
         if (((t_process*)processes->content)->live == 0)
         {
-            if (delete_process(processes))
+			delete_node(&g_env->processes, ((t_process*)processes->content)->id);
+
+				if(lst_size(g_env->processes) == 0)
                     return 1;
-            continue;
         }
         else
         {
             if (((t_process*)processes->content)->live >= NBR_LIVE)
                     nbr_flag++;
-                ((t_process*)processes->content)->live = 0;
-                ((t_process*)processes->content)->carry = 0;
+                reset_process(processes->content);
         }
             processes = processes->next;
     }
@@ -61,6 +45,7 @@ int check_processes()
         g_env->cycle_to_die -= CYCLE_DELTA;
     return 0;
 }
+
 
 void start_cycle()
 {
@@ -89,6 +74,6 @@ void start_cycle()
 		g_env->cycle++;
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
-		//screen_cycle_status();
+//		screen_cycle_status();
 	}
 }

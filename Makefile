@@ -5,7 +5,7 @@ OBJ_PATH = ./obj/
 LIB_PATH = ./libft/
 INC_PATH = ./includes/ ./libft/includes/
 OBJ_NAME = $(SRC_NAME:.c=.o)
-SRC_NAME = ui.c vm.c process.c environment.c cycle.c operation.c operation_exec.c coding_byte_parser.c live.c util.c arg_parser.c ld.c sti.c st.c add.c sub.c and.c zjmp.c ldi.c
+SRC_NAME = ui.c vm.c process.c environment.c cycle.c operation.c operation_exec.c coding_byte_parser.c util.c utility.c arg_parser.c c_live.c  c_ld.c c_sti.c c_st.c c_add.c c_sub.c c_and.c c_zjmp.c c_ldi.c
 LIBFT = libftprintf.a
 LIB_NAME = -lftprintf -lcurses
 

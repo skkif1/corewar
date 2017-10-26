@@ -1,17 +1,5 @@
 #include "../includes/op.h"
 
-void type_to_size(int *mass)
-{
-	int i;
-
-	i = 0;
-	while(i < 3)
-	{
-		if (mass[i] == T_IND || mass[i] == T_DIR)
-			mass[i] = (mass[i] == T_IND) ? IND_SIZE : DIR_SIZE;
-		i++;
-	}
-}
 
 unsigned int make_op(t_process *process, unsigned int first, unsigned int second)
 {

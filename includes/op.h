@@ -84,6 +84,7 @@ typedef struct		process_s
     int color;
     unsigned int live;
     char *current_op;
+	unsigned int id;
     int cycle_to_execute;
 }					t_process;
 
@@ -91,9 +92,10 @@ typedef struct		player_s
 {
     unsigned char *code;
     unsigned int code_len;
-    char *player_name[PROG_NAME_LENGTH];
+    char 		*player_name[PROG_NAME_LENGTH];
     unsigned int player_number;
     unsigned int last_live;
+	int 			live_in_period;
     int color;
 }					t_player;
 
@@ -152,6 +154,8 @@ void rewrite_stat();
 
 //process function
 void add_new_process(int position, t_player *player);
+void reset_process(t_process* process);
+void delete_node(t_list **head_ref, unsigned int key);
 
 
 //envi functions
@@ -169,6 +173,10 @@ void screen_cycle_status();
 int get_opcode_by_name(char *name);
 unsigned int bytes_to_int(const unsigned char *bytes, int size);
 unsigned int big_to_little(unsigned int value);
+
+//utility
+t_player *find_player(unsigned int number);
+void type_to_size(int *mass);
 
 
 //parse arg

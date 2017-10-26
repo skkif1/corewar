@@ -63,6 +63,7 @@ void rewrite_stat()
 		wprintw(stat, "name: %s\n", player->player_name);
 		wattroff(stat, COLOR_PAIR(player->color));
 		wprintw(stat, "     last live: %d\n", player->last_live);
+		wprintw(stat, "     lives in curent period: %d\n", player->live_in_period);
 		temp = temp->next;
 	}
 	wrefresh(stat);
@@ -127,8 +128,8 @@ void init_screen() {
     stat = create_stat_window();
 }
 
-void place_cursor(t_process *process) {
-
+void place_cursor(t_process *process)
+{
     colors[process->counter] = process->color * 1000 + colors[process->counter];
 }
 

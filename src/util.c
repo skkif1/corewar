@@ -8,7 +8,8 @@ int lst_size(t_list *list)
 
     i = 0;
     temp = list;
-
+	if(temp == NULL)
+		return 0;
     while (temp)
     {
         i++;
