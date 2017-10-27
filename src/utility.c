@@ -33,3 +33,10 @@ void invalid_coding_byte(const int *arg_type, t_process *process)
 	else
 		process->counter += arg_type[0] + arg_type[1] + arg_type[2] + 2;
 }
+
+int validate_reqistry(int value)
+{
+	if(value > 0 && value <= 16)
+		return 1;
+	return 0;
+}
