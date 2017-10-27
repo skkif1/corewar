@@ -28,7 +28,7 @@ void type_to_size(int *mass)
 
 void invalid_coding_byte(const int *arg_type, t_process *process)
 {
-	if(arg_type[0] == 0 || arg_type[1] == 0 || arg_type[3])
+	if(arg_type[0] == 0 && arg_type[1] == 0 && arg_type[3])
 		process->counter += 2;
 	else
 		process->counter += arg_type[0] + arg_type[1] + arg_type[2] + 2;

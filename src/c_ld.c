@@ -29,7 +29,6 @@ void ld(t_process *process)
 		else
 		process->counter += arg_type[0] + arg_type[1] + 2;
 	} else {
-
 		value = bytes_to_int(&g_env->global_field[process->counter + T_REG + 1], arg_type[0]);
 		if(arg_type[0] == IND_SIZE)
 			value = bytes_to_int(&g_env->global_field[value], DIR_SIZE);
