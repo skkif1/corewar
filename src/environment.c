@@ -62,16 +62,28 @@ void	error_exit(char *str)
 
 }
 
-t_player*	fill_player(header_t *head)
+t_player*	fill_player(header_t *head, unsigned char *prog)
 {
 	t_player	*player;
-	player = malloc(sizeof(t_player));
+	static unsigned int player_num = 4294967295;
 
+	player = malloc(sizeof(t_player));
+	player->code = (unsigned char*)malloc(sizeof(unsigned char) * head->prog_size);
+	player->code_len = head->prog_size;
+	player->player_number = player_num;
 	ft_memcpy(player->player_name, head->prog_name, 128);
+	ft_memcpy(player->code, prog, head->prog_size);
 	for (int i = 0; i < 128; i++)
 	{
 		printf("%x", player->player_name[i]);
 	}
+	printf("\n");
+	for (int i = 0; i < head->prog_size; i++)
+		printf("%.2x", prog[i++]);
+	printf("\n");
+	printf("num - %u\n", player->player_number);
+
+	player_num--;
 	return (player);
 }
 
@@ -106,10 +118,9 @@ void    register_players_auto(t_list *players)
 			ft_putstr("Read prog not valid");
 			exit(EXIT_FAILURE);
 		}
-		while (i < head->prog_size)
-			printf("%.2x", prog[i++]);
+		fill_player(head, prog);
+		free(prog);
 		close(fd);
-		fill_player(head);
 		fd_l = fd_l->next;
 	}
 
