@@ -34,7 +34,10 @@ void add(t_process *process)
 	r3 = g_env->global_field[process->counter + 4];
 	if(!(validate_reqistry(r1) && validate_reqistry(r2) && validate_reqistry(r3)))
 		return;
-	process->registers[r3] = process->registers[r1] + process->registers[r2];
+	if(get_opcode_by_name(process->current_op) == 4)
+		process->registers[r3] = process->registers[r1] + process->registers[r2];
+	else
+		process->registers[r3] = process->registers[r1] - process->registers[r2];
 	process->counter += 5;
 	process->carry = (char) ((process->registers[r3] == 0) ? 1 : 0);
 }
