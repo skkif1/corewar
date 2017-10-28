@@ -3,7 +3,7 @@
 unsigned  int get_arg(t_process *process)
 {
     unsigned int arg;
-    arg = bytes_to_int(&g_env->global_field[process->counter + 1], 4);
+    arg = bytes_to_int(process->counter + 1, 4);
     return arg;
 }
 

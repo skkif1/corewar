@@ -13,15 +13,15 @@ t_player *find_player(unsigned int number)
 	return 0;
 }
 
-void type_to_size(int *mass)
+void type_to_size(int *mass, int dir_size)
 {
 	int i;
 
 	i = 0;
 	while(i < 3)
 	{
-		if (mass[i] == T_IND || mass[i] == T_DIR)
-			mass[i] = (mass[i] == T_IND) ? IND_SIZE : DIR_SIZE;
+		if (mass[i] == T_IND || mass[i] == dir_size)
+			mass[i] = (mass[i] == T_IND) ? IND_SIZE : dir_size;
 		i++;
 	}
 }

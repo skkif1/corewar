@@ -23,7 +23,7 @@ int validate_and(int *mass, t_process *process)
 			(mass[1] == T_REG || mass[1] == T_DIR|| mass[1] == T_IND) &&
 			(mass[2] == T_REG))
 		i = 1;
-	type_to_size(mass);
+	type_to_size(mass, 4);
 	if(!i)
 	{
 		invalid_coding_byte(mass, process);
@@ -36,12 +36,12 @@ unsigned int get_arg_and(int *params, int num, t_process *process)
 	unsigned int arg;
 
 	if(num == 0)
-		arg = bytes_to_int(&g_env->global_field[process->counter + 2], params[0]);
+		arg = bytes_to_int(process->counter + 2, params[0]);
 	else
-		arg = bytes_to_int(&g_env->global_field[process->counter + 2 + params[0]], params[1]);
+		arg = bytes_to_int(process->counter + 2 + params[0], params[1]);
 
 	if (params[num] == IND_SIZE || params[num] == 1)
-		arg = (params[num] == IND_SIZE) ? bytes_to_int(&g_env->global_field[arg], DIR_SIZE) : process->registers[arg];
+		arg = (params[num] == IND_SIZE) ? bytes_to_int(arg, DIR_SIZE) : process->registers[arg];
 	return arg;
 }
 

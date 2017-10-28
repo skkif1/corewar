@@ -12,9 +12,9 @@ void sti(t_process *process)
 	registry = g_env->global_field[process->counter + T_REG + 1];
 	value = process->registers[registry];
 
-	int temp = process->counter +  T_REG + 2;
+	unsigned int temp = process->counter +  T_REG + 2;
 	if (coding_byte == 104)
-		address = bytes_to_int(&g_env->global_field[temp], 2) + bytes_to_int(&g_env->global_field[temp + 2], 2) + process->counter;
+		address = bytes_to_int(temp, 2) + bytes_to_int(temp + 2, 2) + process->counter;
 
 	// no implementation of other cding_byte
 

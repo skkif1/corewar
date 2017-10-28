@@ -34,27 +34,33 @@ int get_opcode_by_name(char *name)
     exit(1);
 }
 
-unsigned int bytes_to_int(const unsigned char *bytes, int size)
+unsigned int normalize_cursor(unsigned int *start)
+{
+	*start = (*start + 1 == MEM_SIZE)? 0 : *start + 1;
+	return *start;
+}
+
+unsigned int bytes_to_int(unsigned int start, int size)
 {
 	unsigned int l = 0;
 	int i;
 
-    i = 0;
+	start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
+
+	i = 0;
 
 	if (size == 4)
 	{
-
-		l = (unsigned char)(bytes[0]) << 24 |
-			(unsigned char)(bytes[1]) << 16 |
-			(unsigned char)(bytes[2]) << 8 |
-			(unsigned char)(bytes[3]);
+		l = (unsigned char)(g_env->global_field[start]) << 24 |
+			(unsigned char)(g_env->global_field[normalize_cursor(&start)]) << 16 |
+			(unsigned char)(g_env->global_field[normalize_cursor(&start)]) << 8 |
+			(unsigned char)(g_env->global_field[normalize_cursor(&start)]);
 	} else
 	{
 
-		l = (unsigned char)(bytes[0]) << 8 |
-			(unsigned char)(bytes[1]);
+		l = (unsigned char)(g_env->global_field[start]) << 8 |
+			(unsigned char)(g_env->global_field[normalize_cursor(&start)]);
 	}
-
 	return l;
 }
 

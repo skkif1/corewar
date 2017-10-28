@@ -8,7 +8,7 @@ int validate_ld(int *mass)
 
 	if((mass[0] == T_IND || mass[0] == T_DIR) && mass[1] == T_REG)
 		res = 1;
-	type_to_size(mass);
+	type_to_size(mass, 4);
 	return res;
 }
 
@@ -29,9 +29,9 @@ void ld(t_process *process)
 		else
 		process->counter += arg_type[0] + arg_type[1] + 2;
 	} else {
-		value = bytes_to_int(&g_env->global_field[process->counter + T_REG + 1], arg_type[0]);
+		value = bytes_to_int(process->counter + T_REG + 1, arg_type[0]);
 		if(arg_type[0] == IND_SIZE)
-			value = bytes_to_int(&g_env->global_field[value], DIR_SIZE);
+			value = bytes_to_int(value, DIR_SIZE);
 		reqistry = g_env->global_field[process->counter + T_REG + arg_type[0] + T_REG];
 		process->counter += T_REG + arg_type[0] + T_REG + 1;
 		process->registers[reqistry] = value;

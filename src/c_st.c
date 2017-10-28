@@ -8,7 +8,7 @@ int validate_st(int *mass)
 
 	if(mass[0] == T_REG && (mass[1] == T_IND || mass[1] == T_REG))
 		i = 1;
-	type_to_size(mass);
+	type_to_size(mass, 4);
 	return i;
 }
 
@@ -30,7 +30,7 @@ void st(t_process *process)
 		value = big_to_little(process->registers[registry]);
 
 		if(arg_type[1] == IND_SIZE) {
-			address = bytes_to_int(&g_env->global_field[process->counter + T_REG + 2], arg_type[1]);
+			address = bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
 			address = process->counter + (address % IDX_MOD);
 			ft_memcpy(&g_env->global_field[address], &value, DIR_SIZE);
 		}
