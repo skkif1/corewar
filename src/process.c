@@ -12,7 +12,7 @@ void add_new_process(int position, t_player *player)
     i = 0;
 
     process = (t_process*)malloc(sizeof(t_process));
-    while(i < REG_NUMBER)
+    while(i < REG_NUMBER + 1)
     {
         process->registers[i] = 0;
         i++;

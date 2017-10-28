@@ -27,7 +27,7 @@ t_op    g_tab[17] =
                 {0, 0, {0}, 0, 0, 0, 0, 0}
         };
 
-void (*operation[16])(t_process *process) = {live, ld, st, add, add, and, and, and, zjmp, ldi, sti};
+void (*operation[16])(t_process *process) = {live, ld, st, add, add, and, and, and, zjmp, ldi, sti, c_fork};
 
 
 

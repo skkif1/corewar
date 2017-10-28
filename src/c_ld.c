@@ -33,8 +33,11 @@ void ld(t_process *process)
 		if(arg_type[0] == IND_SIZE)
 			value = bytes_to_int(value, DIR_SIZE);
 		reqistry = g_env->global_field[process->counter + T_REG + arg_type[0] + T_REG];
+		if(validate_reqistry(reqistry))
+		{
+			process->registers[reqistry] = value;
+			process->carry = (char) ((value == 0) ? 1 : 0);
+		}
 		process->counter += T_REG + arg_type[0] + T_REG + 1;
-		process->registers[reqistry] = value;
-		process->carry = (char) ((value == 0) ? 1 : 0);
 	}
 }
