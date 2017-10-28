@@ -26,7 +26,7 @@ unsigned int bytes_to_int(unsigned int start, int size)
 	return l;
 }
 
-void bytes_to_memory(unsigned int start, const void *value, size_t len)
+void bytes_to_memory(unsigned int start, const void *value, size_t len, int color)
 {
 
 	unsigned char *val;
@@ -35,9 +35,12 @@ void bytes_to_memory(unsigned int start, const void *value, size_t len)
 	start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
 
 	g_env->global_field[start] = *val++;
+	register_color_changes(start, 1, color);
 	len--;
 	while (len--)
 	{
 		g_env->global_field[normalize_cursor(&start)] = *val++;
+		register_color_changes(start, 1, color);
 	}
+	rewrite_memory(g_env->global_field);
 }

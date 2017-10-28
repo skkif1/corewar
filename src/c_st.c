@@ -32,7 +32,7 @@ void st(t_process *process)
 		if(arg_type[1] == IND_SIZE) {
 			address = bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
 			address = process->counter + (address % IDX_MOD);
-			bytes_to_memory(address, &value, DIR_SIZE);
+			bytes_to_memory(address, &value, DIR_SIZE, process->color);
 		}
 		else
 		{
@@ -40,7 +40,5 @@ void st(t_process *process)
 			process->registers[address] = value;
 		}
 		process->counter += 2 + T_REG + arg_type[1];
-		register_color_changes(address, 4, process->color);
-		rewrite_memory(g_env->global_field);
 	}
 }
