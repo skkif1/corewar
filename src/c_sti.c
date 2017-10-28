@@ -18,7 +18,7 @@ void sti(t_process *process)
 
 	// no implementation of other cding_byte
 
-	ft_memcpy(&g_env->global_field[address], &value, 4);
+	bytes_to_memory(address, &value, 4);
 	register_color_changes(address, 4, process->color);
 	rewrite_memory(g_env->global_field);
 	process->counter += 1 + T_REG + DIR_SIZE;

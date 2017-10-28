@@ -17,7 +17,7 @@ void st(t_process *process)
 	int coding_byte;
 	unsigned int value;
 	int registry;
-	int address;
+	unsigned int address;
 	int arg_type[3];
 
 	coding_byte = g_env->global_field[process->counter + 1];
@@ -32,7 +32,7 @@ void st(t_process *process)
 		if(arg_type[1] == IND_SIZE) {
 			address = bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
 			address = process->counter + (address % IDX_MOD);
-			ft_memcpy(&g_env->global_field[address], &value, DIR_SIZE);
+			bytes_to_memory(address, &value, DIR_SIZE);
 		}
 		else
 		{
