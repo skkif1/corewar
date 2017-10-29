@@ -184,7 +184,7 @@ void parse_args(int argc, char **argv);
 
 
 //VR block
-//void register_players_auto(t_list *players);
+void register_players_auto(t_list *players);
 
 
 #endif //COREWAR_OP_H

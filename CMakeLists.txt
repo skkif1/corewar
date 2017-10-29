@@ -14,7 +14,10 @@ set(SOURCE_FILES
         src/ui.c
         src/vm.c
         src/util.c
-        src/arg_parser.c src/ld.c src/sti.c src/st.c)
+        src/arg_parser.c
+        src/ld.c
+        src/sti.c
+        src/st.c)
 
 add_executable(corewar ${SOURCE_FILES})
 target_link_libraries(corewar ${CMAKE_SOURCE_DIR}/libft/libftprintf.a -lcurses)
