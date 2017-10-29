@@ -129,6 +129,7 @@ void sub(t_process *process);
 void and(t_process *process);
 void zjmp(t_process *process);
 void ldi(t_process *process);
+void c_fork(t_process *process);
 
 //operation_exec function
 
@@ -161,7 +162,7 @@ void delete_node(t_list **head_ref, unsigned int key);
 //envi functions
 void add_new_player(t_player *player);
 void init_env();
-void register_players(t_list *players);
+//void register_players(t_list *players);
 
 
 //cycle functions
@@ -171,16 +172,22 @@ void start_cycle();
 int lst_size(t_list *list);
 void screen_cycle_status();
 int get_opcode_by_name(char *name);
-unsigned int bytes_to_int(const unsigned char *bytes, int size);
+unsigned int bytes_to_int(unsigned int, int size);
 unsigned int big_to_little(unsigned int value);
 
 //utility
 t_player *find_player(unsigned int number);
-void type_to_size(int *mass);
+void type_to_size(int *mass, int dir_size);
+int validate_reqistry(int value);
+void invalid_coding_byte(const int *arg_type, t_process *process);
 
 
 //parse arg
 void parse_args(int argc, char **argv);
+
+//read_write
+void bytes_to_memory(unsigned int start, const void *value, size_t len, int color);
+
 
 
 //VR block
