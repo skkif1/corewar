@@ -66,24 +66,23 @@ t_player*	fill_player(header_t *head, unsigned char *prog)
 {
 	t_player	*player;
 	static unsigned int player_num = 4294967295;
+	static int color = 3;
 
 	player = malloc(sizeof(t_player));
 	player->code = (unsigned char*)malloc(sizeof(unsigned char) * head->prog_size);
 	player->code_len = head->prog_size;
 	player->player_number = player_num;
+	player->color = color;
 	ft_memcpy(player->player_name, head->prog_name, 128);
 	ft_memcpy(player->code, prog, head->prog_size);
-	for (int i = 0; i < 128; i++)
-	{
-		printf("%x", player->player_name[i]);
-	}
+	printf("%s", player->player_name);
 	printf("\n");
 	for (int i = 0; i < head->prog_size; i++)
 		printf("%.2x", prog[i++]);
 	printf("\n");
-	printf("num - %u\n", player->player_number);
 
 	player_num--;
+	color += 2;
 	return (player);
 }
 
@@ -93,7 +92,8 @@ void    register_players_auto(t_list *players)
 	t_list          *fd_l;
 	int 			fd;
 	unsigned char	*prog;
-	int i;
+	int 			i;
+
 
 	i = 0;
 	head = (header_t*)malloc(sizeof(header_t)); //2192
@@ -119,6 +119,7 @@ void    register_players_auto(t_list *players)
 			exit(EXIT_FAILURE);
 		}
 		fill_player(head, prog);
+		ft_lstadd(&players, ft_lstnew(fill_player(head, prog), sizeof(t_player)));
 		free(prog);
 		close(fd);
 		fd_l = fd_l->next;
