@@ -111,6 +111,7 @@ typedef struct		env_s
     char 			vis_run;
     int 			vis_delay;
 	t_list			*player_files;
+	int 			process_number;
 }					t_env;
 
 extern void (*operation[16])(t_process *process);
@@ -151,6 +152,7 @@ void dell_window();
 void place_cursor(t_process *process);
 int manage_ui();
 void rewrite_stat();
+void hold_ui();
 
 
 //process function

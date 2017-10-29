@@ -15,7 +15,10 @@ int main(int argc, char **argv)
     register_players_auto(players);
     start_cycle();
 
-    if(g_env->vis)
+	if (g_env->vis)
+		hold_ui();
+
+	if(g_env->vis)
     {
         getch();
         dell_window();

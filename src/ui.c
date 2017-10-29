@@ -50,7 +50,7 @@ void rewrite_stat()
 	wprintw(stat,"CYCLE TO DIE: %d \n", CYCLE_TO_DIE);
 	wprintw(stat,"CYCLE DELTA: %d \n", CYCLE_DELTA);
 	wprintw(stat,"NBR LIVE: %d \n\n", NBR_LIVE);
-//	wprintw(stat,"PROCESSES: %d \n\n", g_env->processes_number);
+	wprintw(stat,"PROCESSES: %d \n\n", g_env->process_number);
 	wprintw(stat,"CYCLE: %u\n\n", g_env->cycle);
 
 	wprintw(stat,"PLAYERS:\n");
@@ -193,5 +193,14 @@ int manage_ui()
 	}
     move(0,0);
 	return 1;
+}
+
+
+void hold_ui()
+{
+	while (1)
+	{
+		manage_ui();
+	}
 }
 

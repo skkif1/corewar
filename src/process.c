@@ -25,6 +25,7 @@ void add_new_process(int position, t_player *player)
     process->cycle_to_execute = 0;
 	process->id = g_id++;
     ft_lstadd(&g_env->processes, ft_lstnew(process, sizeof(t_process)));
+	g_env->process_number++;
 };
 
 
@@ -58,7 +59,7 @@ void delete_node(t_list **head_ref, unsigned int key)
 			if(((t_process*)temp->content)->id == key)
 			{
 				prev->next = temp->next;
-				printf("%d\n", ((t_process*)temp->content)->id);
+				g_env->process_number--;
 				return;
 			}
 			temp = temp->next;
