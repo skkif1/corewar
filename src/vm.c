@@ -11,7 +11,7 @@ int main(int argc, char **argv)
         init_screen();
 
     t_list *players = NULL;
-    register_players(players);
+//    register_players(players);
     register_players_auto(players);
     start_cycle();
 

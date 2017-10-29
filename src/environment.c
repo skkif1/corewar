@@ -57,11 +57,6 @@ void		reverse_bytes(unsigned int *bytes, int size)
 
 }
 
-void	error_exit(char *str)
-{
-
-}
-
 t_player*	fill_player(header_t *head, unsigned char *prog)
 {
 	t_player	*player;
@@ -75,11 +70,6 @@ t_player*	fill_player(header_t *head, unsigned char *prog)
 	player->color = color;
 	ft_memcpy(player->player_name, head->prog_name, 128);
 	ft_memcpy(player->code, prog, head->prog_size);
-	printf("%s", player->player_name);
-	printf("\n");
-	for (int i = 0; i < head->prog_size; i++)
-		printf("%.2x", prog[i++]);
-	printf("\n");
 
 	player_num--;
 	color += 2;
@@ -118,81 +108,18 @@ void    register_players_auto(t_list *players)
 			ft_putstr("Read prog not valid");
 			exit(EXIT_FAILURE);
 		}
-		fill_player(head, prog);
 		ft_lstadd(&players, ft_lstnew(fill_player(head, prog), sizeof(t_player)));
 		free(prog);
 		close(fd);
 		fd_l = fd_l->next;
 	}
+	g_env->players = players;
 
-	exit(111);
-}
-
-void register_players(t_list *players)
-{
-    t_player *player;
-    t_player *player2;
-
-    //static unsigned int name = 4294967295;
-    player = malloc(sizeof(t_player));
-    player2 = malloc(sizeof(t_player));
-
-
-    ft_memcpy(player->player_name, "zork", ft_strlen("zork"));
-    player->player_number = 4294967295;
-    player->code_len = 17;
-    player->color = 3;
-
-    player->code = malloc(sizeof(char) * 20);
-    player->code[0] = 1;
-    player->code[1] = 255;
-    player->code[2] = 255;
-    player->code[3] = 255;
-    player->code[4] = 255;
-    player->code[5] = 2;
-    player->code[6] = 208;
-    player->code[7] = 0;
-    player->code[8] = 0;
-    player->code[9] = 4;
-    player->code[10] = 11;
-    player->code[11] = 104;
-    player->code[12] = 4;
-    player->code[13] = 0;
-    player->code[14] = 20;
-    player->code[15] = 0;
-    player->code[16] = 20;
-    player->code[17] = '\0';
-
-
-    ft_lstadd(&players, ft_lstnew(player, sizeof(t_player)));
-
-    ft_memcpy(player2->player_name, "zork2", ft_strlen("zork2"));
-    player2->player_number = 4294967294;
-    player2->code_len = 5;
-    player2->color = 5;
-
-
-    player2->code = malloc(sizeof(char) * 5);
-    player2->code[0] = 1;
-    player2->code[1] = 255;
-    player2->code[2] = 255;
-    player2->code[3] = 255;
-    player2->code[4] = 253;
-    player2->code[5] = '\0';
-
-    ft_lstadd(&players, ft_lstnew(player2, sizeof(t_player)));
-
-    g_env->player_in_game = 2;
-
-    g_env->players = players;
-
-    while (players)
-    {
-        add_new_player(players->content);
-        players = players->next;
-    }
-
-
+	while (players)
+	{
+		add_new_player(players->content);
+		players = players->next;
+	}
 }
 
 void add_new_player(t_player *player)

@@ -19,12 +19,10 @@ void parse_args(int argc, char **argv)
 			ft_lstadd_end(&g_env->player_files, ft_lstnew(argv[i], ft_strlen(argv[i]) + 1));
 		i++;
 	}
-//	t_list	*plist;
-
-//	plist = g_env->player_files;
-//	while (plist)
-//	{
-//		printf("|%s|\n", plist->content);
-//		plist = plist->next;
-//	}
+	g_env->player_in_game = lst_size(g_env->player_files);
+	if(g_env->player_in_game > MAX_PLAYERS)
+	{
+		ft_printf("numberof players in 1 and %d\n",  MAX_PLAYERS);
+		exit(EXIT_FAILURE);
+	}
 }
