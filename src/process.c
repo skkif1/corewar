@@ -21,6 +21,7 @@ void add_new_process(int position, t_player *player)
     process->color = player->color;
     process->counter = (unsigned int) position;
     process->live = 0;
+	process->name = strdup((const char *) player->player_name);
     process->current_op = 0;
     process->cycle_to_execute = 0;
 	process->id = g_id++;

@@ -81,6 +81,7 @@ void    register_players_auto(t_list *players)
 		add_new_player(players->content);
 		players = players->next;
 	}
+	rewrite_stat();
 }
 
 void add_new_player(t_player *player)

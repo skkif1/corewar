@@ -7,6 +7,7 @@ int g_mem_col_len = MEM_SIZE / 64;
 static int colors[MEM_SIZE];
 static WINDOW *memory;
 static WINDOW *stat;
+t_list *notifications;
 
 WINDOW *create_memory_window() {
 
@@ -36,6 +37,22 @@ void register_color_changes(int start, int len, int color) {
     };
 }
 
+void rewrite_notification()
+{
+    t_list *temp;
+    t_notification *not;
+    temp = notifications;
+    not = notifications->content;
+    while(temp)
+    {
+        not = temp->content;
+//        wattron(stat, COLOR_PAIR(1));
+        printf("%s", not->notification);
+//        wattroff(stat, COLOR_PAIR(1));
+        temp = temp->next;
+    }
+}
+
 void rewrite_stat()
 {
 	t_list *temp;
@@ -52,10 +69,8 @@ void rewrite_stat()
 	wprintw(stat,"NBR LIVE: %d \n\n", NBR_LIVE);
 	wprintw(stat,"PROCESSES: %d \n\n", g_env->process_number);
 	wprintw(stat,"CYCLE: %u\n\n", g_env->cycle);
-
-	wprintw(stat,"PLAYERS:\n");
-
-	temp = g_env->players;
+    wprintw(stat,"PLAYERS:\n");
+    temp = g_env->players;
 	while (temp)
 	{
 		player = temp->content;
@@ -66,7 +81,22 @@ void rewrite_stat()
 		wprintw(stat, "     lives in curent period: %d\n", player->live_in_period);
 		temp = temp->next;
 	}
+    wprintw(stat, "\nLEGEND:\n   w - start/stop\n   s - increase speed\n   a - decrease speed\n");
+    rewrite_notification();
 	wrefresh(stat);
+}
+
+
+
+void add_notification(char *info, t_process *process)
+{
+    t_notification *notification;
+
+    notification = malloc(sizeof(t_notification));
+    notification->color = process->color;
+    notification->notification = info;
+    ft_lstadd(&notifications, ft_lstnew(notification, sizeof(t_notification)));
+    rewrite_notification();
 }
 
 
@@ -123,6 +153,7 @@ void init_screen() {
     init_def_color();
     chtype background = '.' | COLOR_PAIR(1);
     bkgd(background);
+    curs_set(0);
     refresh();
     memory = create_memory_window();
     stat = create_stat_window();
@@ -167,10 +198,13 @@ int manage_ui()
 
     if (!g_env->vis_run)
         pause_war();
-    move(0,0);
 
+    move(0,0);
     timeout(g_env->vis_delay);
     button = getch();
+    attron(COLOR_PAIR(1));
+    printw("...........");
+    attroff(COLOR_PAIR(1));
 
     if (button == 119)
 	{
@@ -186,12 +220,12 @@ int manage_ui()
     {
         per_second = (per_second == 1) ? 1 : --per_second;
         g_env->vis_delay = 1000 / per_second;
-    } else if (button == 27)
+    } else if (button == 27 && getch() != 91)
 	{
-		dell_window();
-		exit(0);
+            dell_window();
+            printf("%d\n" , button);
+            exit(0);
 	}
-    move(0,0);
 	return 1;
 }
 

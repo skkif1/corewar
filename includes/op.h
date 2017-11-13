@@ -114,6 +114,15 @@ typedef struct		env_s
 	int 			process_number;
 }					t_env;
 
+typedef struct		notification_s
+{
+    int color;
+	char *notification;
+
+}					t_notification;
+
+
+
 extern void (*operation[16])(t_process *process);
 extern t_op g_tab[17];
 extern t_env *g_env;
@@ -153,6 +162,7 @@ void place_cursor(t_process *process);
 int manage_ui();
 void rewrite_stat();
 void hold_ui();
+void add_notification(char *info, t_process *process);
 
 
 //process function
