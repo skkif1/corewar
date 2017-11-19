@@ -1,17 +1,15 @@
 #include "../includes/op.h"
 
 
-int g_mem_row_len = 64 * 3;
-int g_mem_col_len = MEM_SIZE / 64;
-
-static int colors[MEM_SIZE];
+static int g_colors[MEM_SIZE];
 static WINDOW *memory;
 static WINDOW *stat;
+t_list *notifications;
 
 WINDOW *create_memory_window() {
 
-    WINDOW *wraper = newwin(g_mem_col_len + 2, g_mem_row_len + 2, MARGIN, MARGIN);
-    WINDOW *memory = newwin(g_mem_col_len, g_mem_row_len, MARGIN + 1, MARGIN + 1);
+    WINDOW *wraper = newwin(COL_LEN + 2, ROW_LEN + 2, MARGIN, MARGIN);
+    WINDOW *memory = newwin(COL_LEN, ROW_LEN, MARGIN + 1, MARGIN + 1);
     wrefresh(wraper);
     wrefresh(memory);
     return memory;
@@ -19,8 +17,8 @@ WINDOW *create_memory_window() {
 
 WINDOW *create_stat_window() {
 
-    WINDOW *wrapper = newwin(g_mem_col_len + 2, 60, MARGIN, g_mem_row_len + 10);
-    WINDOW *stat = newwin(g_mem_col_len - 2, 60 - 2, MARGIN + 1, g_mem_row_len + 11);
+    WINDOW *wrapper = newwin(COL_LEN + 2, 60, MARGIN, ROW_LEN + 10);
+    WINDOW *stat = newwin(COL_LEN - 2, 60 - 2, MARGIN + 1, ROW_LEN + 11);
     wrefresh(wrapper);
     wrefresh(stat);
     return stat;
@@ -31,9 +29,26 @@ void register_color_changes(int start, int len, int color) {
     int i = 0;
 
     while (i < len) {
-        colors[start + i] = color;
+        g_colors[start + i] = color;
         i++;
     };
+}
+
+void rewrite_notification()
+{
+    t_list *temp;
+    t_notification *not;
+    temp = notifications;
+
+    wmove(stat, 20, 0);
+    while(temp)
+    {
+        not = temp->content;
+        wattron(stat, COLOR_PAIR(not->color));
+        wprintw(stat, "%s\n", not->notification);
+        wattroff(stat, COLOR_PAIR(not->color));
+        temp = temp->next;
+    }
 }
 
 void rewrite_stat()
@@ -52,10 +67,8 @@ void rewrite_stat()
 	wprintw(stat,"NBR LIVE: %d \n\n", NBR_LIVE);
 	wprintw(stat,"PROCESSES: %d \n\n", g_env->process_number);
 	wprintw(stat,"CYCLE: %u\n\n", g_env->cycle);
-
-	wprintw(stat,"PLAYERS:\n");
-
-	temp = g_env->players;
+    wprintw(stat,"PLAYERS:\n");
+    temp = g_env->players;
 	while (temp)
 	{
 		player = temp->content;
@@ -66,9 +79,22 @@ void rewrite_stat()
 		wprintw(stat, "     lives in curent period: %d\n", player->live_in_period);
 		temp = temp->next;
 	}
+    wprintw(stat, "\nLEGEND:\n   w - start/stop\n   s - increase speed\n   a - decrease speed\n");
+    rewrite_notification();
 	wrefresh(stat);
 }
 
+
+
+void add_notification(char *info, t_process *process)
+{
+    t_notification *notification;
+
+    notification = malloc(sizeof(t_notification));
+    notification->color = process->color;
+    notification->notification = info;
+    ft_lstadd(&notifications, ft_lstnew(notification, sizeof(t_notification)));
+}
 
 void rewrite_memory(unsigned char *buff) {
 
@@ -77,16 +103,16 @@ void rewrite_memory(unsigned char *buff) {
     wmove(memory, 0, 0);
     int i = 0;
     while (i < MEM_SIZE) {
-        if (colors[i] > 1000) {
-            wattron(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+        if (g_colors[i] > 1000) {
+            wattron(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
             wprintw(memory, "%.2X", buff[i]);
-            wattroff(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+            wattroff(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
             wprintw(memory, " ");
-            colors[i] = colors[i] % 1000;
+            g_colors[i] = g_colors[i] % 1000;
         } else {
-            wattron(memory, COLOR_PAIR(colors[i]));
+            wattron(memory, COLOR_PAIR(g_colors[i]));
             wprintw(memory, "%.2X", buff[i]);
-            wattroff(memory, COLOR_PAIR(colors[i]));
+            wattroff(memory, COLOR_PAIR(g_colors[i]));
             wprintw(memory, " ");
         }
         i++;
@@ -114,7 +140,7 @@ void init_def_color() {
     init_pair(14, COLOR_BLACK, COLOR_CYAN); // player 6 cursor color
 
     while (i < MEM_SIZE)
-        colors[i++] = 2;
+        g_colors[i++] = 2;
 }
 
 void init_screen() {
@@ -123,6 +149,7 @@ void init_screen() {
     init_def_color();
     chtype background = '.' | COLOR_PAIR(1);
     bkgd(background);
+    curs_set(0);
     refresh();
     memory = create_memory_window();
     stat = create_stat_window();
@@ -130,7 +157,7 @@ void init_screen() {
 
 void place_cursor(t_process *process)
 {
-    colors[process->counter] = process->color * 1000 + colors[process->counter];
+    g_colors[process->counter] = process->color * 1000 + g_colors[process->counter];
 }
 
 
@@ -167,10 +194,13 @@ int manage_ui()
 
     if (!g_env->vis_run)
         pause_war();
-    move(0,0);
 
+    move(0,0);
     timeout(g_env->vis_delay);
     button = getch();
+    attron(COLOR_PAIR(1));
+    printw("...........");
+    attroff(COLOR_PAIR(1));
 
     if (button == 119)
 	{
@@ -186,12 +216,12 @@ int manage_ui()
     {
         per_second = (per_second == 1) ? 1 : --per_second;
         g_env->vis_delay = 1000 / per_second;
-    } else if (button == 27)
+    } else if (button == 27 && getch() != 91)
 	{
-		dell_window();
-		exit(0);
+            dell_window();
+            printf("%d\n" , button);
+            exit(0);
 	}
-    move(0,0);
 	return 1;
 }
 

@@ -21,9 +21,11 @@ void add_new_process(int position, t_player *player)
     process->color = player->color;
     process->counter = (unsigned int) position;
     process->live = 0;
+	process->name = strdup((const char *) player->player_name);
     process->current_op = 0;
     process->cycle_to_execute = 0;
 	process->id = g_id++;
+    process->player_num = player->player_number;
     ft_lstadd(&g_env->processes, ft_lstnew(process, sizeof(t_process)));
 	g_env->process_number++;
 };
@@ -66,5 +68,3 @@ void delete_node(t_list **head_ref, unsigned int key)
 		}
 	}
 }
-
-

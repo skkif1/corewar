@@ -22,6 +22,7 @@ void c_fork(t_process *process)
 	child_process->current_op = 0;
 	child_process->cycle_to_execute = 0;
 	child_process->id = g_id++;
+	child_process->player_num = process->player_num;
 	ft_lstadd_end(&g_env->processes, ft_lstnew(child_process, sizeof(t_process)));
 	process->counter += 3;
 }

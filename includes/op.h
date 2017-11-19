@@ -37,7 +37,13 @@
 #define CYCLE_DELTA				50
 #define NBR_LIVE				21
 #define MAX_CHECKS				10
-#define MARGIN                  2 //custom def
+#define MARGIN                  2
+
+
+//custom def
+#define BYTES_PER_ROW       64
+#define ROW_LEN             (BYTES_PER_ROW * 3)
+#define COL_LEN             MEM_SIZE / BYTES_PER_ROW
 
 
 typedef char	t_arg_type;
@@ -85,6 +91,7 @@ typedef struct		process_s
     unsigned int live;
     char *current_op;
 	unsigned int id;
+    unsigned int player_num;
     int cycle_to_execute;
 }					t_process;
 
@@ -113,6 +120,15 @@ typedef struct		env_s
 	t_list			*player_files;
 	int 			process_number;
 }					t_env;
+
+typedef struct		notification_s
+{
+    int color;
+	char *notification;
+
+}					t_notification;
+
+
 
 extern void (*operation[16])(t_process *process);
 extern t_op g_tab[17];
@@ -155,6 +171,7 @@ void place_cursor(t_process *process);
 int manage_ui();
 void rewrite_stat();
 void hold_ui();
+void add_notification(char *info, t_process *process);
 
 
 //process function
