@@ -51,6 +51,24 @@ int check_processes()
 }
 
 
+
+void dump_memory() {
+
+
+	int i = 1;
+	while (i <= MEM_SIZE)
+	{
+
+		ft_printf("%.2x ", g_env->global_field[i - 1]);
+		if(i % 64 == 0)
+		{
+			ft_printf("\n");
+		}
+		i++;
+	}
+}
+
+
 void start_cycle()
 {
     t_list *temp;
@@ -68,6 +86,8 @@ void start_cycle()
             do_operation(temp->content);
             temp = temp->next;
         }
+        if(g_env->cycle == g_env->dump)
+            dump_memory();
         if (i++ == g_env->cycle_to_die)
         {
             i = 0;
@@ -81,3 +101,4 @@ void start_cycle()
 //		screen_cycle_status();
 	}
 }
+

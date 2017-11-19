@@ -25,11 +25,25 @@ static unsigned int get_second(int *param, t_process *process)
 {
 	unsigned int value;
 
-	if(param[1] == T_REG) {
-		value = g_env->global_field[process->counter + 2 + IND_SIZE];
+	int jump = 0;
+
+
+		if(param[0] == T_IND)
+			jump  = IND_SIZE;
+		if(param[0] == T_REG)
+			jump = 1;
+		if(param[0] == T_DIR)
+			jump = DIR_SIZE;
+
+	if(param[1] == T_REG)
+	{
+		value = bytes_to_int(process->counter + 2 + jump, 2);
 		value = process->registers[value];
-	} else
-		value = bytes_to_int(process->counter + 2 + IND_SIZE, 2);
+	}
+	if(param[1] == T_DIR)
+	{
+		value = bytes_to_int(process->counter + 2 + jump, 2);
+	}
 	return value;
 }
 

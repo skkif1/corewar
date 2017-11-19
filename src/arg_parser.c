@@ -11,6 +11,11 @@ void parse_args(int argc, char **argv)
 			g_env->vis = 1;
 		else
 			g_env->vis = 0;
+		if(!ft_strcmp(argv[2], "-dump"))
+		{
+			g_env->vis = 0;
+			g_env->dump = ft_atoi(argv[3]);
+		}
     }
 
     while (i < argc)
