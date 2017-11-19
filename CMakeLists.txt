@@ -5,89 +5,14 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
         includes/op.h
-        libft/includes/ft_printf.h
-        libft/src/char_handler.c
-        libft/src/ft_append.c
-        libft/src/ft_atoi.c
-        libft/src/ft_bzero.c
-        libft/src/ft_isalnum.c
-        libft/src/ft_isalpha.c
-        libft/src/ft_isascii.c
-        libft/src/ft_isdigit.c
-        libft/src/ft_isprint.c
-        libft/src/ft_itoa.c
-        libft/src/ft_lstadd.c
-        libft/src/ft_lstadd_end.c
-        libft/src/ft_lstdel.c
-        libft/src/ft_lstdelone.c
-        libft/src/ft_lstiter.c
-        libft/src/ft_lstmap.c
-        libft/src/ft_lstnew.c
-        libft/src/ft_lstsort.c
-        libft/src/ft_memalloc.c
-        libft/src/ft_memccpy.c
-        libft/src/ft_memchr.c
-        libft/src/ft_memcmp.c
-        libft/src/ft_memcpy.c
-        libft/src/ft_memdel.c
-        libft/src/ft_memmove.c
-        libft/src/ft_memset.c
-        libft/src/ft_printf.c
-        libft/src/ft_putchar.c
-        libft/src/ft_putchar_fd.c
-        libft/src/ft_putendl.c
-        libft/src/ft_putendl_fd.c
-        libft/src/ft_putnbr.c
-        libft/src/ft_putnbr_fd.c
-        libft/src/ft_putstr.c
-        libft/src/ft_putstr_fd.c
-        libft/src/ft_redup.c
-        libft/src/ft_renew.c
-        libft/src/ft_strcat.c
-        libft/src/ft_strchr.c
-        libft/src/ft_strclr.c
-        libft/src/ft_strcmp.c
-        libft/src/ft_strcpy.c
-        libft/src/ft_strdel.c
-        libft/src/ft_strdup.c
-        libft/src/ft_strequ.c
-        libft/src/ft_striter.c
-        libft/src/ft_striteri.c
-        libft/src/ft_strjoin.c
-        libft/src/ft_strlcat.c
-        libft/src/ft_strlen.c
-        libft/src/ft_strmap.c
-        libft/src/ft_strmapi.c
-        libft/src/ft_strncat.c
-        libft/src/ft_strncmp.c
-        libft/src/ft_strncpy.c
-        libft/src/ft_strnequ.c
-        libft/src/ft_strnew.c
-        libft/src/ft_strnstr.c
-        libft/src/ft_strrchr.c
-        libft/src/ft_strsplit.c
-        libft/src/ft_strstr.c
-        libft/src/ft_strsub.c
-        libft/src/ft_strtrim.c
-        libft/src/ft_tolower.c
-        libft/src/ft_toupper.c
-        libft/src/get_modif.c
-        libft/src/get_next_line.c
-        libft/src/num_list.c
-        libft/src/number.c
-        libft/src/number_handler.c
-        libft/src/parse.c
-        libft/src/str_handler.c
-        libft/src/string.c
-        libft/src/util.c
-        libft/src/util_bonus.c
-        libft/src/wide_str.c
         src/arg_parser.c
         src/c_add.c
         src/c_and.c
         src/c_fork.c
         src/c_ld.c
+        src/c_lld.c
         src/c_ldi.c
+        src/c_lldi.c
         src/c_live.c
         src/c_st.c
         src/c_sti.c

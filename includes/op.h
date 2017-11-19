@@ -131,6 +131,8 @@ void and(t_process *process);
 void zjmp(t_process *process);
 void ldi(t_process *process);
 void c_fork(t_process *process);
+void lld(t_process *process);
+void lldi(t_process *process);
 
 //operation_exec function
 

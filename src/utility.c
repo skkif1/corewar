@@ -20,8 +20,20 @@ void type_to_size(int *mass, int dir_size)
 	i = 0;
 	while(i < 3)
 	{
-		if (mass[i] == T_IND || mass[i] == dir_size)
-			mass[i] = (mass[i] == T_IND) ? IND_SIZE : dir_size;
+		if(mass[i] == T_IND)
+			mass[i] = IND_SIZE;
+		else
+		{
+			if(mass[i] == T_DIR)
+			{
+				mass[i] = dir_size;
+			}
+		}
+//
+//		if (mass[i] == T_IND || mass[i] == dir_size)
+//			mass[i] = (mass[i] == T_IND) ? IND_SIZE : dir_size;
+//		if(mass[i] == T_DIR)
+//			mass[i] = dir_size;
 		i++;
 	}
 }
