@@ -1,18 +1,15 @@
 #include "../includes/op.h"
 
 
-int g_mem_row_len = 64 * 3;
-int g_mem_col_len = MEM_SIZE / 64;
-
-static int colors[MEM_SIZE];
+static int g_colors[MEM_SIZE];
 static WINDOW *memory;
 static WINDOW *stat;
 t_list *notifications;
 
 WINDOW *create_memory_window() {
 
-    WINDOW *wraper = newwin(g_mem_col_len + 2, g_mem_row_len + 2, MARGIN, MARGIN);
-    WINDOW *memory = newwin(g_mem_col_len, g_mem_row_len, MARGIN + 1, MARGIN + 1);
+    WINDOW *wraper = newwin(COL_LEN + 2, ROW_LEN + 2, MARGIN, MARGIN);
+    WINDOW *memory = newwin(COL_LEN, ROW_LEN, MARGIN + 1, MARGIN + 1);
     wrefresh(wraper);
     wrefresh(memory);
     return memory;
@@ -20,8 +17,8 @@ WINDOW *create_memory_window() {
 
 WINDOW *create_stat_window() {
 
-    WINDOW *wrapper = newwin(g_mem_col_len + 2, 60, MARGIN, g_mem_row_len + 10);
-    WINDOW *stat = newwin(g_mem_col_len - 2, 60 - 2, MARGIN + 1, g_mem_row_len + 11);
+    WINDOW *wrapper = newwin(COL_LEN + 2, 60, MARGIN, ROW_LEN + 10);
+    WINDOW *stat = newwin(COL_LEN - 2, 60 - 2, MARGIN + 1, ROW_LEN + 11);
     wrefresh(wrapper);
     wrefresh(stat);
     return stat;
@@ -32,7 +29,7 @@ void register_color_changes(int start, int len, int color) {
     int i = 0;
 
     while (i < len) {
-        colors[start + i] = color;
+        g_colors[start + i] = color;
         i++;
     };
 }
@@ -42,13 +39,14 @@ void rewrite_notification()
     t_list *temp;
     t_notification *not;
     temp = notifications;
-    not = notifications->content;
+
+    wmove(stat, 20, 0);
     while(temp)
     {
         not = temp->content;
-//        wattron(stat, COLOR_PAIR(1));
-        printf("%s", not->notification);
-//        wattroff(stat, COLOR_PAIR(1));
+        wattron(stat, COLOR_PAIR(not->color));
+        wprintw(stat, "%s\n", not->notification);
+        wattroff(stat, COLOR_PAIR(not->color));
         temp = temp->next;
     }
 }
@@ -96,9 +94,7 @@ void add_notification(char *info, t_process *process)
     notification->color = process->color;
     notification->notification = info;
     ft_lstadd(&notifications, ft_lstnew(notification, sizeof(t_notification)));
-    rewrite_notification();
 }
-
 
 void rewrite_memory(unsigned char *buff) {
 
@@ -107,16 +103,16 @@ void rewrite_memory(unsigned char *buff) {
     wmove(memory, 0, 0);
     int i = 0;
     while (i < MEM_SIZE) {
-        if (colors[i] > 1000) {
-            wattron(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+        if (g_colors[i] > 1000) {
+            wattron(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
             wprintw(memory, "%.2X", buff[i]);
-            wattroff(memory, COLOR_PAIR(colors[i] / 1000 + 1));
+            wattroff(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
             wprintw(memory, " ");
-            colors[i] = colors[i] % 1000;
+            g_colors[i] = g_colors[i] % 1000;
         } else {
-            wattron(memory, COLOR_PAIR(colors[i]));
+            wattron(memory, COLOR_PAIR(g_colors[i]));
             wprintw(memory, "%.2X", buff[i]);
-            wattroff(memory, COLOR_PAIR(colors[i]));
+            wattroff(memory, COLOR_PAIR(g_colors[i]));
             wprintw(memory, " ");
         }
         i++;
@@ -144,7 +140,7 @@ void init_def_color() {
     init_pair(14, COLOR_BLACK, COLOR_CYAN); // player 6 cursor color
 
     while (i < MEM_SIZE)
-        colors[i++] = 2;
+        g_colors[i++] = 2;
 }
 
 void init_screen() {
@@ -161,7 +157,7 @@ void init_screen() {
 
 void place_cursor(t_process *process)
 {
-    colors[process->counter] = process->color * 1000 + colors[process->counter];
+    g_colors[process->counter] = process->color * 1000 + g_colors[process->counter];
 }
 
 

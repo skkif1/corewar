@@ -10,19 +10,14 @@ unsigned  int get_arg(t_process *process)
 void anounce_live(t_process *process)
 {
 	char *notification;
+	char *cycle;
 
-//	if(g_env->vis)
-//	{
-		notification = ft_strdup("A process shows that player ");
+	cycle = ft_itoa(g_env->cycle + 1);
+		notification = ft_strdup("\nA process shows that player ");
 		notification = ft_append(notification, process->name, ft_strlen(notification), ft_strlen(process->name));
-		notification = ft_append(notification, " is alive\n", ft_strlen(notification), 10);
+		notification = ft_append(notification, " is alive on cycle --> ", ft_strlen(notification), 23);
+		notification = ft_append(notification, cycle, ft_strlen(notification), ft_strlen(cycle));
 		add_notification(notification, process);
-//	}
-//	else
-//	{
-//		ft_printf("A process shows that player %s is alive\n", process->name);
-//	}
-
 }
 
 void live(t_process *process)
@@ -32,7 +27,8 @@ void live(t_process *process)
 
 
 	player = find_player(arg);
-	if(player != NULL)
+
+	if(player != NULL && player->player_number == process->player_num)
 	{
 		process->live++;
 		player->last_live = (g_env->cycle + 1);

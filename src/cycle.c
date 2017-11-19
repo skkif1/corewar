@@ -19,7 +19,7 @@ int check_processes()
 
     t_list *processes;
     int nbr_flag;
-
+    char *notification;
 
     nbr_flag = 0;
     processes = g_env->processes;
@@ -28,9 +28,13 @@ int check_processes()
     {
         if (((t_process*)processes->content)->live == 0)
         {
-			delete_node(&g_env->processes, ((t_process*)processes->content)->id);
+			notification = ft_strdup("\nprocess of player ");
+            notification = ft_append(notification, ((t_process*)processes->content)->name, ft_strlen(notification), ft_strlen(((t_process*)processes->content)->name));
+            notification = ft_append(notification, "was killed!!", ft_strlen(notification), 12);
+            add_notification(notification, processes->content);
 
-				if(lst_size(g_env->processes) == 0)
+            delete_node(&g_env->processes, ((t_process*)processes->content)->id);
+            if(lst_size(g_env->processes) == 0)
                     return 1;
         }
         else
@@ -54,7 +58,7 @@ void start_cycle()
     i = 0;
 
 
-    while (1)
+     while (1)
     {
         if(!manage_ui())
 			continue;
