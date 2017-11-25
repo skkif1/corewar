@@ -4,28 +4,29 @@ unsigned int get_first(int *param, t_process *process)
 {
 	unsigned int value;
 
-	if(param[0] == T_REG)
-	{
-		value = g_env->global_field[process->counter + 2];
-		value = process->registers[value];
-	} else if(param[0] == T_IND)
-	{
-		value = bytes_to_int(process->counter + 2, param[0]);
-		value = bytes_to_int(value, 4);
-	} else
-		value = bytes_to_int(process->counter + 2, param[0]);
-	return value;
+    value = bytes_to_int(process->counter + 2, 2);
+    value = bytes_to_int(value, 4);
+
+    if(param[0] == 1)
+    {
+        value = g_env->global_field[process->counter + 2];
+        value = process->registers[value];
+    }
+    return value;
+
 }
 
 unsigned int get_second(int *param, t_process *process)
 {
 	unsigned int value;
 
-	if(param[1] == T_REG) {
-		value = g_env->global_field[process->counter + 2 + IND_SIZE];
+	value = bytes_to_int(process->counter + 2 + param[0], 2);
+
+	if(param[1] == 1) {
+		value = g_env->global_field[process->counter + 2 + param[0]];
 		value = process->registers[value];
-	} else
-		value = bytes_to_int(process->counter + 2 + IND_SIZE, 2);
+	}
+
 	return value;
 }
 
@@ -60,9 +61,10 @@ void ldi(t_process *process)
 	get_arg_types(params, coding_byte);
 	if(!validate_ldi(params, process))
 		return;
+	type_to_size(params, 2);
 	first = get_first(params, process);
 	second = get_second(params, process);
-	type_to_size(params, 2);
+
 	coding_byte = g_env->global_field[process->counter + 2 + params[0] + params[1]];
 	if(validate_reqistry(coding_byte))
 	{

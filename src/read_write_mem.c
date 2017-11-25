@@ -10,6 +10,11 @@ unsigned int bytes_to_int(unsigned int start, int size)
 {
 	unsigned int l = 0;
 
+    if(size == 1)
+    {
+        start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
+        return g_env->global_field[start];
+    }
 	start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
 	if (size == 4)
 	{
