@@ -83,16 +83,16 @@ typedef struct		header_s
 
 typedef struct		process_s
 {
-    char *name;
-	unsigned int registers[REG_NUMBER];
-    char carry;
-    unsigned int counter;
-    int color;
-    unsigned int live;
-    char *current_op;
-	unsigned int id;
-    unsigned int player_num;
-    int cycle_to_execute;
+    char			*name;
+	unsigned int	registers[REG_NUMBER];
+    char			carry;
+    unsigned int	counter;
+    int				color;
+    unsigned int	live;
+    char			*current_op;
+	unsigned int	id;
+    unsigned int	player_num;
+    int				cycle_to_execute;
 }					t_process;
 
 typedef struct		player_s
@@ -150,6 +150,8 @@ void ldi(t_process *process);
 void c_fork(t_process *process);
 void lld(t_process *process);
 void lldi(t_process *process);
+void c_lfork(t_process *process);
+void	aff(t_process *process);
 
 //operation_exec function
 
