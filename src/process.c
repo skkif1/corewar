@@ -23,6 +23,7 @@ void add_new_process(int position, t_player *player)
     process->live = 0;
 	process->name = strdup((const char *) player->player_name);
     process->current_op = 0;
+	process->say_live = 0;
     process->cycle_to_execute = 0;
 	process->id = g_id++;
     process->player_num = player->player_number;
@@ -35,10 +36,13 @@ void reset_process(t_process* process)
 {
 	t_player *player;
 
+
 	process->live = 0;
 	process->carry = 0;
+	process->say_live = 0;
 	player = find_player(process->registers[1]);
-	player->live_in_period = 0;
+    if(player != NULL)
+        player->live_in_period = 0;
 }
 
 void delete_node(t_list **head_ref, unsigned int key)

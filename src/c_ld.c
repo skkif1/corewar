@@ -25,9 +25,9 @@ void ld(t_process *process)
 	if(!validate_ld(arg_type))
 	{
 		if(arg_type[0] == 0 && arg_type[1] == 0)
-			process->counter += 3;
+			process->counter += 2;
 		else
-		process->counter += arg_type[0] + arg_type[1] + 2;
+			process->counter += arg_type[0] + arg_type[1] + 2;
 	} else {
 		value = bytes_to_int(process->counter + T_REG + 1, arg_type[0]);
 		if(arg_type[0] == IND_SIZE)

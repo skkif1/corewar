@@ -93,6 +93,7 @@ typedef struct		process_s
 	unsigned int	id;
     unsigned int	player_num;
     int				cycle_to_execute;
+	int 			say_live;
 }					t_process;
 
 typedef struct		player_s

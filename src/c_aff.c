@@ -16,7 +16,6 @@ void	aff(t_process *process)
 	unsigned char 	coding_byte;
 	int 			arg_type[3];
 	int 			reg;
-	char			str[1];
 
 	coding_byte = g_env->global_field[process->counter + 1];
 	get_arg_types(arg_type, coding_byte);
@@ -27,11 +26,9 @@ void	aff(t_process *process)
 	}
 	else
 	{
-		reg = process->counter + 2;
-		str[0] = (char)process->registers[reg] / 256;
-		add_notification(&str[0], process);
-
-
-	}
-
+		reg = g_env->global_field[process->counter + 2];
+        if(!g_env->vis)
+             ft_printf("Aff: %c\n", (char) (process->registers[reg] % 256));
+    }
+	process->counter += 3;
 }

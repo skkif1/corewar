@@ -4,7 +4,7 @@
 
 #include "../includes/op.h"
 
-static unsigned int g_id;
+//static unsigned int g_id;
 
 void c_lfork(t_process *process)
 {
@@ -12,7 +12,7 @@ void c_lfork(t_process *process)
 	t_process *child_process;
 	int i;
 
-	param = process->counter;
+    param = process->counter;
 	i = 0;
     param = bytes_to_int(process->counter + 1, 2) + process->counter;
     param = (param >= MEM_SIZE) ? param % MEM_SIZE : param;
@@ -27,7 +27,8 @@ void c_lfork(t_process *process)
     child_process->carry = process->carry;
     child_process->current_op = 0;
     child_process->cycle_to_execute = 0;
-    child_process->id = g_id++;
+    child_process->id = 10;
+    process->say_live = 0;
     child_process->player_num = process->player_num;
     ft_lstadd(&g_env->processes, ft_lstnew(child_process, sizeof(t_process)));
     g_env->process_number++;

@@ -21,6 +21,7 @@ void c_fork(t_process *process)
     child_process->counter = param;
     child_process->carry = process->carry;
     child_process->current_op = 0;
+    process->say_live = 0;
 	child_process->cycle_to_execute = 0;
 	child_process->id = g_id++;
 	child_process->player_num = process->player_num;

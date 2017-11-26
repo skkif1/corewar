@@ -10,7 +10,7 @@ void do_operation(t_process *process)
         init_operation(operation, process);
     }
     if (process->counter >= MEM_SIZE)
-        process->counter = process->counter - MEM_SIZE;
+        process->counter = process->counter % MEM_SIZE;
     place_cursor(process);
 }
 
@@ -26,7 +26,7 @@ int check_processes()
 
     while (processes)
     {
-        if (((t_process*)processes->content)->live == 0)
+        if (((t_process*)processes->content)->say_live == 0)
         {
 			notification = ft_strdup("\nprocess of player ");
             notification = ft_append(notification, ((t_process*)processes->content)->name, ft_strlen(notification), ft_strlen(((t_process*)processes->content)->name));
@@ -91,24 +91,25 @@ void start_cycle()
         if (i++ == g_env->cycle_to_die)
         {
             i = 0;
-            if (check_processes())
-            {
-                rewrite_memory(g_env->global_field);
-                rewrite_stat();
-                break;
-            }
-
+                if (check_processes())
+                {
+                    rewrite_memory(g_env->global_field);
+                    rewrite_stat();
+                    break;
+                }
             continue;
+
         }
 		g_env->cycle++;
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
-        if(g_env->cycle == 825)
-        {
-            while(1)
-                ;
-        }
-		screen_cycle_status();
+//        g_env->vis_delay = 1;
+//        if(g_env->cycle == 1642) // 930
+//        {
+//            while(1)
+//                ;
+//        }
+//		screen_cycle_status();
 	}
 }
 

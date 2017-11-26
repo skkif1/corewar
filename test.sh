@@ -6,15 +6,15 @@
 # diff my_cor orig_cor
 
 
-./resourses/scenario/asm *.s
+#./resourses/scenario/asm *.s
 
-liv="live"
-echo $liv" test"
-rm t_files/my_live_d.txt
-rm t_files/orig_live_d.txt
-./corewar -n -dump 10 resourses/scenario/live_d.cor >> t_files/my_live_d.txt
-./resourses/corewar -d 10 resourses/scenario/live_d.cor | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> t_files/orig_live_d.txt
-diff t_files/my_live_d.txt t_files/orig_live_d.txt
+# liv="live"
+# echo $liv" test"
+# rm t_files/my_live_d.txt
+# rm t_files/orig_live_d.txt
+# ./corewar -n -dump 10 resourses/scenario/live_d.cor >> t_files/my_live_d.txt
+# ./resourses/corewar -d 10 resourses/scenario/live_d.cor | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> t_files/orig_live_d.txt
+# diff t_files/my_live_d.txt t_files/orig_live_d.txt
 
 
 #-------------/ ld /--------------#
@@ -324,4 +324,24 @@ rm "t_files/my_"$val".txt"
 rm "t_files/orig_"$val".txt"
 ./corewar -n -dump 50 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
 ./resourses/corewar -d 50 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
+diff "t_files/my_"$val".txt" "t_files/orig_"$val".txt"
+
+
+#test
+val="ex"
+echo $val" test"
+rm "t_files/my_"$val".txt"
+rm "t_files/orig_"$val".txt"
+./corewar -n -dump 50 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
+./resourses/corewar -d 1000 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
+diff "t_files/my_"$val".txt" "t_files/orig_"$val".txt"
+
+#test
+
+val="sam_2.0"
+echo $val" test"
+rm "t_files/my_"$val".txt"
+rm "t_files/orig_"$val".txt"
+./corewar -n -dump 1600 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
+./resourses/corewar -d 1600 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
 diff "t_files/my_"$val".txt" "t_files/orig_"$val".txt"
