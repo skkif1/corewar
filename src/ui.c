@@ -65,7 +65,7 @@ void rewrite_stat()
 	wprintw(stat,"CYCLE TO DIE: %d \n", CYCLE_TO_DIE);
 	wprintw(stat,"CYCLE DELTA: %d \n", CYCLE_DELTA);
 	wprintw(stat,"NBR LIVE: %d \n\n", NBR_LIVE);
-	wprintw(stat,"PROCESSES: %d \n\n", g_env->process_number);
+	wprintw(stat,"PROCESSES: %d \n\n", lst_size(g_env->processes));
 	wprintw(stat,"CYCLE: %u\n\n", g_env->cycle);
     wprintw(stat,"PLAYERS:\n");
     temp = g_env->players;

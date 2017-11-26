@@ -30,12 +30,12 @@ int check_processes()
         {
 			notification = ft_strdup("\nprocess of player ");
             notification = ft_append(notification, ((t_process*)processes->content)->name, ft_strlen(notification), ft_strlen(((t_process*)processes->content)->name));
-            notification = ft_append(notification, "was killed!!", ft_strlen(notification), 12);
+            notification = ft_append(notification, " was killed!!", ft_strlen(notification), 13);
             add_notification(notification, processes->content);
 
             delete_node(&g_env->processes, ((t_process*)processes->content)->id);
             if(lst_size(g_env->processes) == 0)
-                    return 1;
+                return 1;
         }
         else
         {
@@ -92,13 +92,23 @@ void start_cycle()
         {
             i = 0;
             if (check_processes())
+            {
+                rewrite_memory(g_env->global_field);
+                rewrite_stat();
                 break;
+            }
+
             continue;
         }
 		g_env->cycle++;
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
-//		screen_cycle_status();
+        if(g_env->cycle == 825)
+        {
+            while(1)
+                ;
+        }
+		screen_cycle_status();
 	}
 }
 

@@ -1,5 +1,6 @@
 .name "Mat"
 .comment "Mat"
 
-	fork %100
-	
+	ld %0, r2
+	fork %3
+	zjmp %516

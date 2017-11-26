@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 
     init_env();
     parse_args(argc, argv);
-
+        g_env->vis_delay = 1;
     if (g_env->vis)
         init_screen();
     register_players_auto(players);
