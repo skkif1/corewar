@@ -103,12 +103,11 @@ void start_cycle()
 		g_env->cycle++;
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
-//        g_env->vis_delay = 1;
-//        if(g_env->cycle == 1642) // 930
-//        {
-//            while(1)
-//                ;
-//        }
+        g_env->vis_delay = 500;
+        if(g_env->cycle < 1660) // 930
+        {
+            g_env->vis_delay = 1;
+        }
 //		screen_cycle_status();
 	}
 }

@@ -332,16 +332,26 @@ val="ex"
 echo $val" test"
 rm "t_files/my_"$val".txt"
 rm "t_files/orig_"$val".txt"
-./corewar -n -dump 50 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
+./corewar -n -dump 1000 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
 ./resourses/corewar -d 1000 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
 diff "t_files/my_"$val".txt" "t_files/orig_"$val".txt"
 
-#test
 
-val="sam_2.0"
+#test
+val="Survivor"
 echo $val" test"
 rm "t_files/my_"$val".txt"
 rm "t_files/orig_"$val".txt"
-./corewar -n -dump 1600 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
-./resourses/corewar -d 1600 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
+./corewar -n -dump 1000 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
+./resourses/corewar -d 1000 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
+diff "t_files/my_"$val".txt" "t_files/orig_"$val".txt"
+
+
+#test
+val="tdc3"
+echo $val" test"
+rm "t_files/my_"$val".txt"
+rm "t_files/orig_"$val".txt"
+./corewar -n -dump 1000 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
+./resourses/corewar -d 1000 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
 diff "t_files/my_"$val".txt" "t_files/orig_"$val".txt"

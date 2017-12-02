@@ -70,7 +70,7 @@ void sti(t_process *process)
 	if(validate_reqistry(value))
 	{
 		value = process->registers[value];
-		bytes_to_memory(first + second, &value, 4, process->color);
+		bytes_to_memory(process->counter + first + second, &value, 4, process->color);
 	}
 	process->counter += params[0] + params[1] + params[2] + 2;
 }
