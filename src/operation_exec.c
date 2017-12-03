@@ -24,7 +24,7 @@ int get_operation(t_process *process)
             return -1;
         }
         process->current_op = g_tab[op].name;
-        process->cycle_to_execute = g_tab[op].duration - 1;
+        process->cycle_to_execute += g_tab[op].duration - 1;
     } else
     {
         process->cycle_to_execute--;

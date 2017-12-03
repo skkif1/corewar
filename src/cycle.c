@@ -39,7 +39,7 @@ int check_processes()
         }
         else
         {
-            if (((t_process*)processes->content)->live >= NBR_LIVE)
+            if (((t_process*)processes->content)->say_live >= NBR_LIVE)
                     nbr_flag++;
                 reset_process(processes->content);
         }
@@ -97,14 +97,12 @@ void start_cycle()
                     rewrite_stat();
                     break;
                 }
-            continue;
-
         }
 		g_env->cycle++;
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
-        g_env->vis_delay = 500;
-        if(g_env->cycle < 1660) // 930
+//        g_env->vis_delay = 500;
+//        if(g_env->cycle < 3072) // 930
         {
             g_env->vis_delay = 1;
         }

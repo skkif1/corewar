@@ -20,12 +20,13 @@ void c_fork(t_process *process)
     child_process->live = process->live;
     child_process->counter = param;
     child_process->carry = process->carry;
+    child_process->say_live = process->say_live;
     child_process->current_op = 0;
-    child_process->say_live = 0;
-	child_process->cycle_to_execute = 0;
+    child_process->is_child = 1;
 	child_process->id = g_id++;
 	child_process->player_num = process->player_num;
 	ft_lstadd(&g_env->processes, ft_lstnew(child_process, sizeof(t_process)));
     g_env->process_number++;
     process->counter += 3;
+    place_cursor(child_process);
 }

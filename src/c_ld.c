@@ -36,7 +36,9 @@ void ld(t_process *process)
 		if(validate_reqistry(reqistry))
 		{
 			process->registers[reqistry] = value;
-			process->carry = (char) ((value == 0) ? 1 : 0);
+			if(process->registers[reqistry] == 0)
+				process->carry = 1;
+//			process->carry = (char) ( ? 1 : 0);
 		}
 		process->counter += T_REG + arg_type[0] + T_REG + 1;
 	}

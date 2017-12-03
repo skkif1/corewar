@@ -26,7 +26,6 @@ void live(t_process *process)
     t_player *player;
     unsigned int arg = get_arg(process);
 
-
 	player = find_player(arg);
 
 	if(player != NULL && player->player_number == process->player_num)
@@ -36,6 +35,6 @@ void live(t_process *process)
 		player->live_in_period++;
         anounce_live(process);
 	}
-    process->say_live = 1;
+    process->say_live++;
     process->counter += 5;
 }

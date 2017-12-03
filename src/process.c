@@ -27,6 +27,7 @@ void add_new_process(int position, t_player *player)
     process->cycle_to_execute = 0;
 	process->id = g_id++;
     process->player_num = player->player_number;
+    process->is_child = 0;
     ft_lstadd(&g_env->processes, ft_lstnew(process, sizeof(t_process)));
 	g_env->process_number++;
 };
@@ -38,7 +39,7 @@ void reset_process(t_process* process)
 
 
 	process->live = 0;
-	process->carry = 0;
+	//process->carry = 0;
 	process->say_live = 0;
 	player = find_player(process->registers[1]);
     if(player != NULL)

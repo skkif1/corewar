@@ -39,5 +39,7 @@ void add(t_process *process)
 	else
 		process->registers[r3] = process->registers[r1] - process->registers[r2];
 	process->counter += 5;
-	process->carry = (char) ((process->registers[r3] == 0) ? 1 : 0);
+//	process->carry = (char) ((process->registers[r3] == 0) ? 1 : 0);
+    if(process->registers[r3] == 0)
+        process->carry = 1;
 }

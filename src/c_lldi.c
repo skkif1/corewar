@@ -1,4 +1,4 @@
-//
+	//
 // Created by Vitaliy Rudakov on 11/18/17.
 //
 
@@ -86,6 +86,8 @@ void lldi(t_process *process)
 	{
 		value = bytes_to_int(first + second + process->counter, REG_SIZE);
 		process->registers[coding_byte] = value;
+		if(process->registers[coding_byte] == 0)
+			process->carry = 1;
 	}
 	process->counter += params[0] + params[1] + params[2] + 2;
 }
