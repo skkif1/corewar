@@ -13,7 +13,10 @@ void c_fork(t_process *process)
   //  param = (param >= MEM_SIZE) ? param % MEM_SIZE : param;
 	child_process = (t_process*)malloc(sizeof(t_process));
 	while(i < REG_NUMBER + 1)
-		child_process->registers[i++] = 0;
+    {
+        child_process->registers[i] = process->registers[i];
+        i++;
+    }
 	child_process->registers[1] = process->registers[1];
 	child_process->color = process->color;
 	child_process->name = ft_strdup(process->name);

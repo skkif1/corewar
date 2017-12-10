@@ -43,32 +43,97 @@ fail        00
 
 
 "
+entry:
+	sti			r1, %:zork, %1
+	sti			r1, %:ardef, %1
+	sti			r1, %:avdef, %1
+	sti			r1, %:entry_l1, %1
+	ld			%0, r16
+	fork		%:zork
 
-gen:
-	live	%1
-	add	r2, r3, r2
-	sub	r2, r4, r5
-	and	r5, r6, r5
-	zjmp	%:ok
-	ld	%0, r2
-ok:
-	live	%1
-	fork	%:no
-	fork	%:gen
-	ld	%0, r5
-	zjmp	%:gen
-	
-no:
-	live	%1	
-	sti	r8, %:end, r2
-	add	r2, r3, r2
-	sub	r4, r2, r5	#r4 = r2
-	zjmp	%:boucle2
-	ld	%0, r5
-	zjmp	%:no
-	
-boucle2:
-	ld	%0, r2
-	zjmp	%:no
+entry_l1:
+	live		%42
+	ld			%439025904, r2
+	ld			%0, r16
+	fork		%:avdef
 
-end:	
+################################################################################
+
+ardef:
+	live		%42
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	st			r2, -400
+	zjmp		%:ardef
+
+################################################################################
+
+zork:
+	live		%42
+	zjmp		%:zork
+
+################################################################################
+
+avdef:
+	live		%42
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	st			r2, 400
+	zjmp		%:avdef
+	

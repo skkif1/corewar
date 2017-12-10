@@ -35,6 +35,7 @@ void live(t_process *process)
 		player->live_in_period++;
         anounce_live(process);
 	}
+    g_env->num_live++;
     process->say_live++;
     process->counter += 5;
 }

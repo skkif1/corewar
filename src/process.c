@@ -46,30 +46,84 @@ void reset_process(t_process* process)
         player->live_in_period = 0;
 }
 
-void delete_node(t_list **head_ref, unsigned int key)
+//void delete_node(t_list **head_ref, unsigned int key)
+//{
+//
+//	t_list *temp;
+//	t_list *prev;
+//	temp = *head_ref;
+//
+//	if(!temp)
+//		return;
+//	if(((t_process*)temp->content)->id == key)
+//	{
+//		*head_ref = temp->next;
+//	} else
+//	{
+//		prev = temp;
+//		temp = temp->next;
+//		while(temp)
+//		{
+//			if(((t_process*)temp->content)->id == key)
+//			{
+//				prev->next = temp->next;
+//				g_env->process_number--;
+//				return;
+//			}
+//			temp = temp->next;
+//		}
+//	}
+//}
+
+
+void delete_node(t_list **lst, unsigned int id)
 {
+	// When node to be deleted is head node
 
+	t_list *head = *lst;
 	t_list *temp;
-	t_list *prev;
-	temp = *head_ref;
 
-	if(!temp)
-		return;
-	if(((t_process*)temp->content)->id == key)
+	if(((t_process*)head->content)->id == id)
 	{
-		*head_ref = temp->next;
-	} else
-	{
-		prev = temp;
-		while(temp)
+		if(head->next == NULL)
 		{
-			if(((t_process*)temp->content)->id == key)
-			{
-				prev->next = temp->next;
-				g_env->process_number--;
-				return;
-			}
-			temp = temp->next;
+			*lst = NULL;
+            g_env->process_number--;
+			return;
 		}
+
+		/* Copy the data of next node to head */
+		head->content = head->next->content;
+
+		// store address of next node
+		temp = head->next;
+
+		// Remove the link of next node
+		head->next = head->next->next;
+
+		// free memory
+		free(temp);
+
+		return;
 	}
+
+
+	// When not first node, follow the normal deletion process
+
+	// find the previous node
+	temp = head;
+	while(temp->next != NULL && ((t_process*)temp->next->content)->id != id)
+	{
+		temp = temp->next;
+	}
+
+	// Check if node really exists in Linked List
+	if(temp->next == NULL)
+	{
+		return;
+	}
+
+	// Remove node from Linked List
+	temp->next = temp->next->next;
+    g_env->process_number--;
 }

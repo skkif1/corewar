@@ -18,10 +18,8 @@ int check_processes()
 {
 
     t_list *processes;
-    int nbr_flag;
     char *notification;
 
-    nbr_flag = 0;
     processes = g_env->processes;
 
     while (processes)
@@ -39,14 +37,19 @@ int check_processes()
         }
         else
         {
-            if (((t_process*)processes->content)->say_live >= NBR_LIVE)
-                    nbr_flag++;
-                reset_process(processes->content);
+            reset_process(processes->content);
         }
-            processes = processes->next;
+        processes = processes->next;
     }
-    if (nbr_flag != 0)
+    if (g_env->num_live >= NBR_LIVE || g_env->checks == MAX_CHECKS - 2)
+    {
         g_env->cycle_to_die -= CYCLE_DELTA;
+        g_env->checks = 0;
+    } else
+    {
+        g_env->checks++;
+    }
+    g_env->num_live = 0;
     return 0;
 }
 
@@ -80,6 +83,11 @@ void start_cycle()
     {
         if(!manage_ui())
 			continue;
+        g_env->vis = 0;
+        if(g_env->cycle > 36945) // 930
+        {
+            g_env->vis = 1;
+        }
         temp = g_env->processes;
         while (temp)
         {
@@ -88,7 +96,7 @@ void start_cycle()
         }
         if(g_env->cycle == g_env->dump)
             dump_memory();
-        if (i++ == g_env->cycle_to_die)
+        if (i++ == g_env->cycle_to_die - 1)
         {
             i = 0;
                 if (check_processes())
@@ -101,11 +109,8 @@ void start_cycle()
 		g_env->cycle++;
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
-//        g_env->vis_delay = 500;
-//        if(g_env->cycle < 3072) // 930
-        {
-            g_env->vis_delay = 1;
-        }
+        g_env->vis_delay = 700;
+
 //		screen_cycle_status();
 	}
 }

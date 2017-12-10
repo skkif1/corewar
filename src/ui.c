@@ -157,7 +157,10 @@ void init_screen() {
 
 void place_cursor(t_process *process)
 {
-    g_colors[process->counter] = process->color * 1000 + g_colors[process->counter];
+    if(g_colors[process->counter]  < 1000)
+    {
+        g_colors[process->counter] = process->color * 1000 + g_colors[process->counter];
+    }
 }
 
 

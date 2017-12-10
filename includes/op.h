@@ -121,6 +121,8 @@ typedef struct		env_s
     int 			vis_delay;
 	t_list			*player_files;
 	int 			process_number;
+	int 			num_live;
+	int 			checks;
 	unsigned int 			dump;
 }					t_env;
 
