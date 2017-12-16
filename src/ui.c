@@ -105,13 +105,13 @@ void rewrite_memory(unsigned char *buff) {
     while (i < MEM_SIZE) {
         if (g_colors[i] > 1000) {
             wattron(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
-            wprintw(memory, "%.2X", buff[i]);
+            wprintw(memory, "%.2x", buff[i]);
             wattroff(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
             wprintw(memory, " ");
             g_colors[i] = g_colors[i] % 1000;
         } else {
             wattron(memory, COLOR_PAIR(g_colors[i]));
-            wprintw(memory, "%.2X", buff[i]);
+            wprintw(memory, "%.2x", buff[i]);
             wattroff(memory, COLOR_PAIR(g_colors[i]));
             wprintw(memory, " ");
         }

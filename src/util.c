@@ -12,7 +12,11 @@ int lst_size(t_list *list)
 		return 0;
     while (temp)
     {
-        i++;
+
+        if(((t_process*)temp->content)->id != 2000000000)
+        {
+            i++;
+        }
         temp = temp->next;
     }
     return i;

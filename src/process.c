@@ -83,47 +83,43 @@ void delete_node(t_list **lst, unsigned int id)
 	t_list *head = *lst;
 	t_list *temp;
 
-	if(((t_process*)head->content)->id == id)
-	{
-		if(head->next == NULL)
-		{
-			*lst = NULL;
-            g_env->process_number--;
+		if (((t_process *) head->content)->id == id) {
+			if (head->next == NULL) {
+				*lst = NULL;
+				g_env->process_number--;
+				return;
+			}
+
+			/* Copy the data of next node to head */
+			head->content = head->next->content;
+
+			// store address of next node
+			temp = head->next;
+
+			// Remove the link of next node
+			head->next = head->next->next;
+
+			// free memory
+			free(temp);
+
 			return;
 		}
 
-		/* Copy the data of next node to head */
-		head->content = head->next->content;
 
-		// store address of next node
-		temp = head->next;
+		// When not first node, follow the normal deletion process
 
-		// Remove the link of next node
-		head->next = head->next->next;
+		// find the previous node
+		temp = head;
+		while (temp->next != NULL && ((t_process *) temp->next->content)->id != id) {
+			temp = temp->next;
+		}
 
-		// free memory
-		free(temp);
+		// Check if node really exists in Linked List
+		if (temp->next == NULL) {
+			return;
+		}
 
-		return;
-	}
-
-
-	// When not first node, follow the normal deletion process
-
-	// find the previous node
-	temp = head;
-	while(temp->next != NULL && ((t_process*)temp->next->content)->id != id)
-	{
-		temp = temp->next;
-	}
-
-	// Check if node really exists in Linked List
-	if(temp->next == NULL)
-	{
-		return;
-	}
-
-	// Remove node from Linked List
-	temp->next = temp->next->next;
-    g_env->process_number--;
+		// Remove node from Linked List
+		temp->next = temp->next->next;
+		g_env->process_number--;
 }
