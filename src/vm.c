@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 
     if (g_env->vis)
         init_screen();
-    register_players_auto(players);
+    register_players_auto(&players);
     start_cycle();
 
 	if (g_env->vis)

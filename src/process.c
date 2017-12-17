@@ -28,6 +28,7 @@ void add_new_process(int position, t_player *player)
     process->player_num = player->player_number;
     ft_lstadd(&g_env->processes, ft_lstnew(process, sizeof(t_process)));
 	g_env->process_number++;
+	free(process);
 };
 
 

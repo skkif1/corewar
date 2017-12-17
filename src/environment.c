@@ -14,11 +14,12 @@ void		reverse_bytes(unsigned int *bytes, int size)
 		save[i] = (unsigned char) ((*bytes) >> (i * 8));
 		res+= save[i] << (8 * (size - 1 - i));
 	}
+	free(save);
 	*bytes = res;
 
 }
 
-t_player*	fill_player(header_t *head, unsigned char *prog)
+void	fill_player(header_t *head, unsigned char *prog, t_list **players)
 {
 	t_player	*player;
 	static unsigned int player_num = 4294967295;
@@ -34,24 +35,27 @@ t_player*	fill_player(header_t *head, unsigned char *prog)
 
 	player_num--;
 	color += 2;
-	return (player);
+
+	ft_lstadd(players, ft_lstnew(player, sizeof(t_player)));
+	free(prog);
+	free(head);
+//	free(player->code);
+	free(player);
 }
 
-void    register_players_auto(t_list *players)
+void    register_players_auto(t_list **players)
 {
     header_t		*head;
 	t_list          *fd_l;
 	int 			fd;
 	unsigned char	*prog;
-	int 			i;
 
-
-	i = 0;
-	head = (header_t*)malloc(sizeof(header_t)); //2192
+//	head = (header_t*)malloc(sizeof(header_t)); //2192
 	fd_l = g_env->player_files;
 
 	while (fd_l)
 	{
+		head = (header_t*)malloc(sizeof(header_t)); //2192
 		if ((fd = open(fd_l->content, O_RDONLY)) < 0)
 			exit(EXIT_FAILURE);
 		if(read(fd, head, sizeof(header_t)) != sizeof(header_t))
@@ -69,17 +73,16 @@ void    register_players_auto(t_list *players)
 			ft_putstr("Read prog not valid");
 			exit(EXIT_FAILURE);
 		}
-		ft_lstadd(&players, ft_lstnew(fill_player(head, prog), sizeof(t_player)));
-		free(prog);
+		fill_player(head, prog, players);
 		close(fd);
 		fd_l = fd_l->next;
 	}
-	g_env->players = players;
+	g_env->players = *players;
 
 	while (players)
 	{
-		add_new_player(players->content);
-		players = players->next;
+		add_new_player((*players)->content);
+		players = (*players)->next;
 	}
 	rewrite_stat();
 }

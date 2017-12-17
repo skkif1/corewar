@@ -119,7 +119,7 @@ typedef struct		env_s
     int 			vis_delay;
 	t_list			*player_files;
 	int 			process_number;
-	unsigned int 			dump;
+	int 			dump;
 }					t_env;
 
 typedef struct		notification_s
@@ -215,7 +215,6 @@ void bytes_to_memory(unsigned int start, const void *value, size_t len, int colo
 
 
 //VR block
-void register_players_auto(t_list *players);
-
+void register_players_auto(t_list **players);
 
 #endif //COREWAR_OP_H
