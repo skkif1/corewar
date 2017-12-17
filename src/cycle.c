@@ -76,7 +76,7 @@ void start_cycle() {
             continue;
         g_env->vis = 0;
 
-        if(g_env->cycle > 3700) // 930
+        if(g_env->cycle > 4870) // 930
         {
             g_env->vis = 1;
             g_env->vis_delay = 500;
