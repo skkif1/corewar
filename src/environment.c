@@ -79,10 +79,11 @@ void    register_players_auto(t_list **players)
 	}
 	g_env->players = *players;
 
-	while (players)
+    t_list *temp = *players;
+	while (temp)
 	{
-		add_new_player((*players)->content);
-		players = (*players)->next;
+		add_new_player(temp->content);
+		temp = temp->next;
 	}
 	rewrite_stat();
 }

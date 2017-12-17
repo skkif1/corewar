@@ -76,11 +76,11 @@ void start_cycle() {
             continue;
         g_env->vis = 0;
 
-//        if(g_env->cycle > 2490) // 930
-//        {
-//            g_env->vis = 1;
-//            g_env->vis_delay = 500;
-//        }
+        if(g_env->cycle > 2570) // 930
+        {
+            g_env->vis = 1;
+            g_env->vis_delay = 500;
+        }
 
         temp = g_env->processes;
         while (temp) {

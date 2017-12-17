@@ -21,7 +21,7 @@ static void handle_flags(int argc,char** argv)
 				exit(EXIT_FAILURE);
 			}
 			g_env->vis = 0;
-			g_env->dump = ft_atoi(argv[i + 1]);
+			g_env->dump = (unsigned int)ft_atoi(argv[i + 1]);
 			i++;
 		}
 		i++;

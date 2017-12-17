@@ -43,7 +43,7 @@
 //custom def
 #define BYTES_PER_ROW       64
 #define ROW_LEN             (BYTES_PER_ROW * 3)
-#define COL_LEN             MEM_SIZE / BYTES_PER_ROW
+#define COL_LEN             (MEM_SIZE / BYTES_PER_ROW)
 
 
 typedef char	t_arg_type;
