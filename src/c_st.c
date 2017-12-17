@@ -29,7 +29,7 @@ void st(t_process *process) {
 
 	if (arg_type[1] == IND_SIZE) {
 		address = bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
-		address = process->counter + (address % IDX_MOD);
+        address = process->counter + (address % IDX_MOD);
 		bytes_to_memory(address, &value, DIR_SIZE, process->color);
 	} else {
 		address = g_env->global_field[process->counter + T_REG + 2];

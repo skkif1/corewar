@@ -22,13 +22,14 @@ unsigned int get_second_st(const int *params, t_process *process)
 {
 	unsigned int res;
 
-	res = 0;
-	if(params[2] == T_REG)
+	res = bytes_to_int(process->counter + 3 + params[1], 2);
+
+	if(params[2] == 1)
 	{
 		res = g_env->global_field[process->counter + 3 + params[1]];
 		res = process->registers[res];
-	} else
-		res = bytes_to_int(process->counter + 3 + params[1], 2);
+	}
+
 	return res;
 }
 
@@ -36,15 +37,14 @@ unsigned int get_second_st(const int *params, t_process *process)
 unsigned int get_first_st(const int *params, t_process *process) {
 	unsigned int res;
 
-	res = 0;
+
+	res = bytes_to_int(process->counter + 3, 2);
+	if (params[1] == T_IND)
+		res = bytes_to_int(res + 2, 2);
+
 	if (params[1] == T_REG) {
 		res = g_env->global_field[process->counter + 3];
 		res = process->registers[res];
-	} else
-	{
-		res = bytes_to_int(process->counter + 3, 2);
-		if (params[1] == T_IND)
-			res = bytes_to_int(res, 2);
 	}
 	return res;
 }
@@ -62,9 +62,10 @@ void sti(t_process *process)
 	get_arg_types(params, coding_byte);
 	if(!validate_sti(params, process))
 		return;
-	first = get_first_st(params, process);
-	type_to_size(params, 2);
-	second = get_second_st(params, process);
+
+    first = get_first_st(params, process);
+    type_to_size(params, 2);
+    second = get_second_st(params, process);
 	value = g_env->global_field[process->counter + 2];
 	if(validate_reqistry(value))
 	{
