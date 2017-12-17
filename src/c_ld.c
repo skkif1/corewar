@@ -38,6 +38,8 @@ void ld(t_process *process)
 			process->registers[reqistry] = value;
 			if(process->registers[reqistry] == 0)
 				process->carry = 1;
+			else
+				process->carry = 0;
 //			process->carry = (char) ( ? 1 : 0);
 		}
 		process->counter += T_REG + arg_type[0] + T_REG + 1;

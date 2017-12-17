@@ -88,6 +88,8 @@ void lldi(t_process *process)
 		process->registers[coding_byte] = value;
 		if(process->registers[coding_byte] == 0)
 			process->carry = 1;
+		else
+			process->carry = 0;
 	}
 	process->counter += params[0] + params[1] + params[2] + 2;
 }

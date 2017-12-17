@@ -66,6 +66,8 @@ void and(t_process *process)
 	process->registers[(int)coding_byte] = make_op(process, first, second);
 	if(process->registers[(int)coding_byte] == 0)
 		process->carry = 1;
+	else
+		process->carry = 0;
 //	process->carry = (char) ((process->registers[(int)coding_byte] == 0) ? 1 : 0);
 	process->counter += params[0] + params[1] + params[2] + 2;
 }

@@ -69,7 +69,7 @@ void sti(t_process *process)
 	value = g_env->global_field[process->counter + 2];
 	if(validate_reqistry(value))
 	{
-		value = process->registers[value];
+		value = big_to_little(process->registers[value]);
 		bytes_to_memory(process->counter + first + second, &value, 4, process->color);
 	}
 	process->counter += params[0] + params[1] + params[2] + 2;
