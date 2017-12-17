@@ -5,7 +5,7 @@ unsigned int get_first(int *param, t_process *process)
 	unsigned int value;
 
     value = bytes_to_int(process->counter + 2, 2);
-    value = bytes_to_int(value, 4);
+  //  value = bytes_to_int(value, 4);
 
     if(param[0] == 1)
     {
@@ -68,8 +68,8 @@ void ldi(t_process *process)
 	coding_byte = g_env->global_field[process->counter + 2 + params[0] + params[1]];
 	if(validate_reqistry(coding_byte))
 	{
-		value = bytes_to_int(first + second, REG_SIZE);
-		process->registers[coding_byte] = value;
+		value = bytes_to_int(process->counter + first + second, REG_SIZE);
+		process->registers[coding_byte] = big_to_little(value);
 	}
 	process->counter += params[0] + params[1] + params[2] + 2;
 }
