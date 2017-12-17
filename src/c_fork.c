@@ -8,7 +8,6 @@ void c_fork(t_process *process)
 	t_process *child_process;
 	int i;
 
-	param = process->counter;
 	i = 0;
 	param = bytes_to_int(process->counter + 1, 2) % IDX_MOD + process->counter - 1;
 	param = (param >= MEM_SIZE) ? param % MEM_SIZE : param;
