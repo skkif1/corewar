@@ -19,9 +19,7 @@ int validate_and(int *mass, t_process *process)
 	int i;
 
 	i = 0;
-	if((mass[0] == T_REG || mass[0] == T_DIR|| mass[0] == T_IND) &&
-			(mass[1] == T_REG || mass[1] == T_DIR|| mass[1] == T_IND) &&
-			(mass[2] == T_REG))
+	if((mass[0] == T_REG || mass[0] == T_DIR|| mass[0] == T_IND) && (mass[1] == T_REG || mass[1] == T_DIR|| mass[1] == T_IND) && (mass[2] == T_REG))
 		i = 1;
 	type_to_size(mass, 4);
 	if(!i)
@@ -61,13 +59,14 @@ void and(t_process *process)
 	first = get_arg_and(params, 0, process);
 	second = get_arg_and(params, 1, process);
 	coding_byte = g_env->global_field[process->counter + 2 + params[0] + params[1]];
-	if(!validate_reqistry(coding_byte))
-		return;
-	process->registers[(int)coding_byte] = make_op(process, first, second);
-	if(process->registers[(int)coding_byte] == 0)
-		process->carry = 1;
-	else
-		process->carry = 0;
+	if(validate_reqistry(coding_byte))
+    {
+        process->registers[(int)coding_byte] = make_op(process, first, second);
+        if(process->registers[(int)coding_byte] == 0)
+            process->carry = 1;
+        else
+            process->carry = 0;
+    }
 //	process->carry = (char) ((process->registers[(int)coding_byte] == 0) ? 1 : 0);
 	process->counter += params[0] + params[1] + params[2] + 2;
 }
