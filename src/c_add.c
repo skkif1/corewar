@@ -37,14 +37,18 @@ void add(t_process *process)
 	r3 = g_env->global_field[process->counter + 4];
 	if((validate_reqistry(r1) && validate_reqistry(r2) && validate_reqistry(r3)))
 	{
-		if(get_opcode_by_name(process->current_op) == 3)
-			process->registers[r3] = process->registers[r1] + process->registers[r2];
-		else
-			process->registers[r3] = process->registers[r1] - process->registers[r2];
+
+			if(get_opcode_by_name(process->current_op) == 3)
+				arg_type[0] = process->registers[r1] + process->registers[r2];
+			else
+				arg_type[0] = process->registers[r1] - process->registers[r2];
+		 if(r3 != 1)
+		 {
+			 process->registers[r3] = arg_type[0];
+		 }
 	}
 	process->counter += 5;
-//	process->carry = (char) ((process->registers[r3] == 0) ? 1 : 0);
-    if(process->registers[r3] == 0)
+    if(arg_type[0] == 0)
         process->carry = 1;
 	else
 		process->carry = 0;

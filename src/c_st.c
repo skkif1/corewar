@@ -33,7 +33,8 @@ void st(t_process *process) {
 		bytes_to_memory(address, &value, DIR_SIZE, process->color);
 	} else {
 		address = g_env->global_field[process->counter + T_REG + 2];
-		process->registers[address] = value;
+		if(address != 1)
+			process->registers[address] = value;
 	}
 	process->counter += 2 + T_REG + arg_type[1];
 

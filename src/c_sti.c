@@ -12,7 +12,7 @@ int validate_sti(int *mass, t_process *process)
 	if(!i)
 	{
 		type_to_size(mass, 2);
-		invalid_coding_byte(mass, process);
+		invalid_coding_byte(mass, process, 3);
 	}
 	return i;
 }

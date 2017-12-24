@@ -69,7 +69,10 @@ void ldi(t_process *process)
 	if(validate_reqistry(coding_byte))
 	{
 		value = bytes_to_int(process->counter + first + second, REG_SIZE);
-		process->registers[coding_byte] = value;
+		if(coding_byte != 1)
+		{
+			process->registers[coding_byte] = value;
+		}
 	}
 	process->counter += params[0] + params[1] + params[2] + 2;
 }

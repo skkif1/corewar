@@ -85,8 +85,9 @@ void lldi(t_process *process)
 	if(validate_reqistry(coding_byte))
 	{
 		value = bytes_to_int(first + second + process->counter, REG_SIZE);
-		process->registers[coding_byte] = value;
-		if(process->registers[coding_byte] == 0)
+		if(coding_byte != 1)
+            process->registers[coding_byte] = value;
+		if(value == 0)
 			process->carry = 1;
 		else
 			process->carry = 0;
