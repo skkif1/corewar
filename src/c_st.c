@@ -9,7 +9,7 @@ int validate_st(int *mass, t_process *process) {
 		i = 1;
 	type_to_size(mass, 4);
 	if (!i)
-		invalid_coding_byte(mass, process);
+		invalid_coding_byte(mass, process, 2);
 	return i;
 }
 

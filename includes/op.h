@@ -207,7 +207,7 @@ unsigned int big_to_little(unsigned int value);
 t_player *find_player(unsigned int number);
 void type_to_size(int *mass, int dir_size);
 int validate_reqistry(int value);
-void invalid_coding_byte(const int *arg_type, t_process *process);
+void invalid_coding_byte(const int *arg_type, t_process *process, int paramcount);
 
 
 //parse arg

@@ -12,7 +12,7 @@ int validate_add(int *mass, t_process *process)
 	type_to_size(mass, 4);
 	if(!i)
     {
-        invalid_coding_byte(mass, process);
+        invalid_coding_byte(mass, process, 3);
         return 0;
     }
 	return 1;
