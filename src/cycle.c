@@ -20,19 +20,17 @@ void do_operation(t_process *process) {
 int check_processes() {
 
     t_list *processes;
-    char *notification;
 
     processes = g_env->processes;
 
     while (processes) {
-        if (((t_process *) processes->content)->say_live == 0) {
-            notification = ft_strdup("\nprocess of player ");
-            notification = ft_append(notification, ((t_process *) processes->content)->name, ft_strlen(notification),
-                                     ft_strlen(((t_process *) processes->content)->name));
-            notification = ft_append(notification, " was killed!!", ft_strlen(notification), 13);
-            add_notification(notification, processes->content);
+        if (((t_process *) processes->content)->say_live == 0)
+        {
             ((t_process *) processes->content)->id = 2000000000;
-        } else {
+
+        }
+        else
+        {
             reset_process(processes->content);
         }
         processes = processes->next;
@@ -76,11 +74,11 @@ void start_cycle() {
             continue;
         g_env->vis = 0;
 
-//        if(g_env->cycle > 3934) // 930
-//        {
-//            g_env->vis = 1;
-//            g_env->vis_delay = 500;
-//        }
+        if(g_env->cycle > 7841) // 930
+        {
+            g_env->vis = 1;
+            g_env->vis_delay = 500;
+        }
 
         temp = g_env->processes;
         while (temp) {

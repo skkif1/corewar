@@ -61,13 +61,13 @@ void and(t_process *process)
 	coding_byte = g_env->global_field[process->counter + 2 + params[0] + params[1]];
 	if(validate_reqistry(coding_byte))
     {
-        process->registers[(int)coding_byte] = make_op(process, first, second);
-        if(process->registers[(int)coding_byte] == 0)
+		if((int)coding_byte != 1)
+        	process->registers[(int)coding_byte] = make_op(process, first, second);
+        if( make_op(process, first, second) == 0)
             process->carry = 1;
         else
             process->carry = 0;
     }
-//	process->carry = (char) ((process->registers[(int)coding_byte] == 0) ? 1 : 0);
 	process->counter += params[0] + params[1] + params[2] + 2;
 }
 

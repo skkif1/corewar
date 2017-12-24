@@ -39,12 +39,13 @@ void lld(t_process *process)
 		reqistry = g_env->global_field[process->counter + T_REG + arg_type[0] + T_REG];
 		if(validate_reqistry(reqistry))
 		{
-			process->registers[reqistry] = value;
-			if(process->registers[reqistry] == 0)
+			if(process->registers[reqistry] != 1)
+                process->registers[reqistry] = value;
+
+            if(value == 0)
 				process->carry = 1;
 			else
 				process->carry = 0;
-//			process->carry = (char) ((value == 0) ? 1 : 0);
 		}
 		process->counter += T_REG + arg_type[0] + T_REG + 1;
 	}
