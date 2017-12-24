@@ -15,7 +15,7 @@ static void handle_flags(int argc,char** argv)
 			g_env->vis = 1;
 		if(!ft_strcmp(argv[i], "-dump"))
 		{
-			if (g_env->dump != 0 || i + 1 > argc || !ft_isdigitstr(argv[i + 1]))
+			if (g_env->dump > 0 || i + 1 > argc || !ft_isdigitstr(argv[i + 1]))
 			{
 				ft_putstr("Error, -dump.");
 				exit(EXIT_FAILURE);

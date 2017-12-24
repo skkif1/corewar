@@ -123,7 +123,7 @@ typedef struct		env_s
 	int 			process_number;
 	int 			num_live;
 	int 			checks;
-	unsigned int 			dump;
+	int 			dump;
 }					t_env;
 
 typedef struct		notification_s
