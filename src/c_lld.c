@@ -39,7 +39,6 @@ void lld(t_process *process)
 		reqistry = g_env->global_field[process->counter + T_REG + arg_type[0] + T_REG];
 		if(validate_reqistry(reqistry))
 		{
-			if(process->registers[reqistry] != 1)
                 process->registers[reqistry] = value;
 
             if(value == 0)

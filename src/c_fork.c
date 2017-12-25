@@ -10,7 +10,6 @@ void c_fork(t_process *process)
 
 	i = 0;
 	param = ((short)bytes_to_int(process->counter + 1, 2)) % IDX_MOD + process->counter;
-  //  param = (param >= MEM_SIZE) ? param % MEM_SIZE : param;
 	child_process = (t_process*)malloc(sizeof(t_process));
 	while(i < REG_NUMBER + 1)
     {
@@ -31,5 +30,7 @@ void c_fork(t_process *process)
 	ft_lstadd(&g_env->processes, ft_lstnew(child_process, sizeof(t_process)));
     g_env->process_number++;
     process->counter += 3;
+    if (child_process->counter >= MEM_SIZE)
+        child_process->counter = child_process->counter % MEM_SIZE;
     place_cursor(child_process);
 }

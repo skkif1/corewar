@@ -12,7 +12,7 @@
 
 find . -name "*file_*" -delete
 
-a=6000
+a=16250
 
 cor="resourses/test.cor"
 

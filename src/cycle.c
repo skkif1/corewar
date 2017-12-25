@@ -3,6 +3,10 @@
 t_env *g_env;
 
 void do_operation(t_process *process) {
+
+    if (process->counter >= MEM_SIZE)
+        process->counter = process->counter % MEM_SIZE;
+
     int operation = get_operation(process);
 
 
@@ -72,14 +76,14 @@ void start_cycle() {
     while (1) {
         if (!manage_ui())
             continue;
-        g_env->vis = 0;
+//        g_env->vis = 0;
 
-//        if(g_env->cycle > 6080) // 930
+//        if(g_env->cycle > 16280) // 930
 //        {
 //            g_env->vis = 1;
-//            g_env->vis_delay = 500;
+            g_env->vis_delay = 500;
 //        }
-//
+
         temp = g_env->processes;
         while (temp) {
             do_operation(temp->content);
