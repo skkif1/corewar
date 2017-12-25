@@ -68,11 +68,5 @@ do
 	# 	#break
 	# fi
 	# rm res
-
-	var=`expr $a % 500`
-	if [ "$var" == "0" ]; then
-		echo $a
-	fi
-
 	a=`expr $a + 1`
 done		
