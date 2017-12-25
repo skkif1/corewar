@@ -43,14 +43,22 @@ void invalid_coding_byte(const int *arg_type, t_process *process, int param_coun
     if(param_count == 2)
     {
         if(arg_type[0] == 0 && arg_type[1] == 0)
+        {
             process->counter += 2;
+        } else
+        {
+            process->counter += arg_type[0] + arg_type[1] + 2;
+        }
     }
     else if(arg_type[0] == 0 && arg_type[1] == 0 && arg_type[2] == 0 )
     {
         process->counter += 2;
+
+    } else
+    {
+        process->counter += arg_type[0] + arg_type[1] + arg_type[2] + 2;
     }
-	else
-		process->counter += arg_type[0] + arg_type[1] + arg_type[2] + 2;
+
 }
 
 int validate_reqistry(int value)
