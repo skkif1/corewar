@@ -18,24 +18,27 @@ void st(t_process *process) {
 	unsigned int value;
 	int registry;
 	unsigned int address;
-	int arg_type[3];
+    int arg_type[3];
 
-	coding_byte = g_env->global_field[process->counter + 1];
+
+    coding_byte = g_env->global_field[process->counter + 1];
 	get_arg_types(arg_type, coding_byte);
-	if (!validate_st(arg_type, process))
-		return;
-	registry = g_env->global_field[process->counter + T_REG + 1];
-	value = big_to_little(process->registers[registry]);
+    if (validate_st(arg_type, process))
+    {
+        registry = g_env->global_field[process->counter + T_REG + 1];
+        value = big_to_little(process->registers[registry]);
 
-	if (arg_type[1] == IND_SIZE) {
-		address = (short)bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
-        address = process->counter + ((short)address % IDX_MOD);
-		bytes_to_memory(address, &value, DIR_SIZE, process->color);
-	} else {
-		address = g_env->global_field[process->counter + T_REG + 2];
-		if(address != 1)
-			process->registers[address] = value;
-	}
-	process->counter += 2 + T_REG + arg_type[1];
+        if (arg_type[1] == IND_SIZE) {
+            address = (short)bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
+            address = process->counter + ((short)address % IDX_MOD);
+            bytes_to_memory(address, &value, DIR_SIZE, process->color);
+        } else {
+            address = g_env->global_field[process->counter + T_REG + 2];
+            if(address != 1)
+                process->registers[address] = value;
+        }
+        process->counter += 2 + T_REG + arg_type[1];
+
+    }
 
 }

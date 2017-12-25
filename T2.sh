@@ -1,22 +1,21 @@
 #!bin/bash
 
-dump=`./resourses/corewar -v 2 champs/ex.cor | tail -n 3 | head -n 1 | cut -c 17-20`
+# dump=`./corewar -v 2 slider2.cor | tail -n 4 | head -n 1 | cut -c 17-29`
 
-./resourses/corewar -d $dump champs/ex.cor | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba'
+# ./corewar -d $dump slider2.cor | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba'
 
+dump=$1
 
+rm "ft_file.txt"
+rm "file.txt"
+./corewar -dump $dump "resourses/test.cor" >> "ft_file.txt"
+./resourses/corewar -d $dump "resourses/test.cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "file.txt"
+diff "ft_file.txt" "file.txt"
 
+diffs=`diff "ft_file.txt" "file.txt"`
 
+echo $diffs
 
-
-
-
-
-val="lldi_ddr"
-echo $val" test"
-./resourses/scenario/asm "resourses/scenario/"$val".s"
-rm "t_files/my_"$val".txt"
-rm "t_files/orig_"$val".txt"
-./corewar -n -dump 50 "resourses/scenario/"$val".cor" >> "t_files/my_"$val".txt"
-./resourses/corewar -d 50 "resourses/scenario/"$val".cor" | cut -c 10-201 | sed -e :a -e '$q;N;65,$D;ba' >> "t_files/orig_"$val".txt"
-diff "t_files/my_"$val".txt" "t_files/orig_"$val".txt"
+if [[ $diffs == "" ]]; then
+	echo $dump
+fi
