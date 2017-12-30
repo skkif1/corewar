@@ -1,5 +1,6 @@
 #include "../includes/op.h"
 
+int valid_registry[2] = {1,1};
 
 int validate_sti(int *mass, t_process *process)
 {
@@ -27,7 +28,13 @@ unsigned int get_second_st(const int *params, t_process *process)
 	if(params[2] == 1)
 	{
 		res = g_env->global_field[process->counter + 3 + params[1]];
-		res = process->registers[res];
+        if(validate_reqistry(res))
+        {
+            res = process->registers[res];
+        } else
+        {
+            valid_registry[1] = 0;
+        }
 	}
 
 	return res;
@@ -44,33 +51,37 @@ unsigned int get_first_st(const int *params, t_process *process) {
 
 	if (params[1] == T_REG) {
 		res = g_env->global_field[process->counter + 3];
-		res = process->registers[res];
+		if(validate_reqistry(res))
+        {
+            res = process->registers[res];
+        } else
+        {
+            valid_registry[0] = 0;
+        }
+
 	}
 	return res;
 }
 
 
-void sti(t_process *process)
-{
-	int coding_byte;
-	unsigned int value;
-	unsigned int first;
-	unsigned int second;
-	int params[3];
+void sti(t_process *process) {
+    int coding_byte;
+    unsigned int value;
+    short first;
+    short second;
+    int params[3];
 
-	coding_byte = g_env->global_field[process->counter + 1];
-	get_arg_types(params, coding_byte);
-	if(!validate_sti(params, process))
-		return;
-
+    coding_byte = g_env->global_field[process->counter + 1];
+    get_arg_types(params, coding_byte);
+    if (!validate_sti(params, process))
+        return;
     first = get_first_st(params, process);
     type_to_size(params, 2);
     second = get_second_st(params, process);
-	value = g_env->global_field[process->counter + 2];
-	if(validate_reqistry(value))
-	{
-		value = big_to_little(process->registers[value]);
-		bytes_to_memory(process->counter + first + second, &value, 4, process->color);
-	}
-	process->counter += params[0] + params[1] + params[2] + 2;
+    value = g_env->global_field[process->counter + 2];
+    if (validate_reqistry(value) && valid_registry[0] && valid_registry[1]) {
+        value = big_to_little(process->registers[value]);
+        bytes_to_memory(process->counter + (first + second) % IDX_MOD, &value, 4, process->color);
+    }
+    process->counter += params[0] + params[1] + params[2] + 2;
 }

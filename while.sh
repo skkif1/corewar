@@ -12,7 +12,7 @@
 
 find . -name "*file_*" -delete
 
-a=1
+a=15700
 
 # champs/championships/2014/brandazz/Rainbow_dash.cor
 # champs/championships/2014/cdivry/youforkmytralala.cor
@@ -47,7 +47,7 @@ a=1
 
 # cor=`find champs/championships -name $1".cor"`
 
-cor="champs/championships/2014/vrey/darksasuke.cor"
+cor="resourses/test.cor"
 while [ $a -lt 2147483647 ]
 do
 
