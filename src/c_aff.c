@@ -22,13 +22,13 @@ void	aff(t_process *process)
 
 	if(!validate_aff(arg_type))
 	{
-		process->counter += 3;
+		process->counter += 2;
 	}
 	else
 	{
 		reg = g_env->global_field[process->counter + 2];
         if(!g_env->vis)
              ft_printf("Aff: %c\n", (char) (process->registers[reg] % 256));
+		process->counter += 3;
     }
-	process->counter += 3;
 }

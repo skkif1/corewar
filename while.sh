@@ -12,7 +12,7 @@
 
 find . -name "*file_*" -delete
 
-a=15700
+a=15400
 
 # champs/championships/2014/brandazz/Rainbow_dash.cor
 # champs/championships/2014/cdivry/youforkmytralala.cor

@@ -31,7 +31,7 @@ void ld(t_process *process)
 	} else {
 		value = bytes_to_int(process->counter + T_REG + 1, arg_type[0]);
 		if(arg_type[0] == IND_SIZE)
-			value = bytes_to_int(value, DIR_SIZE);
+			value = bytes_to_int(process->counter + value, DIR_SIZE);
 		reqistry = g_env->global_field[process->counter + T_REG + arg_type[0] + T_REG];
 		if(validate_reqistry(reqistry))
 		{

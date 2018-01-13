@@ -31,7 +31,7 @@ void st(t_process *process) {
             value = big_to_little(process->registers[registry]);
 
             if (arg_type[1] == IND_SIZE) {
-                address = (short)bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
+                address = bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
                 address = process->counter + ((short)address % IDX_MOD);
                 bytes_to_memory(address, &value, DIR_SIZE, process->color);
             } else {

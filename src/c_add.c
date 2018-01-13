@@ -42,10 +42,7 @@ void add(t_process *process)
 				arg_type[0] = process->registers[r1] + process->registers[r2];
 			else
 				arg_type[0] = process->registers[r1] - process->registers[r2];
-		 if(r3 != 1)
-		 {
-			 process->registers[r3] = arg_type[0];
-		 }
+		process->registers[r3] = arg_type[0];
 	}
 	process->counter += 5;
     if(arg_type[0] == 0)

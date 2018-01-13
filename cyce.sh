@@ -1,4 +1,4 @@
-dump=25000
+dump=7900
 
 rm "ft_file.txt"
 rm "file.txt"
