@@ -19,7 +19,7 @@ void add_new_process(int position, t_player *player)
     }
     process->registers[1] = player->player_number;
     process->color = player->color;
-    process->counter = (unsigned int) position;
+    process->counter = position;
     process->live = 0;
 	process->name = strdup((const char *) player->player_name);
     process->current_op = 0;

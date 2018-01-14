@@ -4,7 +4,7 @@ static unsigned int g_id;
 
 void c_fork(t_process *process)
 {
-	unsigned int param;
+    int param;
 	t_process *child_process;
 	int i;
 

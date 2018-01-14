@@ -13,11 +13,13 @@ int validate_st(int *mass, t_process *process) {
 	return i;
 }
 
+
+
 void st(t_process *process) {
 	int coding_byte;
 	unsigned int value;
 	int registry;
-	unsigned int address;
+    int address;
     int arg_type[3];
 
 
@@ -32,8 +34,20 @@ void st(t_process *process) {
 
             if (arg_type[1] == IND_SIZE) {
                 address = bytes_to_int(process->counter + T_REG + 2, arg_type[1]);
-                address = process->counter + ((short)address % IDX_MOD);
-                bytes_to_memory(address, &value, DIR_SIZE, process->color);
+
+                if(address > 32767)
+                {
+                    address = ((process->counter + (short)address % IDX_MOD));
+                    if(address < 0)
+                    {
+                        address = MEM_SIZE + address;
+                    }
+                } else
+                {
+                    address = ((process->counter + address % IDX_MOD));
+                }
+
+                bytes_to_memory(address % MEM_SIZE, &value, DIR_SIZE, process->color);
             } else {
                 address = g_env->global_field[process->counter + T_REG + 2];
 
@@ -41,7 +55,5 @@ void st(t_process *process) {
             }
         }
         process->counter += 2 + T_REG + arg_type[1];
-
     }
-
 }

@@ -53,7 +53,10 @@ void and(t_process *process)
 
 	coding_byte = g_env->global_field[process->counter + 1];
 	get_arg_types(params, coding_byte);
-
+	if(process->counter < 0)
+	{
+		printf("asd");
+	}
 	if (!validate_and(params, process))
 		return;
 	first = get_arg_and(params, 0, process);
@@ -69,6 +72,10 @@ void and(t_process *process)
             process->carry = 0;
     }
 	process->counter += params[0] + params[1] + params[2] + 2;
+	if(process->counter < 0)
+	{
+		printf("asd");
+	}
 }
 
 

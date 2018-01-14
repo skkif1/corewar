@@ -27,7 +27,7 @@ int get_second_st(const int *params, t_process *process)
 
 	if(params[2] == 1)
 	{
-		res = g_env->global_field[process->counter + 3 + params[1]];
+		res = get_register(process->counter, 3 + params[1]);
         if(validate_reqistry(res))
         {
             res = process->registers[res];

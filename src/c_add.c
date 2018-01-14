@@ -49,4 +49,9 @@ void add(t_process *process)
         process->carry = 1;
 	else
 		process->carry = 0;
+
+	if(process->counter < 0)
+	{
+		printf("asd");
+	}
 }

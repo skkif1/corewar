@@ -200,7 +200,7 @@ void start_cycle();
 int lst_size(t_list *list);
 void screen_cycle_status();
 int get_opcode_by_name(char *name);
-unsigned int bytes_to_int(int, int size);
+int bytes_to_int(int, int size);
 unsigned int big_to_little(unsigned int value);
 
 //utility
@@ -208,7 +208,7 @@ t_player *find_player(unsigned int number);
 void type_to_size(int *mass, int dir_size);
 int validate_reqistry(int value);
 void invalid_coding_byte(const int *arg_type, t_process *process, int paramcount);
-
+int get_register(int counter, int skip);
 
 //parse arg
 void parse_args(int argc, char **argv);

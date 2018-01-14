@@ -8,11 +8,10 @@ static unsigned int g_id;
 
 void c_lfork(t_process *process)
 {
-	unsigned int param;
+    int param;
 	t_process *child_process;
 	int i;
 
-    param = process->counter;
 	i = 0;
     param = bytes_to_int(process->counter + 1, 2) + process->counter;
     param = (param >= MEM_SIZE) ? param % MEM_SIZE : param;

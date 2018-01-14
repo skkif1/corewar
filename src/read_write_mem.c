@@ -6,16 +6,16 @@ int normalize_cursor(int *start)
 	return *start;
 }
 
-unsigned int bytes_to_int(int start, int size)
+int bytes_to_int(int start, int size)
 {
-	unsigned int l = 0;
+	int l = 0;
+
+	start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
 
     if(size == 1)
     {
-        start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
-        return g_env->global_field[start];
+		return g_env->global_field[start];
     }
-	start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
 	if (size == 4)
 	{
 		l = (unsigned char)(g_env->global_field[start]) << 24 |
@@ -34,7 +34,7 @@ unsigned int bytes_to_int(int start, int size)
 void bytes_to_memory(int start, const void *value, size_t len, int color)
 {
 	unsigned char *val;
-
+//	printf("start %d\n", start);
 	val = (unsigned char *) value;
 	start = (start >= MEM_SIZE) ? start % MEM_SIZE : start;
 
