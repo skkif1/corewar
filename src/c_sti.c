@@ -86,7 +86,6 @@ void sti(t_process *process) {
     {
         value = big_to_little(process->registers[value]);
 
-        unsigned temp = (temp < 0) ? temp
         bytes_to_memory(process->counter + (first + second) % IDX_MOD, &value, 4, process->color);
     }
     process->counter += params[0] + params[1] + params[2] + 2;
