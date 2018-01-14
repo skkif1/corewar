@@ -1,12 +1,12 @@
 #include "../includes/op.h"
 
-unsigned int normalize_cursor(unsigned int *start)
+int normalize_cursor(int *start)
 {
 	*start = (*start + 1 == MEM_SIZE)? 0 : *start + 1;
 	return *start;
 }
 
-unsigned int bytes_to_int(unsigned int start, int size)
+unsigned int bytes_to_int(int start, int size)
 {
 	unsigned int l = 0;
 
@@ -31,7 +31,7 @@ unsigned int bytes_to_int(unsigned int start, int size)
 	return l;
 }
 
-void bytes_to_memory(unsigned int start, const void *value, size_t len, int color)
+void bytes_to_memory(int start, const void *value, size_t len, int color)
 {
 	unsigned char *val;
 

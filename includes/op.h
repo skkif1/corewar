@@ -86,7 +86,7 @@ typedef struct		process_s
     char			*name;
 	unsigned int	registers[REG_NUMBER];
     char			carry;
-    unsigned int	counter;
+    int	counter;
     int				color;
     unsigned int	live;
     char			*current_op;
@@ -200,7 +200,7 @@ void start_cycle();
 int lst_size(t_list *list);
 void screen_cycle_status();
 int get_opcode_by_name(char *name);
-unsigned int bytes_to_int(unsigned int, int size);
+unsigned int bytes_to_int(int, int size);
 unsigned int big_to_little(unsigned int value);
 
 //utility
@@ -214,7 +214,7 @@ void invalid_coding_byte(const int *arg_type, t_process *process, int paramcount
 void parse_args(int argc, char **argv);
 
 //read_write
-void bytes_to_memory(unsigned int start, const void *value, size_t len, int color);
+void bytes_to_memory(int start, const void *value, size_t len, int color);
 
 
 

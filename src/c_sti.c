@@ -19,11 +19,11 @@ int validate_sti(int *mass, t_process *process)
 }
 
 
-short get_second_st(const int *params, t_process *process)
+int get_second_st(const int *params, t_process *process)
 {
-    short res;
+    int res;
 
-	res = bytes_to_int(process->counter + 3 + params[1], 2);
+	res = (short)bytes_to_int(process->counter + 3 + params[1], 2);
 
 	if(params[2] == 1)
 	{
@@ -42,12 +42,11 @@ short get_second_st(const int *params, t_process *process)
 }
 
 
-short get_first_st(const int *params, t_process *process) {
+int get_first_st(const int *params, t_process *process) {
 
-    short res;
+    int res;
 
-
-	res = bytes_to_int(process->counter + 3, 2);
+	res = (short)bytes_to_int(process->counter + 3, 2);
 	if (params[1] == T_IND)
 		res = bytes_to_int(res + 2, 2);
 //
@@ -70,8 +69,8 @@ short get_first_st(const int *params, t_process *process) {
 void sti(t_process *process) {
     int coding_byte;
     unsigned int value;
-    short first;
-    short second;
+    int first;
+    int second;
     int params[3];
 
     coding_byte = g_env->global_field[process->counter + 1];
@@ -85,9 +84,12 @@ void sti(t_process *process) {
     if (validate_reqistry(value) && valid_registry[0] && valid_registry[1])
     {
         value = big_to_little(process->registers[value]);
-
-        unsigned temp = (temp < 0) ? temp
-        bytes_to_memory(process->counter + (first + second) % IDX_MOD, &value, 4, process->color);
+        first = process->counter + (first + second) % IDX_MOD;
+        if(first < 0)
+        {
+            first = MEM_SIZE + first;
+        }
+        bytes_to_memory(first % MEM_SIZE, &value, 4, process->color);
     }
     process->counter += params[0] + params[1] + params[2] + 2;
 }
