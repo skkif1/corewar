@@ -48,7 +48,7 @@ int get_first_st(const int *params, t_process *process) {
 
 	res = (short)bytes_to_int(process->counter + 3, 2);
 	if (params[1] == T_IND)
-		res = bytes_to_int(res + 2, 2);
+		res = bytes_to_int(process->counter + res + 2, 2);
 //
 	if (params[1] == T_REG)
     {

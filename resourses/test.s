@@ -1,35 +1,154 @@
-.name "Mat"
-.comment "Mat"
+.name "Candy"
+.comment ""
 
-	ld %100, r2
-	sti r1, %100, r2
+	st		r1, r12
+	ld      %0 , r14
+	zjmp    %:base
 
-	ld %32767, r2
-	sti r1, %100, r2
+def:
+	st		r9, -256
+	st		r10, -256
+	st		r14, -9
+	st      r4, -21
+	st      r14, -30
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st		r9, -256
+	st		r10, -256
+	st		r14, -9
+	st      r4, -21
+	st      r14, -30
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st		r10, -256
+	st		r14, -9
+	st      r4, -21
+	st      r14, -30
+	ld      %0 , r15
+	zjmp %:def
 
-	ld %200, r2
-	sti r1, %-100, r2
+liv:
+	live    %42
+	fork    %:live3
+	ld      %0 , r16
+	zjmp    %:base
 
-	ld %-300, r2
-	sti r1, %100, r2
+base:
+	live 	%42
+	ld		%57672449, r3
+	ld		%57672959, r4
+	ld		%42991616, r9
+	ld		%235536380, r10
+	ld		%16777216 ,r11
+	xor		r12, r14, r15
+	sti		r15, %:live1, %1
+	sti		r15, %:liv, %1
+	sti		r15, %:live2, %1
+	zjmp    %:live1
 
-	ld %-200, r2
-	sti r1, %-200, r2
+live1:
+	live	%42
+	fork	%:def
+	fork	%:save
+	ld		%0 , r15
+	zjmp	%:liv
 
-	ld %32769, r2
-	sti r1, %100, r2 
+live3:
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+zjmp %:live3
 
-	ld %100, r2
-	sti r1, %32769, r2
+attak:
+	live 	%42
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+zjmp %:attak
 
-	ld %3000, r2
-	sti r1, %3000, r2
-
-	ld %-3000, r2
-	sti r1, %-3000, r2
-
-	ld %32767, r2
-	sti r1, %100, r2
-
-	ld %500000000, r2
-	sti r1, %2000000000, r2
+live2:
+		live    %1
+save:
+		live %1
+		fork	%:attak
+		st      r4, 254
+		zjmp %:save

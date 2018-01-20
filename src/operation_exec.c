@@ -43,10 +43,7 @@ int get_operation(t_process *process)
 void init_operation(int command, t_process *process)
 {
     operation[command](process);
-    if(process->counter < 0)
-    {
-        printf("asd");
-    }
+
     process->current_op = 0;
 
 }

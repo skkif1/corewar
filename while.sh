@@ -12,12 +12,12 @@
 
 # find . -name "*file_*" -delete
 
-a=1
+a=2640
 
 # cor=`find champs/championships -name $1".cor"`
 
 cor="resourses/test.cor"
-while [ $a -lt 2147483647 ]
+while [ $a -lt 200000 ]
 do
 
 

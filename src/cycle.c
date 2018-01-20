@@ -14,14 +14,9 @@ void do_operation(t_process *process) {
     {
         if (operation != -1) {
             init_operation(operation, process);
-            if (process->counter < 0)
-            {
-                printf("asdasd");
-            }
         }
         if (process->counter >= MEM_SIZE)
             process->counter = process->counter % MEM_SIZE;
-        place_cursor(process);
     }
 }
 
@@ -82,12 +77,12 @@ void start_cycle() {
             continue;
         g_env->vis = 0;
 
-//        if(g_env->cycle > 50)
+//        if(g_env->cycle > 1000)
 //        {
 //            g_env->vis = 1;
-//            g_env->vis_delay = 500;
+//            g_env->vis_delay = 100;
 //        }
-
+//
         temp = g_env->processes;
         while (temp) {
             do_operation(temp->content);
@@ -98,17 +93,17 @@ void start_cycle() {
             dump_memory();
             break;
         }
+
         if (i++ >= g_env->cycle_to_die - 1) {
             i = 0;
             if (check_processes()) {
+
                 g_env->cycle++;
                 rewrite_memory(g_env->global_field);
                 rewrite_stat();
                 break;
             }
         }
-
-
         g_env->cycle++;
         rewrite_memory(g_env->global_field);
         rewrite_stat();

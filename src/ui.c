@@ -86,15 +86,24 @@ void rewrite_stat()
 
 
 
-void add_notification(char *info, t_process *process)
-{
-    t_notification *notification;
 
-    notification = malloc(sizeof(t_notification));
-    notification->color = process->color;
-    notification->notification = info;
-    ft_lstadd(&notifications, ft_lstnew(notification, sizeof(t_notification)));
+int check_cursor(int position)
+{
+    t_list *temp = g_env->processes;
+
+    int color = 0;
+
+    while (temp)
+    {
+        if(((t_process*)temp->content)->id != 2000000000 && ((t_process*)temp->content)->counter == position)
+        {
+            color = ((t_process*)temp->content)->color + 1;
+        }
+        temp = temp->next;
+    }
+    return color;
 }
+
 
 void rewrite_memory(unsigned char *buff) {
 
@@ -102,23 +111,29 @@ void rewrite_memory(unsigned char *buff) {
         return;
     wmove(memory, 0, 0);
     int i = 0;
+    int color = 0;
     while (i < MEM_SIZE) {
-        if (g_colors[i] > 1000) {
-            wattron(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
-            wprintw(memory, "%.2x", buff[i]);
-            wattroff(memory, COLOR_PAIR(g_colors[i] / 1000 + 1));
-            wprintw(memory, " ");
-            g_colors[i] = g_colors[i] % 1000;
-        } else {
+
+        color = check_cursor(i);
+        if( color == 0)
+        {
             wattron(memory, COLOR_PAIR(g_colors[i]));
             wprintw(memory, "%.2x", buff[i]);
             wattroff(memory, COLOR_PAIR(g_colors[i]));
+            wprintw(memory, " ");
+        } else
+        {
+            wattron(memory, COLOR_PAIR(color));
+            wprintw(memory, "%.2x", buff[i]);
+            wattroff(memory, COLOR_PAIR(color));
             wprintw(memory, " ");
         }
         i++;
     }
     wrefresh(memory);
 }
+
+
 
 void init_def_color() {
     int i = 0;
@@ -155,13 +170,6 @@ void init_screen() {
     stat = create_stat_window();
 }
 
-void place_cursor(t_process *process)
-{
-    if(g_colors[process->counter]  < 1000)
-    {
-        g_colors[process->counter] = process->color * 1000 + g_colors[process->counter];
-    }
-}
 
 
 void dell_window() {

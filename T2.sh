@@ -14,7 +14,6 @@ diff "ft_file.txt" "file.txt"
 
 diffs=`diff "ft_file.txt" "file.txt"`
 
-echo $diffs
 
 if [[ $diffs == "" ]]; then
 	echo $dump

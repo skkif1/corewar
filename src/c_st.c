@@ -23,11 +23,11 @@ void st(t_process *process) {
     int arg_type[3];
 
 
-    coding_byte = g_env->global_field[process->counter + 1];
+    coding_byte = get_register(process->counter, 1);
 	get_arg_types(arg_type, coding_byte);
     if (validate_st(arg_type, process))
     {
-        registry = g_env->global_field[process->counter + T_REG + 1];
+        registry = get_register(process->counter, T_REG + 1);
         if(validate_reqistry(registry))
         {
             value = big_to_little(process->registers[registry]);
@@ -49,7 +49,7 @@ void st(t_process *process) {
 
                 bytes_to_memory(address % MEM_SIZE, &value, DIR_SIZE, process->color);
             } else {
-                address = g_env->global_field[process->counter + T_REG + 2];
+                address = get_register(process->counter, T_REG + 2);
 
                     process->registers[address] = value;
             }

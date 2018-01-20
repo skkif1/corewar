@@ -174,11 +174,11 @@ void rewrite_memory(unsigned char *buff);
 void register_color_changes(int start, int len, int color);
 void init_screen();
 void dell_window();
-void place_cursor(t_process *process);
 int manage_ui();
 void rewrite_stat();
 void hold_ui();
 void add_notification(char *info, t_process *process);
+void del_cursor(t_process *process);
 
 
 //process function
@@ -198,7 +198,6 @@ void start_cycle();
 
 //util
 int lst_size(t_list *list);
-void screen_cycle_status();
 int get_opcode_by_name(char *name);
 int bytes_to_int(int, int size);
 unsigned int big_to_little(unsigned int value);

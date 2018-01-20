@@ -27,10 +27,11 @@ void c_fork(t_process *process)
     child_process->is_child = 1;
 	child_process->id = g_id++;
 	child_process->player_num = process->player_num;
-	ft_lstadd(&g_env->processes, ft_lstnew(child_process, sizeof(t_process)));
+
     g_env->process_number++;
     process->counter += 3;
     if (child_process->counter >= MEM_SIZE)
         child_process->counter = child_process->counter % MEM_SIZE;
-    place_cursor(child_process);
+    ft_lstadd(&g_env->processes, ft_lstnew(child_process, sizeof(t_process)));
+    free(child_process);
 }

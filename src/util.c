@@ -52,7 +52,7 @@ unsigned int big_to_little(unsigned int value)
 int get_register(int process_counter, int skip)
 {
     process_counter += skip;
-    if(process_counter > MEM_SIZE)
+    if(process_counter > MEM_SIZE - 1)
     {
         return g_env->global_field[process_counter % MEM_SIZE];
     }

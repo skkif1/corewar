@@ -33,4 +33,5 @@ void c_lfork(t_process *process)
     ft_lstadd(&g_env->processes, ft_lstnew(child_process, sizeof(t_process)));
     g_env->process_number++;
     process->counter += 3;
+    free(child_process);
 }
