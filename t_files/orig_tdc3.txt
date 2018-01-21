@@ -1,1 +1,0 @@
-d source file resourses/scenario/tdc3.cor

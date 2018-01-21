@@ -9,7 +9,7 @@ SRC_NAME = ui.c vm.c process.c environment.c cycle.c operation.c operation_exec.
 LIBFT = libftprintf.a
 LIB_NAME = -lftprintf -lcurses
 
-FLAG =
+FLAG = -Wall -Wextra -Werror
 CC = gcc -Ofast
 
 SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))

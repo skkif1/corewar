@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   arg_parser.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/21 19:53:49 by omotyliu          #+#    #+#             */
+/*   Updated: 2018/01/21 19:53:52 by omotyliu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/op.h"
 
-static void handle_flags(int argc,char** argv)
+static void	handle_flags(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	g_env->vis = 0;
@@ -13,7 +25,7 @@ static void handle_flags(int argc,char** argv)
 			return ;
 		if (!ft_strcmp(argv[i], "-n"))
 			g_env->vis = 1;
-		if(!ft_strcmp(argv[i], "-dump"))
+		if (!ft_strcmp(argv[i], "-dump"))
 		{
 			if (g_env->dump > 0 || i + 1 > argc || !ft_isdigitstr(argv[i + 1]))
 			{
@@ -28,28 +40,30 @@ static void handle_flags(int argc,char** argv)
 	}
 }
 
-void parse_args(int argc, char **argv)
+void		parse_args(int argc, char **argv)
 {
 	int i;
 
 	i = 1;
 	if (argc > 1)
-		handle_flags(argc,argv);
+		handle_flags(argc, argv);
 	else
 	{
 		ft_putstr("usage");
 		exit(EXIT_FAILURE);
 	}
-    while (i < argc)
+	while (i < argc)
 	{
-		if (ft_strrchr(argv[i], '.') != NULL && ft_strcmp(ft_strrchr(argv[i], '.'), ".cor") == 0)
-			ft_lstadd_end(&g_env->player_files, ft_lstnew(argv[i], ft_strlen(argv[i]) + 1));
+		if (ft_strrchr(argv[i], '.') != NULL &&
+			ft_strcmp(ft_strrchr(argv[i], '.'), ".cor") == 0)
+			ft_lstadd_end(&g_env->player_files, ft_lstnew(argv[i],
+				ft_strlen(argv[i]) + 1));
 		i++;
 	}
 	g_env->player_in_game = lst_size(g_env->player_files);
-	if(g_env->player_in_game > MAX_PLAYERS || g_env->player_in_game == 0)
+	if (g_env->player_in_game > MAX_PLAYERS || g_env->player_in_game == 0)
 	{
-		ft_printf("number of players in 1 and %d\n",  MAX_PLAYERS);
+		ft_printf("number of players in 1 and %d\n", MAX_PLAYERS);
 		exit(EXIT_FAILURE);
 	}
 }

@@ -113,7 +113,7 @@ typedef struct		env_s
     t_list 			*processes;
     unsigned char 	global_field[MEM_SIZE];
     int 			player_in_game;
-    unsigned int 	cycle;
+    int 	        cycle;
     int 			cycle_to_die;
     t_list 			*players;
     char 			vis;
@@ -135,7 +135,7 @@ typedef struct		notification_s
 
 
 
-extern void (*operation[16])(t_process *process);
+extern void (*g_operation[16])(t_process *process);
 extern t_op g_tab[17];
 extern t_env *g_env;
 
@@ -151,10 +151,10 @@ void sub(t_process *process);
 void and(t_process *process);
 void zjmp(t_process *process);
 void ldi(t_process *process);
-void c_fork(t_process *process);
+void c_fork(t_process *pr);
 void lld(t_process *process);
 void lldi(t_process *process);
-void c_lfork(t_process *process);
+void c_lfork(t_process *proc);
 void	aff(t_process *process);
 
 //operation_exec function
@@ -206,7 +206,7 @@ unsigned int big_to_little(unsigned int value);
 t_player *find_player(unsigned int number);
 void type_to_size(int *mass, int dir_size);
 int validate_reqistry(int value);
-void invalid_coding_byte(const int *arg_type, t_process *process, int paramcount);
+void invalid_coding_byte(const int *arg_t, t_process *proc, int params);
 int get_register(int counter, int skip);
 
 //parse arg

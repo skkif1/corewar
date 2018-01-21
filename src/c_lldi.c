@@ -1,92 +1,98 @@
-	//
-// Created by Vitaliy Rudakov on 11/18/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   c_lldi.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/21 18:55:19 by omotyliu          #+#    #+#             */
+/*   Updated: 2018/01/21 18:55:21 by omotyliu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/op.h"
 
-static unsigned int get_first(int *param, t_process *process)
+static unsigned int		get_first(int *param, t_process *process)
 {
 	unsigned int value;
 
-	if(param[0] == T_REG)
+	if (param[0] == T_REG)
 	{
 		value = g_env->global_field[process->counter + 2];
 		value = process->registers[value];
-	} else if(param[0] == T_IND)
+	}
+	else if (param[0] == T_IND)
 	{
 		value = bytes_to_int(process->counter + 2, param[0]);
 		value = bytes_to_int(value, 4);
-	} else
+	}
+	else
 		value = bytes_to_int(process->counter + 2, param[0]);
-	return value;
+	return (value);
 }
 
-static unsigned int get_second(int *param, t_process *process)
+static unsigned int		get_second(int *param, t_process *process)
 {
-	unsigned int value;
+	unsigned int	value;
+	int				jump;
 
-	int jump = 0;
-
-
-		if(param[0] == T_IND)
-			jump  = IND_SIZE;
-		if(param[0] == T_REG)
-			jump = 1;
-		if(param[0] == T_DIR)
-			jump = DIR_SIZE;
-
-	if(param[1] == T_REG)
+	jump = 0;
+	if (param[0] == T_IND)
+		jump = IND_SIZE;
+	if (param[0] == T_REG)
+		jump = 1;
+	if (param[0] == T_DIR)
+		jump = DIR_SIZE;
+	if (param[1] == T_REG)
 	{
 		value = bytes_to_int(process->counter + 2 + jump, 2);
 		value = process->registers[value];
 	}
-	if(param[1] == T_DIR)
+	if (param[1] == T_DIR)
 	{
 		value = bytes_to_int(process->counter + 2 + jump, 2);
 	}
-	return value;
+	return (value);
 }
 
-int validate_lldi(int *mass, t_process *process)
+int						validate_lldi(int *mass, t_process *process)
 {
 	int i;
 
 	i = 0;
-	if((mass[0] == T_REG || mass[0] == T_DIR || mass[0] == T_IND) &&
-	   (mass[1] == T_REG || mass[1] == T_DIR) && (mass[2] == T_REG))
+	if ((mass[0] == T_REG || mass[0] == T_DIR || mass[0] == T_IND) &&
+		(mass[1] == T_REG || mass[1] == T_DIR) && (mass[2] == T_REG))
 		i = 1;
-
-	if(!i)
+	if (!i)
 	{
 		type_to_size(mass, 2);
 		invalid_coding_byte(mass, process, 3);
 	}
-	return i;
+	return (i);
 }
 
-
-void lldi(t_process *process)
+void					lldi(t_process *process)
 {
-	unsigned int coding_byte;
-	unsigned int first;
-	unsigned int second;
-	unsigned int value;
-
-	int params[3];
+	unsigned int	coding_byte;
+	unsigned int	first;
+	unsigned int	second;
+	unsigned int	value;
+	int				params[3];
 
 	coding_byte = g_env->global_field[process->counter + 1];
 	get_arg_types(params, coding_byte);
-	if(!validate_lldi(params, process))
-		return;
+	if (!validate_lldi(params, process))
+		return ;
 	first = get_first(params, process);
 	second = get_second(params, process);
 	type_to_size(params, 2);
-	coding_byte = g_env->global_field[process->counter + 2 + params[0] + params[1]];
-	if(validate_reqistry(coding_byte))
+	coding_byte = g_env->global_field[process->counter + 2 +
+		params[0] + params[1]];
+	if (validate_reqistry(coding_byte))
 	{
 		value = bytes_to_int(first + second + process->counter, REG_SIZE);
-		 process->registers[coding_byte] = value;
-		if(value == 0)
+		process->registers[coding_byte] = value;
+		if (value == 0)
 			process->carry = 1;
 		else
 			process->carry = 0;
