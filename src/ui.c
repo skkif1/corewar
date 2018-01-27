@@ -17,57 +17,58 @@ WINDOW *create_memory_window() {
 
 WINDOW *create_stat_window() {
 
-    WINDOW *wrapper = newwin(COL_LEN + 2, 60, MARGIN, ROW_LEN + 10);
-    WINDOW *stat = newwin(COL_LEN - 2, 60 - 2, MARGIN + 1, ROW_LEN + 11);
-    wrefresh(wrapper);
-    wrefresh(stat);
-    return stat;
+	WINDOW *wrapper = newwin(COL_LEN + 2, 60, MARGIN, ROW_LEN + 10);
+	WINDOW *stat = newwin(COL_LEN - 2, 60 - 2, MARGIN + 1, ROW_LEN + 11);
+	wrefresh(wrapper);
+	wrefresh(stat);
+	return (stat);
 }
 
 
 void register_color_changes(int start, int len, int color) {
-    int i = 0;
+	int i;
 
-    while (i < len) {
-        g_colors[start + i] = color;
-        i++;
-    };
+	i = 0;
+	while (i < len) {
+		g_colors[start + i] = color;
+		i++;
+	};
 }
 
-void rewrite_notification()
+void	rewrite_notification()
 {
-    t_list *temp;
-    t_notification *not;
-    temp = notifications;
+	t_list *temp;
+	t_notification *not;
+	temp = notifications;
 
-    wmove(stat, 20, 0);
-    while(temp)
-    {
-        not = temp->content;
-        wattron(stat, COLOR_PAIR(not->color));
-        wprintw(stat, "%s\n", not->notification);
-        wattroff(stat, COLOR_PAIR(not->color));
-        temp = temp->next;
-    }
+	wmove(stat, 20, 0);
+	while (temp)
+	{
+		not = temp->content;
+		wattron(stat, COLOR_PAIR(not->color));
+		wprintw(stat, "%s\n", not->notification);
+		wattroff(stat, COLOR_PAIR(not->color));
+		temp = temp->next;
+	}
 }
 
-void rewrite_stat()
+void	rewrite_stat()
 {
 	t_list *temp;
 	t_player *player;
 
 	if (!g_env->vis)
-		return;
+		return ;
 
 	wmove(stat, 0, 0);
-	wprintw(stat,"\n");
-	wprintw(stat,"CYCLE PER SECOND: %d \n", 1000 / g_env->vis_delay);
-	wprintw(stat,"CYCLE TO DIE: %d \n", g_env->cycle_to_die);
-	wprintw(stat,"CYCLE DELTA: %d \n", CYCLE_DELTA);
-	wprintw(stat,"NBR LIVE: %d \n\n", NBR_LIVE);
-	wprintw(stat,"PROCESSES: %d \n\n", lst_size(g_env->processes));
-	wprintw(stat,"CYCLE: %u\n\n", g_env->cycle);
-    wprintw(stat,"PLAYERS:\n");
+	wprintw(stat, "\n");
+	wprintw(stat, "CYCLE PER SECOND: %d \n", 1000 / g_env->vis_delay);
+	wprintw(stat, "CYCLE TO DIE: %d \n", g_env->cycle_to_die);
+	wprintw(stat, "CYCLE DELTA: %d \n", CYCLE_DELTA);
+	wprintw(stat, "NBR LIVE: %d \n\n", NBR_LIVE);
+	wprintw(stat, "PROCESSES: %d \n\n", lst_size(g_env->processes));
+	wprintw(stat, "CYCLE: %u\n\n", g_env->cycle);
+    wprintw(stat, "PLAYERS:\n");
     temp = g_env->players;
 	while (temp)
 	{
@@ -181,59 +182,59 @@ void dell_window() {
 
 void pause_war()
 {
-    int button;
+	int button;
 
-    while(1)
-    {
-        button = getch();
-        if (button == 119)
-        {
-            g_env->vis_run = 1;
-            return;
-        }
-        move(0,0);
-    }
+	while (1)
+	{
+		button = getch();
+		if (button == 119)
+		{
+			g_env->vis_run = 1;
+			return ;
+		}
+		move(0, 0);
+	}
 }
 
 int manage_ui()
 {
-    int button;
-    static int per_second;
+	int button;
+	static int per_second;
 
-    if (!g_env->vis)
-        return 1;
+	if (!g_env->vis)
+		return 1;
 
-    if (!g_env->vis_run)
-        pause_war();
+	if (!g_env->vis_run)
+		pause_war();
 
-    move(0,0);
-    timeout(g_env->vis_delay);
-    button = getch();
-    attron(COLOR_PAIR(1));
-    printw("...........");
-    attroff(COLOR_PAIR(1));
+	move(0, 0);
+	timeout(g_env->vis_delay);
+	button = getch();
+	attron(COLOR_PAIR(1));
+	printw("...........");
+	attroff(COLOR_PAIR(1));
 
-    if (button == 119)
+	if (button == 119)
 	{
 		g_env->vis_run = 0;
-		return 0;
+		return (0);
 	}
-    if (button == 115)
-    {
-		per_second = (per_second == 100) ? 100 : ++per_second;
-        g_env->vis_delay = 1000 / per_second;
-    } else
-    if (button == 97)
-    {
-        per_second = (per_second == 1) ? 1 : --per_second;
-        g_env->vis_delay = 1000 / per_second;
-    } else if (button == 27 && getch() != 91)
+	if (button == 115)
 	{
-            dell_window();
-            printf("%d\n" , button);
-            exit(0);
-	}
-	return 1;
+		per_second = (per_second == 100) ? 100 : ++per_second;
+		g_env->vis_delay = 1000 / per_second;
+	} else
+	if (button == 97)
+	{
+		per_second = (per_second == 1) ? 1 : --per_second;
+		g_env->vis_delay = 1000 / per_second;
+	} else if (button == 27 && getch() != 91)
+	{
+		dell_window();
+		printf("%d\n", button);
+		exit(0);
+		
+	return (1);
 }
 
 

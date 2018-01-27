@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   environment.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 17:34:06 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/21 17:34:09 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/27 14:18:25 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void		fill_player(header_t *head, unsigned char *prog, t_list **players)
 	free(player);
 }
 
-void		register_players_auto(t_list **players)
+void		register_players_auto(t_list **players )
 {
 	header_t		*head;
 	t_list			*fd_l;
@@ -76,7 +76,7 @@ void		register_players_auto(t_list **players)
 			exit(EXIT_FAILURE);
 		}
 		prog = (unsigned char*)malloc(sizeof(unsigned char) * head->prog_size);
-		if (read(fd,prog, head->prog_size + 1) != head->prog_size)
+		if (read(fd, prog, head->prog_size + 1) != head->prog_size)
 		{
 			ft_putstr("Read prog not valid");
 			exit(EXIT_FAILURE);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cycle.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 17:44:43 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/21 17:44:46 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/27 15:00:15 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,26 @@ int		check_processes_rewrite(void)
 	return (0);
 }
 
+int		norm_cycle(t_list *temp, int *i)
+{
+	while (temp)
+	{
+		do_operation(temp->content);
+		temp = temp->next;
+	}
+	if (g_env->cycle == g_env->dump - 1)
+	{
+		dump_memory();
+		return (1);
+	}
+	if (*i++ >= g_env->cycle_to_die - 1)
+	{
+		*i = 0;
+		if (check_processes_rewrite())
+			return (1);
+	}
+}
+
 void	start_cycle(void)
 {
 	t_list	*temp;
@@ -97,22 +117,8 @@ void	start_cycle(void)
 		if (!manage_ui())
 			continue ;
 		temp = g_env->processes;
-		while (temp)
-		{
-			do_operation(temp->content);
-			temp = temp->next;
-		}
-		if (g_env->cycle == g_env->dump - 1)
-		{
-			dump_memory();
+		if (norm_cycle(temp, &i))
 			break ;
-		}
-		if (i++ >= g_env->cycle_to_die - 1)
-		{
-			i = 0;
-			if (check_processes_rewrite())
-				break ;
-		}
 		g_env->cycle++;
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
