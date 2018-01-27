@@ -233,7 +233,7 @@ int manage_ui()
 		dell_window();
 		printf("%d\n", button);
 		exit(0);
-		
+	}
 	return (1);
 }
 

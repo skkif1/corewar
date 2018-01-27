@@ -6,7 +6,7 @@
 /*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 17:44:43 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/27 15:00:15 by vrudakov         ###   ########.fr       */
+/*   Updated: 2018/01/27 16:16:33 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ int		norm_cycle(t_list *temp, int *i)
 		if (check_processes_rewrite())
 			return (1);
 	}
+	return (0);
 }
 
 void	start_cycle(void)

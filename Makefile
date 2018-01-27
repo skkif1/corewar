@@ -26,7 +26,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c $(INCLUDE)
 	@mkdir -p $(OBJ_PATH)
-	$(CC) $(FLAG) $(INC) -o $@ -c $<
+	$(CC) $(INC) -o $@ -c $<
 
 lib:
 	@echo "\033[37;44m Make libft \033[0m"
