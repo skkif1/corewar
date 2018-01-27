@@ -1,0 +1,3 @@
+ng contestants...
+1, weighing 681 bytes, "Misaka Mikoto" ("result information") !
+t 1, "Misaka Mikoto", has won !
