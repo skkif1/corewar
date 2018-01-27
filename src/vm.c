@@ -13,6 +13,7 @@
 #include "../includes/op.h"
 
 t_env *g_env;
+void winner();
 
 int		main(int argc, char **argv)
 {
@@ -33,6 +34,7 @@ int		main(int argc, char **argv)
 		getch();
 		dell_window();
 	}
+      winner();
 }
 
 void		init_env(void)
@@ -46,4 +48,22 @@ void		init_env(void)
 	g_env->vis_run = 0;
 	g_env->player_files = NULL;
 	g_env->dump = -1;
+}
+
+void winner()
+{
+    t_list *temp = g_env->players;
+    unsigned int last = 0;
+    t_player *player;
+
+    while (temp)
+    {
+        if(((t_player*)temp->content)->last_live > last)
+        {
+            last = 0;
+            player = temp->content;
+        }
+        temp = temp->next;
+    }
+    ft_printf("Player %u (%s) won\n", player->player_number, player->player_name);
 }
