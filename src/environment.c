@@ -53,7 +53,7 @@ void		fill_player(header_t *head, unsigned char *prog, t_list **players)
 	free(player);
 }
 
-void		register_players_auto(t_list **players )
+void		register_players_auto(t_list **players)
 {
 	header_t		*head;
 	t_list			*fd_l;
@@ -86,13 +86,15 @@ void		register_players_auto(t_list **players )
 		fd_l = fd_l->next;
 	}
 	g_env->players = *players;
-	t_list *temp = *players;
+	t_list *temp;
+
+	temp = *players;
 	while (temp)
 	{
 		add_new_player(temp->content);
 		temp = temp->next;
 	}
-	rewrite_stat();
+
 }
 
 void		add_new_player(t_player *player)
@@ -102,8 +104,7 @@ void		add_new_player(t_player *player)
 	int end;
 
 	j = 0;
-	start = (unsigned int)
-	(MEM_SIZE / g_env->player_in_game * (4294967295 - player->player_number));
+	start = (unsigned int)(MEM_SIZE / g_env->player_in_game * (4294967295 - player->player_number));
 	end = start + player->code_len;
 	player->live_in_period = 0;
 	add_new_process(start, player);

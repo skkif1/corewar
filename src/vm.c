@@ -14,6 +14,31 @@
 
 t_env *g_env;
 
+void	handle_v(int argc, char **argv)
+{
+	int	i;
+	unsigned int num;
+	unsigned int player_number;
+
+	i = 1;
+	player_number = 4294967295;
+	while (i < argc)
+	{
+		if (ft_strcmp(ft_strrchr(argv[i], '.'), ".cor") == 0)
+			player_number--;
+		if (ft_strcmp(argv[i],"-n") == 0)
+		{
+			if (ft_isdigitstr(argv[i + 1]))
+				num = (unsigned int) ft_atoi(argv[i + 1]);
+			else
+				exit(0);
+			find_player(player_number + 1)->real_num = num;
+		}
+		i++;
+	}
+
+}
+
 int		main(int argc, char **argv)
 {
 	t_list *players;
@@ -25,6 +50,8 @@ int		main(int argc, char **argv)
 	if (g_env->vis)
 		init_screen();
 	register_players_auto(&players);
+	handle_v(argc, argv);
+	rewrite_stat();
 	start_cycle();
 	if (g_env->vis)
 		hold_ui();
@@ -46,4 +73,5 @@ void		init_env(void)
 	g_env->vis_run = 0;
 	g_env->player_files = NULL;
 	g_env->dump = -1;
+
 }
