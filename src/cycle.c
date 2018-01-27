@@ -87,7 +87,7 @@ void start_cycle() {
     while (1) {
         if (!manage_ui())
             continue;
-        g_env->vis = 0;
+//        g_env->vis = 0;
 
 //        if(g_env->cycle > 26446)
 //        {

@@ -138,6 +138,9 @@ typedef struct		notification_s
 extern void (*g_operation[16])(t_process *process);
 extern t_op g_tab[17];
 extern t_env *g_env;
+int g_colors[MEM_SIZE];
+WINDOW *memory;
+WINDOW *stat;
 
 
 //comands
@@ -208,6 +211,8 @@ void type_to_size(int *mass, int dir_size);
 int validate_reqistry(int value);
 void invalid_coding_byte(const int *arg_t, t_process *proc, int params);
 int get_register(int counter, int skip);
+void pause_war();
+int check_cursor(int position);
 
 //parse arg
 void parse_args(int argc, char **argv);
