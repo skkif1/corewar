@@ -3,41 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   vm.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: omotyliu <omotyliu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 16:48:12 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/21 16:48:20 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/27 19:55:12 by omotyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/op.h"
 
 t_env *g_env;
-void winner();
 
-void	handle_v(int argc, char **argv)
+void	winner(void)
 {
-	int	i;
-	unsigned int num;
-	unsigned int player_number;
+	t_list			*temp;
+	unsigned int	last;
+	t_player		*player;
 
-	i = 1;
-	player_number = 4294967295;
-	while (i < argc)
+	temp = g_env->players;
+	last = 0;
+	while (temp)
 	{
-		if (ft_strcmp(ft_strrchr(argv[i], '.'), ".cor") == 0)
-			player_number--;
-		if (ft_strcmp(argv[i],"-n") == 0)
+		if (((t_player*)temp->content)->last_live > last)
 		{
-			if (ft_isdigitstr(argv[i + 1]))
-				num = (unsigned int) ft_atoi(argv[i + 1]);
-			else
-				exit(0);
-			find_player(player_number + 1)->real_num = num;
+			last = ((t_player*)temp->content)->last_live;
+			player = temp->content;
 		}
-		i++;
+		temp = temp->next;
 	}
-
+    if(last != 0)
+    {
+        ft_printf("Player %u (%s) won\n", player->player_number,
+                  player->player_name);
+    } else
+    {
+        ft_printf("Drow\n");
+    }
 }
 
 int		main(int argc, char **argv)
@@ -48,11 +49,9 @@ int		main(int argc, char **argv)
 	init_env();
 	parse_args(argc, argv);
 	g_env->vis_delay = 1;
-	if (g_env->vis)
-		init_screen();
-	register_players_auto(&players);
-	handle_v(argc, argv);
-	rewrite_stat();
+    register_players_auto(&players);
+
+    rewrite_stat();
 	start_cycle();
 	if (g_env->vis)
 		hold_ui();
@@ -61,10 +60,10 @@ int		main(int argc, char **argv)
 		getch();
 		dell_window();
 	}
-      winner();
+	winner();
 }
 
-void		init_env(void)
+void	init_env(void)
 {
 	g_env = malloc(sizeof(t_env));
 	ft_memset(g_env->global_field, 0, MEM_SIZE);
@@ -76,22 +75,4 @@ void		init_env(void)
 	g_env->player_files = NULL;
 	g_env->dump = -1;
 
-}
-
-void winner()
-{
-    t_list *temp = g_env->players;
-    unsigned int last = 0;
-    t_player *player;
-
-    while (temp)
-    {
-        if(((t_player*)temp->content)->last_live > last)
-        {
-            last = 0;
-            player = temp->content;
-        }
-        temp = temp->next;
-    }
-    ft_printf("Player %u (%s) won\n", player->player_number, player->player_name);
 }

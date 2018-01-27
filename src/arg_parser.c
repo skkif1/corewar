@@ -23,7 +23,7 @@ static void	handle_flags(int argc, char **argv)
 	{
 		if (argv[i][0] != '-')
 			return ;
-		if (!ft_strcmp(argv[i], "-n"))
+		if (!ft_strcmp(argv[i], "-v"))
 			g_env->vis = 1;
 		if (!ft_strcmp(argv[i], "-dump"))
 		{
@@ -38,6 +38,32 @@ static void	handle_flags(int argc, char **argv)
 		}
 		i++;
 	}
+}
+void get_number(char **argv, int place)
+{
+    int add = 0;
+
+    if(g_env->numbers == NULL)
+    {
+        g_env->numbers = "|";
+    }
+    if(place - 2 >= 1)
+    {
+        if (ft_strcmp(argv[place - 2], "-n") == 0)
+        {
+                if(ft_isdigitstr(argv[place - 1]))
+                {
+                    g_env->numbers = ft_strjoin(g_env->numbers, argv[place - 1]);
+                    g_env->numbers = ft_strjoin(g_env->numbers, "|");
+                    add = 1;
+                }
+            }
+    }
+    if(!add)
+    {
+        g_env->numbers = ft_strjoin(g_env->numbers, "loll");
+        g_env->numbers = ft_strjoin(g_env->numbers, "|");
+    }
 }
 
 void		parse_args(int argc, char **argv)
@@ -54,10 +80,11 @@ void		parse_args(int argc, char **argv)
 	}
 	while (i < argc)
 	{
-		if (ft_strrchr(argv[i], '.') != NULL &&
-			ft_strcmp(ft_strrchr(argv[i], '.'), ".cor") == 0)
-			ft_lstadd_end(&g_env->player_files, ft_lstnew(argv[i],
-				ft_strlen(argv[i]) + 1));
+		if (ft_strrchr(argv[i], '.') != NULL && ft_strcmp(ft_strrchr(argv[i], '.'), ".cor") == 0)
+        {
+            ft_lstadd_end(&g_env->player_files, ft_lstnew(argv[i], ft_strlen(argv[i]) + 1));
+            get_number(argv, i);
+        }
 		i++;
 	}
 	g_env->player_in_game = lst_size(g_env->player_files);
@@ -67,3 +94,6 @@ void		parse_args(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 }
+
+
+

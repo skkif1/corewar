@@ -103,6 +103,7 @@ typedef struct		player_s
     unsigned int code_len;
     char 		*player_name[PROG_NAME_LENGTH];
     unsigned int player_number;
+    unsigned int real_num;
     unsigned int last_live;
 	int 			live_in_period;
     int color;
@@ -124,6 +125,7 @@ typedef struct		env_s
 	int 			num_live;
 	int 			checks;
 	int 			dump;
+    char            *numbers;
 }					t_env;
 
 typedef struct		notification_s

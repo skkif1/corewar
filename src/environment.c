@@ -33,24 +33,87 @@ void		reverse_bytes(unsigned int *bytes, int size)
 void		fill_player(header_t *head, unsigned char *prog, t_list **players)
 {
 	t_player				*player;
-	static unsigned int		player_num = 4294967295;
-	static int				color;
+	static int				color = 3;
+    static unsigned int		player_num = 4294967295;
 
-	color = 3;
 	player = malloc(sizeof(t_player));
 	player->code = (unsigned char*)
 	malloc(sizeof(unsigned char) * head->prog_size);
 	player->code_len = head->prog_size;
-	player->player_number = player_num;
-	player->color = color;
+	player->real_num = player_num--;
+    player->color = color;
 	ft_memcpy(player->player_name, head->prog_name, 128);
 	ft_memcpy(player->code, prog, head->prog_size);
-	player_num--;
-	color += 2;
+	player->color = color;
+    color += 2;
 	ft_lstadd(players, ft_lstnew(player, sizeof(t_player)));
 	free(prog);
 	free(head);
 	free(player);
+}
+
+void check_number_avail(t_player *player_to, unsigned int num)
+{
+    t_list *temp;
+    t_player *player;
+
+
+    temp = g_env->players;
+    while (temp)
+    {
+        player = temp->content;
+        if(player->player_number == num)
+        {
+            ft_printf("%s you cant take this number, it allready taken by %s\n", player_to->player_name, player->player_name);
+            exit(0);
+        }
+        temp = temp->next;
+    }
+}
+
+unsigned int get_number_f(unsigned int num)
+{
+    t_list *temp;
+    t_player *player;
+
+    temp = g_env->players;
+
+    while (temp)
+    {
+        player = temp->content;
+        if(player->player_number == num)
+        {
+            return get_number_f(num - 1);
+        }
+        temp = temp->next;
+    }
+    return num;
+}
+
+void set_fake_numbers()
+{
+	t_list *temp;
+	t_player *player;
+	char **numbers;
+	int i = 0;
+
+    numbers = ft_strsplit(g_env->numbers, '|');
+    temp = g_env->players;
+	while (temp)
+	{
+		player = temp->content;
+
+        if(ft_strcmp(numbers[i], "loll") == 0)
+            {
+                player->player_number = get_number_f(4294967295);
+            } else
+            {
+                check_number_avail(player, (unsigned int)ft_atoi(numbers[i]));
+                player->player_number = (unsigned int)ft_atoi(numbers[i]);
+            }
+        i++;
+		temp = temp->next;
+	}
 }
 
 void		register_players_auto(t_list **players)
@@ -87,7 +150,9 @@ void		register_players_auto(t_list **players)
 	}
 	g_env->players = *players;
 	t_list *temp;
-
+    set_fake_numbers();
+    if (g_env->vis)
+        init_screen();
 	temp = *players;
 	while (temp)
 	{
@@ -104,7 +169,7 @@ void		add_new_player(t_player *player)
 	int end;
 
 	j = 0;
-	start = (unsigned int)(MEM_SIZE / g_env->player_in_game * (4294967295 - player->player_number));
+	start = (unsigned int)(MEM_SIZE / g_env->player_in_game * (4294967295 - player->real_num));
 	end = start + player->code_len;
 	player->live_in_period = 0;
 	add_new_process(start, player);
