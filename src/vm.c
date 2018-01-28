@@ -25,7 +25,6 @@ int		main(int argc, char **argv)
 	parse_args(argc, argv);
     g_env->vis_delay = 1;
     register_players_auto(&players);
-
     rewrite_stat();
     start_cycle();
     if (g_env->vis)

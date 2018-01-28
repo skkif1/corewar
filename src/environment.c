@@ -84,5 +84,5 @@ void		register_players_auto(t_list **players)
 		close(fd);
 		fd_l = fd_l->next;
 	}
-	add_all_players(*players);
+    add_all_players(*players);
 }

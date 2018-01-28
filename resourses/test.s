@@ -1,172 +1,79 @@
-.name		"Oh, You Fork my TRALALA ..."
-.comment	"HMMMM, my ding-ding-dong !!"
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    big_feet.s                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: clafleur <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2014/02/16 20:28:04 by clafleur          #+#    #+#              #
+#    Updated: 2014/03/02 17:23:26 by clafleur         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-# LD : charge la valeur du 1er param dans le registre
+.name "top defense plus plus"
+.comment "la meilleure defense c'est d'avoir une bonne defense"
 
-# ST : stocke la valeur du registre vers le second paramètre.
+start:
 
-# ADD : Additionne les 2 premiers registres, et met le résultat dans le 3eme.
+start_piege:
+ld		%-16, r5				# r2 = soustraction de start pr aller a r2 : carry a 1
+ld		%-12, r4				# r4 = suite (soustraction de start pr aller a r3 : suite du carry)
+ld		%-8, r6					# r6 = soustration de start pr aller a r10 : zjmp
+ld		%150994944, r10			# r10 = zjmp
+ld		%42991616, r2			# debut de carry a 1
+ld		%256, r3				# suite du carry a 1
+ld		%16, r16				# decrementation de start
+ld		%12, r7					# r7 = addition de end pr aller a r7 : carry a 1
+ld		%16, r9					# r9 = suite (addition de end pr aller a r9 : suite du carry)
+ld		%20, r11				# r11 = addition de end pr aller a r11 : zjmp
+ld		%23, r12				# compteur pour le nombres de pieges
+ld		%1, r13
+ld		%0, r8					# carry = 1
+sti		r1, %:piege1, %1
+sti		r1, %:piege2, %1
+sti		r1, %:begin, %1
+sti		r1, %:live, %1
+fork	%:begin
 
-# SUB : Soustrait les 2 premiers registres, et met le résultat dans le 3eme.
+piege1:							# while(1)
+live	%118978653103279		# je suis en vie
+sti		r2, %:start, r5 
+sti		r3, %:start, r4
+sti		r10, %:start, r6
+sub		r5, r16, r5
+sub		r4, r16, r4
+sub		r6, r16, r6
+sub		r12, r13, r12			# decrementation du compteur
+zjmp	%:start_piege			# reviens en debut de boucle
+ld		%0, r8					# carry = 1
+zjmp	%:piege1				# reviens en debut de boucle
 
-# AND : Applique un & (ET bit-a-bit) sur les 2 premiers registres, et met le 
-# résultat dans le 3eme.
+begin:
+live 	%13371337
+fork	%:piege1
+live 	%42424242
+fork	%:piege2
+live 	%123456789
+fork	%:begin
+live	%08395432657
+fork	%:live
+zjmp	%:begin
 
-# OR : Applique un OU (bit-a-bit) sur les 2 premiers registres, et met le 
-#résultat dans le troisième.
+live:
+live	%23456789456780987
+zjmp	%:begin
 
-# XOR : Fait un OU exclusif bit a bit (c'est comme un OU normal, mais 1^1 = 0)
+piege2:
+live	%198562346853412
+sti		r2, %:end, r7 
+sti		r3, %:end, r9
+sti		r10, %:end, r11
+add		r7, r16, r7
+add		r9, r16, r9
+add		r11, r16, r11
+sub		r12, r13, r12			# decrementation du compteur
+zjmp	%:start_piege			# reviens en debut de boucle
+ld		%0, r8					# carry = 1
+zjmp	%:piege2				# reviens en debut de boucle
 
-# ZJMP : saute a l'adresse si le carry est a 1.
-
-# LDI : additionne les 2 premiers, traite ca comme une adresse, y lit une valeur
-# de la taille d’un registre et la met dans le 3eme.
-
-# STI  : additionne les 2 derniers, utilise cette somme comme une adresse ou 
-# sera copiee la valeur du 1er param
-
-# FORK : Crée un nouveau processus, qui hérite des diﬀérents états de son père,
- # à part son PC, qui est mis à (PC + (1er paramètre % IDX_MOD)).
-
-# LLD : similaire a ld sans la restriction de IDX_MOD (ici 512) (a confirmer)
-
-# LLDI : Pareil que ldi, mais n’applique aucun modulo aux adresses.
-
-# LFORK : Pareil qu’un fork sans modulo à l'adresse.
-
-# AFF : affiche sur la sortie standard le char ASCII
-
-entry:
-	st		r1, 6
-	st		r1, r3
-	live	%42
-	fork	%:hanibalsmith
-	zjmp	%:move1
-
-hanibalsmith:
-	live	%42
-	st		r15, -50
-	st		r15, -64
-	st		r15, -78
-	st		r15, -92
-	st		r15, -106
-	st		r15, -120
-	st		r15, -134
-	st		r15, -148
-	st		r15, -162
-	st		r15, -176
-	st		r15, -190
-	st		r15, -204
-	st		r15, -218
-	st		r15, -232
-	st		r15, -246
-	st		r15, -260
-	st		r15, -274
-	st		r15, -288
-	st		r15, -302
-	st		r15, -318
-	st		r15, -332
-	st		r15, -346
-	st		r15, -360
-	st		r15, -374
-	st		r15, -388
-	st		r15, -402
-	st		r15, -416
-	st		r15, -430
-	st		r15, -444
-	st		r15, -458
-	st		r15, -472
-	st		r15, -486
-	st		r15, -500
-	st		r16, 1
-	live	%42
-	fork	%:hanibalsmith
-	zjmp	%:hanibalsmith
-
-forking:
-	live	%898
-	fork	%:move2
-	live	%1892
-	fork	%:move2
-	live	%4024
-	fork	%:move2
-	live	%232
-	fork	%:move2
-
-move1:
-	st		r1, 6
-	live	%5
-	fork	%:move1
-	zjmp	%9
-
-move2:
-	st		r1, 6
-	live	%42
-	fork	%:move2
-	zjmp	%1
-
-move3:
-	st		r1, 6
-	live	%42
-	fork	%:move3
-	zjmp	%2
-
-move4:
-	st		r1, 6
-	live	%7
-	fork	%:move4
-	zjmp	%3
-
-move5:
-	st		r1, 6
-	live	%1
-	fork	%:move5
-	zjmp	%4
-
-hanibalsmith2:
-	live	%512
-	st		r14, 1
-	st		r14, -203
-	st		r14, -406
-	st		r14, -609
-	st		r14, -803
-	st		r14, -1006
-	st		r14, -1209
-	st		r14, -1403
-	st		r14, -1606
-	st		r14, -1809
-	st		r14, -2003
-	st		r14, -2206
-	st		r14, -2409
-	st		r14, -2603
-	st		r14, -2806
-	st		r14, -3009
-	st		r14, -3203
-	st		r14, -3406
-	st		r14, -3609
-	st		r14, -3803
-	st		r14, -4006
-	st		r14, -4209
-	st		r14, -4403
-	st		r14, -4606
-	st		r14, -4809
-	st		r14, -5003
-	st		r14, -5206
-	st		r14, -5409
-	st		r14, -5603
-	st		r14, -5806
-	st		r14, -6009
-	st		r14, -6203
-	st		r14, -6406
-	st		r14, -6609
-	st		r14, -6803
-	st		r14, -7006
-	st		r14, -7209
-	st		r14, -7403
-	st		r14, -7606
-	st		r14, -7809
-	st		r14, -8003
-	st		r1, 6
-	live	%1
-	zjmp	%:hanibalsmith2
-	fork	%:hanibalsmith2
+end:

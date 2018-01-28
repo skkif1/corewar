@@ -45,7 +45,7 @@ void get_number(char **argv, int place)
 
     if(g_env->numbers == NULL)
     {
-        g_env->numbers = "|";
+        g_env->numbers = ft_strdup("|");
     }
     if(place - 2 >= 1)
     {
@@ -53,16 +53,16 @@ void get_number(char **argv, int place)
         {
                 if(ft_isdigitstr(argv[place - 1]))
                 {
-                    g_env->numbers = ft_strjoin(g_env->numbers, argv[place - 1]);
-                    g_env->numbers = ft_strjoin(g_env->numbers, "|");
+                    g_env->numbers = ft_append(g_env->numbers, argv[place - 1], ft_strlen(g_env->numbers), ft_strlen(argv[place - 1]));
+                    g_env->numbers = ft_append(g_env->numbers, "|", ft_strlen(g_env->numbers), 1);
                     add = 1;
                 }
             }
     }
     if(!add)
     {
-        g_env->numbers = ft_strjoin(g_env->numbers, "loll");
-        g_env->numbers = ft_strjoin(g_env->numbers, "|");
+        g_env->numbers = ft_append(g_env->numbers, "loll", ft_strlen(g_env->numbers), 4);
+        g_env->numbers = ft_append(g_env->numbers, "|", ft_strlen(g_env->numbers), 1);
     }
 }
 

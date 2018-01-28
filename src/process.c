@@ -19,7 +19,6 @@ void	add_new_process(int position, t_player *player)
 {
 	t_process	*process;
 	int			i;
-
 	i = 0;
 	process = (t_process*)malloc(sizeof(t_process));
 	while (i < REG_NUMBER + 1)
