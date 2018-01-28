@@ -15,8 +15,10 @@
 static void	handle_flags(int argc, char **argv)
 {
 	int	i;
+	int flag;
 
 	i = 1;
+    flag = 0;
 	g_env->vis = 0;
 	g_env->dump = -1;
 	while (i < argc)
@@ -75,7 +77,7 @@ void		parse_args(int argc, char **argv)
 		handle_flags(argc, argv);
 	else
 	{
-		ft_putstr("usage");
+		ft_putstr("usage:\n-v turn on visualization\n-n set the number of next player\n-dump dump memory on cycle\n");
 		exit(EXIT_FAILURE);
 	}
 	while (i < argc)
@@ -88,11 +90,15 @@ void		parse_args(int argc, char **argv)
 		i++;
 	}
 	g_env->player_in_game = lst_size(g_env->player_files);
-	if (g_env->player_in_game > MAX_PLAYERS || g_env->player_in_game == 0)
+	if (g_env->player_in_game > MAX_PLAYERS)
 	{
 		ft_printf("number of players in 1 and %d\n", MAX_PLAYERS);
 		exit(EXIT_FAILURE);
-	}
+	} else if (g_env->player_in_game == 0)
+    {
+        ft_printf("no valid players found\n", MAX_PLAYERS);
+        exit(EXIT_FAILURE);
+    }
 }
 
 
