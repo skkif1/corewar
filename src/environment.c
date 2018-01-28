@@ -40,9 +40,9 @@ void		fill_player(header_t *head, unsigned char *prog, t_list **players)
 	player->code = (unsigned char*)
 	malloc(sizeof(unsigned char) * head->prog_size);
 	player->code_len = head->prog_size;
-    if (head->prog_size > 682)
+    if (head->prog_size > CHAMP_MAX_SIZE)
     {
-        ft_putstr("Error: File 42.cor has too large a code (993 bytes > 682 bytes)");
+        ft_printf("Error: File 42.cor has too large a code (%d bytes > %d bytes)\n",head->prog_size ,CHAMP_MAX_SIZE);
         exit(EXIT_FAILURE);
     }
 	player->real_num = player_num--;
