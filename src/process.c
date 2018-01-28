@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 17:12:18 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/21 17:12:22 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/28 21:28:32 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	add_new_process(int position, t_player *player)
 {
 	t_process	*process;
 	int			i;
+
 	i = 0;
 	process = (t_process*)malloc(sizeof(t_process));
 	while (i < REG_NUMBER + 1)

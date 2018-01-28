@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cycle.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <omotyliu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 18:16:31 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/27 20:21:14 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/28 21:33:45 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_env *g_env;
 
-void	do_operation(t_process *process)
+void		do_operation(t_process *process)
 {
 	int operation;
 
@@ -32,7 +32,7 @@ void	do_operation(t_process *process)
 	}
 }
 
-int		check_processes(void)
+int			check_processes(void)
 {
 	t_list *processes;
 
@@ -99,22 +99,18 @@ void		start_cycle(void)
 		if (g_env->cycle == g_env->dump - 1)
 		{
 			dump_memory();
-            return ;
+			return ;
 		}
 		if (i++ >= g_env->cycle_to_die - 1)
 		{
 			i = 0;
 			if (check_processes())
 			{
-				g_env->cycle++;
-				rewrite_memory(g_env->global_field);
-				rewrite_stat();
+				rewrite_common();
 				break ;
 			}
 		}
-		g_env->cycle++;
-		rewrite_memory(g_env->global_field);
-		rewrite_stat();
+		rewrite_common();
 	}
-    winner();
+	winner();
 }

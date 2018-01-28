@@ -78,13 +78,13 @@ void	init_screen(void)
 	bkgd(background);
 	curs_set(0);
 	refresh();
-	memory = create_memory_window();
-	stat = create_stat_window();
+	g_memory = create_memory_window();
+	g_stat = create_stat_window();
 }
 
 void	dell_window(void)
 {
-	delwin(memory);
-	delwin(stat);
+	delwin(g_memory);
+	delwin(g_stat);
 	endwin();
 }
