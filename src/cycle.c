@@ -99,7 +99,7 @@ void		start_cycle(void)
 		if (g_env->cycle == g_env->dump - 1)
 		{
 			dump_memory();
-			break ;
+            return ;
 		}
 		if (i++ >= g_env->cycle_to_die - 1)
 		{

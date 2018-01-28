@@ -39,7 +39,10 @@ void	c_lfork(t_process *proc)
 	param = (param >= MEM_SIZE) ? param % MEM_SIZE : param;
 	child_process = (t_process*)malloc(sizeof(t_process));
 	while (i < REG_NUMBER + 1)
-		child_process->registers[i] = proc->registers[i++];
+	{
+		child_process->registers[i] = proc->registers[i];
+		i++;
+	}
 	set_proc(child_process, proc);
 	child_process->counter = param;
 	proc->counter += 3;

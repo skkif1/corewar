@@ -44,4 +44,5 @@ void c_fork(t_process *process)
     process->counter += 3;
     if (child_process->counter >= MEM_SIZE)
         child_process->counter = child_process->counter % MEM_SIZE;
+
 }
