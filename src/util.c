@@ -90,6 +90,7 @@ void	winner(void)
         else
         {
             rewrite_stat();
+            wmove(stat, 40, 0);
             wprintw(stat, res, player->player_number, player->player_name);
             wrefresh(stat);
         }
@@ -100,6 +101,7 @@ void	winner(void)
         else
         {
             rewrite_stat();
+            wmove(stat, 30, 0);
             wprintw(stat, "Conclusion:\nBots are sucks\nNo lives announced\n");
             wrefresh(stat);
         }

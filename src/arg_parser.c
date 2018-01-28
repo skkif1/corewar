@@ -15,11 +15,9 @@
 static void	handle_flags(int argc, char **argv)
 {
 	int	i;
-	int flag;
 
 	i = 1;
-    flag = 0;
-	g_env->vis = 0;
+    g_env->vis = 0;
 	g_env->dump = -1;
 	while (i < argc)
 	{
@@ -77,7 +75,7 @@ void		parse_args(int argc, char **argv)
 		handle_flags(argc, argv);
 	else
 	{
-		ft_putstr("usage:\n-v turn on visualization\n-n set the number of next player\n-dump dump memory on cycle\n");
+		ft_putstr("usage:\n-v turn on visualization\n-n set the number of next player (in case of wrong value number will set by VM)\n-dump dump memory on cycle\n");
 		exit(EXIT_FAILURE);
 	}
 	while (i < argc)
