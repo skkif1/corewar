@@ -64,3 +64,44 @@ int				get_register(int process_counter, int skip)
 	}
 	return (g_env->global_field[process_counter]);
 }
+
+void	winner(void)
+{
+    t_list			*temp;
+    unsigned int	last;
+    t_player		*player;
+    char *res = "Conclusion:\nPlayer %u (%s) won\n";
+    temp = g_env->players;
+    last = 0;
+    while (temp)
+    {
+        if (((t_player*)temp->content)->last_live > last)
+        {
+            last = ((t_player*)temp->content)->last_live;
+            player = temp->content;
+        }
+        temp = temp->next;
+    }
+    if(last != 0)
+    {
+        if(!g_env->vis)
+        ft_printf(res, player->player_number,
+                  player->player_name);
+        else
+        {
+            rewrite_stat();
+            wprintw(stat, res, player->player_number, player->player_name);
+            wrefresh(stat);
+        }
+    } else
+    {
+        if(!g_env->vis)
+            ft_printf("Drow\n");
+        else
+        {
+            rewrite_stat();
+            wprintw(stat, "Conclusion:\nBots are sucks\nNo lives announced\n");
+            wrefresh(stat);
+        }
+    }
+}

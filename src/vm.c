@@ -14,32 +14,7 @@
 
 t_env *g_env;
 
-void	winner(void)
-{
-	t_list			*temp;
-	unsigned int	last;
-	t_player		*player;
 
-	temp = g_env->players;
-	last = 0;
-	while (temp)
-	{
-		if (((t_player*)temp->content)->last_live > last)
-		{
-			last = ((t_player*)temp->content)->last_live;
-			player = temp->content;
-		}
-		temp = temp->next;
-	}
-    if(last != 0)
-    {
-        ft_printf("Player %u (%s) won\n", player->player_number,
-                  player->player_name);
-    } else
-    {
-        ft_printf("Drow\n");
-    }
-}
 
 int		main(int argc, char **argv)
 {
@@ -60,7 +35,6 @@ int		main(int argc, char **argv)
 		getch();
 		dell_window();
 	}
-	winner();
 }
 
 void	init_env(void)

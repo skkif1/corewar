@@ -67,7 +67,7 @@ void	rewrite_stat(void)
 	temp = g_env->players;
 	print_player_info(temp);
 	wprintw(stat,
-		"\nLEGEND:\n   w - start/stop\n s - incr speed\n   a - decr speed\n");
+		"\nLEGEND:\n   w - start/stop\n   s - incr speed\n   a - decr speed\n");
 	rewrite_notification();
     wrefresh(stat);
 }

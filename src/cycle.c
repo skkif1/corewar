@@ -116,4 +116,5 @@ void		start_cycle(void)
 		rewrite_memory(g_env->global_field);
 		rewrite_stat();
 	}
+    winner();
 }

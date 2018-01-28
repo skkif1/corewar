@@ -206,6 +206,9 @@ int lst_size(t_list *list);
 int get_opcode_by_name(char *name);
 int bytes_to_int(int, int size);
 unsigned int big_to_little(unsigned int value);
+void	winner(void);
+
+
 
 //utility
 t_player *find_player(unsigned int number);
