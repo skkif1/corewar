@@ -207,6 +207,12 @@ int get_opcode_by_name(char *name);
 int bytes_to_int(int, int size);
 unsigned int big_to_little(unsigned int value);
 void	winner(void);
+void print_exit(char *str);
+void add_all_players(t_list *players);
+void set_fake_numbers(void);
+void		check_number_avail(t_player *player_to, unsigned int num);
+
+
 
 
 
