@@ -1,75 +1,154 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    sam_2.0.s                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: bguy <bguy@student.42.fr>                  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2014/03/02 20:48:59 by bguy              #+#    #+#              #
-#    Updated: 2014/03/02 20:49:07 by bguy             ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+.name "Candy"
+.comment ""
 
-.name		"S.A.M."
-.comment	"Ca roxxe du chameau"
+	st		r1, r12
+	ld      %0 , r14
+	zjmp    %:base
 
-entry:
-	sti		r1, %:wall, %1
-	ld		%0, r16
-	fork	%:shield_init
-	st		r1, 6
-	live	%21
-	fork	%:machine_gun_init
+def:
+	st		r9, -256
+	st		r10, -256
+	st		r14, -9
+	st      r4, -21
+	st      r14, -30
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st		r9, -256
+	st		r10, -256
+	st		r14, -9
+	st      r4, -21
+	st      r14, -30
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st      r4, -256
+	st		r10, -256
+	st		r14, -9
+	st      r4, -21
+	st      r14, -30
+	ld      %0 , r15
+	zjmp %:def
 
-wall_prep:
-	ld		%0, r2
-	ld		%0, r16
+liv:
+	live    %42
+	fork    %:live3
+	ld      %0 , r16
+	zjmp    %:base
 
-wall:
-	live	%4902343
-	st		r2, -50
-	st		r2, -59
-	st		r2, -68
-	st		r2, -77
-	st		r2, -86
-	st		r2, -95
-	st		r2, -104
-	st		r2, -113
-	st		r2, -122
-	st		r2, -131
-	st		r2, -140
-	st		r2, -149
-	st		r2, -158
-	st		r2, -167
-	st		r2, -176
-	st		r2, -185
-	st		r2, -194
-	st		r2, -203
-	zjmp	%:wall
+base:
+	live 	%42
+	ld		%57672449, r3
+	ld		%57672959, r4
+	ld		%42991616, r9
+	ld		%235536380, r10
+	ld		%16777216 ,r11
+	xor		r12, r14, r15
+	sti		r15, %:live1, %1
+	sti		r15, %:liv, %1
+	sti		r15, %:live2, %1
+	zjmp    %:live1
 
-shield_init:
-	ld		%0, r2
-
-shield:
-	live	%21
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	st		r2, 124
-	zjmp	%:shield
-
-machine_gun_init:
-	st		r1, 6
-
-machine_gun_gen:
+live1:
 	live	%42
-	fork	%:machine_gun_gen
+	fork	%:def
+	fork	%:save
+	ld		%0 , r15
+	zjmp	%:liv
+
+live3:
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+	live %1
+	st      r3, 256
+zjmp %:live3
+
+attak:
+	live 	%42
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+	st      r9, 256
+zjmp %:attak
+
+live2:
+		live    %1
+save:
+		live %1
+		fork	%:attak
+		st      r4, 254
+		zjmp %:save

@@ -1,3 +1,3 @@
 ng contestants...
-1, weighing 235 bytes, "S.A.M." ("Ca roxxe du chameau") !
-t 1, "S.A.M.", has won !
+1, weighing 544 bytes, "Oh, You Fork my TRALALA ..." ("HMMMM, my ding-ding-dong !!") !
+t 1, "Oh, You Fork my TRALALA ...", has won !
