@@ -6,17 +6,11 @@
 /*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/28 19:50:02 by vrudakov          #+#    #+#             */
-/*   Updated: 2018/01/28 19:52:33 by vrudakov         ###   ########.fr       */
+/*   Updated: 2018/01/28 20:29:58 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/op.h"
-
-void			print_exit(char *str)
-{
-	ft_putstr(str);
-	exit(EXIT_FAILURE);
-}
 
 void			add_all_players(t_list *players)
 {

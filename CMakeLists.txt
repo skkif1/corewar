@@ -29,7 +29,7 @@ set(SOURCE_FILES
         src/ui.c
         src/util.c
         src/utility.c
-        src/vm.c src/ui_util.c src/ui_helper.c src/vm_util.c)
+        src/vm.c src/ui_util.c src/ui_helper.c src/vm_util.c src/extend.c)
 
 add_executable(corewar ${SOURCE_FILES})
 target_link_libraries(corewar ${CMAKE_SOURCE_DIR}/libft/libftprintf.a -lcurses)
