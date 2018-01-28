@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ui.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 19:07:21 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/27 19:07:25 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/28 19:27:48 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	rewrite_stat(void)
 	wprintw(stat,
 		"\nLEGEND:\n   w - start/stop\n   s - incr speed\n   a - decr speed\n");
 	rewrite_notification();
-    wrefresh(stat);
+	wrefresh(stat);
 }
 
 int		check_press(int button)
@@ -83,7 +83,7 @@ int		check_press(int button)
 	{
 		g_per_second = (g_per_second == 500) ? 500 : ++g_per_second;
 		g_per_second = (g_per_second > 500) ? 500 : g_per_second;
-        g_env->vis_delay = 1000 / g_per_second;
+		g_env->vis_delay = 1000 / g_per_second;
 	}
 	else if (button == 97)
 	{

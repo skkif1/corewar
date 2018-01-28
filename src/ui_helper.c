@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ui_helper.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 19:21:23 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/27 19:21:34 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/28 19:28:59 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,14 @@ void	init_screen(void)
 	chtype background;
 
 	initscr();
-    if(LINES < 70 || COLS < 266)
-    {
-        endwin();
+	if (LINES < 70 || COLS < 266)
+	{
+		endwin();
 		ft_printf("minimal console size is 266 COLS and 70 LINES\n");
-        g_env->vis = 0;
-        return;
-    }
-    signal(SIGWINCH, NULL);
+		g_env->vis = 0;
+		return ;
+	}
+	signal(SIGWINCH, NULL);
 	init_def_color();
 	background = '.' | COLOR_PAIR(1);
 	bkgd(background);
