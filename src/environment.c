@@ -6,7 +6,7 @@
 /*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 17:34:06 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/27 14:18:25 by vrudakov         ###   ########.fr       */
+/*   Updated: 2018/01/28 15:53:14 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ void		fill_player(header_t *head, unsigned char *prog, t_list **players)
 	player->code = (unsigned char*)
 	malloc(sizeof(unsigned char) * head->prog_size);
 	player->code_len = head->prog_size;
+    if (head->prog_size > CHAMP_MAX_SIZE)
+    {
+        ft_printf("Error: File 42.cor has too large a code (%d bytes > %d bytes)\n",head->prog_size ,CHAMP_MAX_SIZE);
+        exit(EXIT_FAILURE);
+    }
 	player->real_num = player_num--;
     player->color = color;
 	ft_memcpy(player->player_name, head->prog_name, 128);
@@ -57,12 +62,11 @@ void check_number_avail(t_player *player_to, unsigned int num)
     t_list *temp;
     t_player *player;
 
-
     temp = g_env->players;
     while (temp)
     {
         player = temp->content;
-        if(player->player_number == num)
+        if (player->player_number == num)
         {
             ft_printf("%s you cant take this number, it allready taken by %s\n", player_to->player_name, player->player_name);
             exit(0);
@@ -83,11 +87,11 @@ unsigned int get_number_f(unsigned int num)
         player = temp->content;
         if(player->player_number == num)
         {
-            return get_number_f(num - 1);
+            return (get_number_f(num - 1));
         }
         temp = temp->next;
     }
-    return num;
+    return (num);
 }
 
 void set_fake_numbers()
@@ -95,23 +99,24 @@ void set_fake_numbers()
 	t_list *temp;
 	t_player *player;
 	char **numbers;
-	int i = 0;
+	int i;
 
-    numbers = ft_strsplit(g_env->numbers, '|');
-    temp = g_env->players;
+	i = 0;
+	numbers = ft_strsplit(g_env->numbers, '|');
+	temp = g_env->players;
 	while (temp)
 	{
 		player = temp->content;
 
-        if(ft_strcmp(numbers[i], "loll") == 0)
-            {
-                player->player_number = get_number_f(4294967295);
-            } else
-            {
-                check_number_avail(player, (unsigned int)ft_atoi(numbers[i]));
-                player->player_number = (unsigned int)ft_atoi(numbers[i]);
-            }
-        i++;
+		if (ft_strcmp(numbers[i], "loll") == 0)
+			{
+				player->player_number = get_number_f(4294967295);
+			} else
+			{
+				check_number_avail(player, (unsigned int)ft_atoi(numbers[i]));
+				player->player_number = (unsigned int)ft_atoi(numbers[i]);
+			}
+		i++;
 		temp = temp->next;
 	}
 }
@@ -150,16 +155,15 @@ void		register_players_auto(t_list **players)
 	}
 	g_env->players = *players;
 	t_list *temp;
-    set_fake_numbers();
-    if (g_env->vis)
-        init_screen();
+	set_fake_numbers();
+	if (g_env->vis)
+		init_screen();
 	temp = *players;
 	while (temp)
 	{
 		add_new_player(temp->content);
 		temp = temp->next;
 	}
-
 }
 
 void		add_new_player(t_player *player)
