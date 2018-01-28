@@ -69,7 +69,7 @@ void	rewrite_stat(void)
 	wprintw(stat,
 		"\nLEGEND:\n   w - start/stop\n s - incr speed\n   a - decr speed\n");
 	rewrite_notification();
-	wrefresh(stat);
+    wrefresh(stat);
 }
 
 int		check_press(int button)

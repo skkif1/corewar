@@ -65,7 +65,14 @@ void	init_screen(void)
 	chtype background;
 
 	initscr();
-	signal(SIGWINCH, NULL);
+    if(LINES < 70 || COLS < 266)
+    {
+        endwin();
+		ft_printf("minimal console size is 266 COLS and 70 LINES\n");
+        g_env->vis = 0;
+        return;
+    }
+    signal(SIGWINCH, NULL);
 	init_def_color();
 	background = '.' | COLOR_PAIR(1);
 	bkgd(background);

@@ -48,12 +48,12 @@ int		main(int argc, char **argv)
 	players = NULL;
 	init_env();
 	parse_args(argc, argv);
-	g_env->vis_delay = 1;
+    g_env->vis_delay = 1;
     register_players_auto(&players);
 
     rewrite_stat();
-	start_cycle();
-	if (g_env->vis)
+    start_cycle();
+    if (g_env->vis)
 		hold_ui();
 	if (g_env->vis)
 	{
