@@ -87,7 +87,7 @@ int		check_press(int button)
 	}
 	else if (button == 97)
 	{
-		g_per_second = (g_per_second == 1) ? 1 : --g_per_second;
+		g_per_second = (g_per_second <= 1) ? 1 : --g_per_second;
 		g_env->vis_delay = 1000 / g_per_second;
 	}
 	else if (button == 27 && getch() != 91)
