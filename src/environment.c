@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   environment.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omotyliu <omotyliu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vrudakov <vrudakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 17:34:06 by omotyliu          #+#    #+#             */
-/*   Updated: 2018/01/28 19:47:18 by omotyliu         ###   ########.fr       */
+/*   Updated: 2018/01/28 21:28:03 by vrudakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void		reverse_bytes(unsigned int *bytes, int size)
 	*bytes = res;
 }
 
-void		fill_player(header_t *head, unsigned char *prog, t_list **players)
+void		fill_player(t_header *head, unsigned char *prog, t_list **players)
 {
 	t_player				*player;
 	static int				color = 3;
@@ -60,7 +60,7 @@ void		fill_player(header_t *head, unsigned char *prog, t_list **players)
 
 void		register_players_auto(t_list **players)
 {
-	header_t		*head;
+	t_header		*head;
 	t_list			*fd_l;
 	int				fd;
 	unsigned char	*prog;
@@ -68,10 +68,10 @@ void		register_players_auto(t_list **players)
 	fd_l = g_env->player_files;
 	while (fd_l)
 	{
-		head = (header_t*)malloc(sizeof(header_t));
+		head = (t_header*)malloc(sizeof(t_header));
 		if ((fd = open(fd_l->content, O_RDONLY)) < 0)
 			exit(EXIT_FAILURE);
-		if (read(fd, head, sizeof(header_t)) != sizeof(header_t))
+		if (read(fd, head, sizeof(t_header)) != sizeof(t_header))
 			exit(666);
 		reverse_bytes(&head->prog_size, 4);
 		reverse_bytes(&head->magic, 4);
@@ -84,5 +84,5 @@ void		register_players_auto(t_list **players)
 		close(fd);
 		fd_l = fd_l->next;
 	}
-    add_all_players(*players);
+	add_all_players(*players);
 }

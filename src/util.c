@@ -40,9 +40,9 @@ void			extend_winner(char *res, unsigned int last, t_player *player)
 		else
 		{
 			rewrite_stat();
-			wmove(stat, 40, 0);
-			wprintw(stat, res, player->player_number, player->player_name);
-			wrefresh(stat);
+			wmove(g_stat, 40, 0);
+			wprintw(g_stat, res, player->player_number, player->player_name);
+			wrefresh(g_stat);
 		}
 	}
 	else
@@ -52,9 +52,9 @@ void			extend_winner(char *res, unsigned int last, t_player *player)
 		else
 		{
 			rewrite_stat();
-			wmove(stat, 30, 0);
-			wprintw(stat, "Conclusion:\nBots are sucks\nNo lives announced\n");
-			wrefresh(stat);
+			wmove(g_stat, 30, 0);
+			wprintw(g_stat, "Conclusion:\nBots are sucks\nNo lives announced\n");
+			wrefresh(g_stat);
 		}
 	}
 }

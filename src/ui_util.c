@@ -55,26 +55,26 @@ void	rewrite_memory(unsigned char *buff)
 
 	if (!g_env->vis)
 		return ;
-	i = wmove(memory, 0, 0) - wmove(memory, 0, 0) - 1;
+	i = wmove(g_memory, 0, 0) - wmove(g_memory, 0, 0) - 1;
 	while (i++ < MEM_SIZE)
 	{
 		color = check_cursor(i);
 		if (color == 0)
 		{
-			wattron(memory, COLOR_PAIR(g_colors[i]));
-			wprintw(memory, "%.2x", buff[i]);
-			wattroff(memory, COLOR_PAIR(g_colors[i]));
-			wprintw(memory, " ");
+			wattron(g_memory, COLOR_PAIR(g_colors[i]));
+			wprintw(g_memory, "%.2x", buff[i]);
+			wattroff(g_memory, COLOR_PAIR(g_colors[i]));
+			wprintw(g_memory, " ");
 		}
 		else
 		{
-			wattron(memory, COLOR_PAIR(color));
-			wprintw(memory, "%.2x", buff[i]);
-			wattroff(memory, COLOR_PAIR(color));
-			wprintw(memory, " ");
+			wattron(g_memory, COLOR_PAIR(color));
+			wprintw(g_memory, "%.2x", buff[i]);
+			wattroff(g_memory, COLOR_PAIR(color));
+			wprintw(g_memory, " ");
 		}
 	}
-	wrefresh(memory);
+	wrefresh(g_memory);
 }
 
 int		check_cursor(int position)
