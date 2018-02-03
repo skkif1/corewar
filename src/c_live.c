@@ -32,10 +32,8 @@ void			live(t_process *process)
 		process->live++;
 		player->last_live = (g_env->cycle + 1);
 		player->live_in_period++;
-//        if(!g_env->vis)
-//        {
-//            ft_printf("A process shows that player %s is alive", player->player_name);
-//        }
+        if(!g_env->vis)
+            ft_printf("A process shows that player %s is alive", player->player_name);
 	}
 	g_env->num_live++;
 	process->say_live++;
