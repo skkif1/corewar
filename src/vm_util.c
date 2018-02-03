@@ -68,16 +68,18 @@ unsigned int	get_number_f(unsigned int num)
 	return (num);
 }
 
-void			set_fake_numbers(void)
-{
-	t_list		*temp;
-	t_player	*player;
-	char		**numbers;
-	int			i;
+void			set_fake_numbers(void) {
+	t_list *temp;
+	t_player *player;
+	char **numbers;
+	int i;
 
 	i = 0;
 	numbers = ft_strsplit(g_env->numbers, '|');
 	temp = g_env->players;
+	while (numbers[i] != NULL)
+		i++;
+	i--;
 	while (temp)
 	{
 		player = temp->content;
@@ -88,7 +90,7 @@ void			set_fake_numbers(void)
 			check_number_avail(player, (unsigned int)ft_atoi(numbers[i]));
 			player->player_number = (unsigned int)ft_atoi(numbers[i]);
 		}
-		i++;
+		i--;
 		temp = temp->next;
 	}
 }
