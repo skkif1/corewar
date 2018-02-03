@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_bytes_for_each_lst.c                         :+:      :+:    :+:   */
+/*   count_bytes.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: obohosla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: skapteli <skapteli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/16 18:49:57 by obohosla          #+#    #+#             */
-/*   Updated: 2017/12/16 18:57:41 by obohosla         ###   ########.fr       */
+/*   Updated: 2018/02/03 16:49:42 by skapteli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int				get_label_bytes_2(t_lst *curr_l, char *str_label, int int_arg)
 		tmp_l = tmp_l->next;
 	}
 	error_line(20, curr_l->number_str);
+	return (0);
 }
 
 int				get_label_bytes_1(t_lst *curr_l, char *str_label, int int_arg)

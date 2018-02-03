@@ -6,7 +6,7 @@
 /*   By: skapteli <skapteli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/25 18:28:34 by skapteli          #+#    #+#             */
-/*   Updated: 2017/12/08 18:03:45 by skapteli         ###   ########.fr       */
+/*   Updated: 2018/02/03 17:52:29 by skapteli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,13 @@ void			error_line(int key, int line)
 
 void			too_much_char_error(char c, int line)
 {
-	ft_printf("Too much \'%c\' in line %d", c, line);
+	ft_printf("Too much \'%c\' in line %d\n", c, line);
 	exit(0);
 }
 
 void			error_parameter(int param_num, char *opcode, int line)
 {
-	ft_printf("Invalid parameter %d for instruction %s in line %d",
+	ft_printf("Invalid parameter %d for instruction %s in line %d\n",
 				param_num + 1, opcode, line);
 	exit(0);
 }
