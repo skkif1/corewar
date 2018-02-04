@@ -21,7 +21,6 @@ int		main(int argc, char **argv)
 	players = NULL;
 	init_env();
 	parse_args(argc, argv);
-	g_env->vis_delay = 1;
 	register_players_auto(&players);
 	rewrite_stat();
 	start_cycle();
@@ -32,6 +31,7 @@ int		main(int argc, char **argv)
 		getch();
 		dell_window();
 	}
+	return (0);
 }
 
 void	init_env(void)
