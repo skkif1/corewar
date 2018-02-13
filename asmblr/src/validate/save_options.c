@@ -18,7 +18,7 @@ void			extract_reg(t_lst *curr_l, int i, char *src)
 
 	curr_l->args[i].is_arg = T_REG;
 	reg_numb = ft_atoi(src + 1);
-	if ((reg_numb > 0) && (reg_numb <= REG_NUMBER) && is_only_digits(src + 1))
+	if ((reg_numb >= 0) && (reg_numb <= REG_NUMBER) && is_only_digits(src + 1))
 		curr_l->args[i].int_arg = reg_numb;
 	else
 		error_line(17, curr_l->number_str);

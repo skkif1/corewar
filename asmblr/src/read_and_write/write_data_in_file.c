@@ -21,21 +21,29 @@ void			write_header(t_st *st, char **str, int *i)
 	(*str)[(*i)++] = (char)(st->header->magic >> 8);
 	(*str)[(*i)++] = (char)(st->header->magic);
 	j = -1;
-	while (++j < PROG_NAME_LENGTH + 4)
+	while (++j < PROG_NAME_LENGTH)
 		(*str)[(*i)++] = st->header->prog_name[j];
+    (*str)[(*i)++] = '\0';
+    (*str)[(*i)++] = '\0';
+    (*str)[(*i)++] = '\0';
+    (*str)[(*i)++] = '\0';
 	(*str)[(*i)++] = (char)(st->header->prog_size >> 24);
-	(*str)[(*i)++] = (char)(st->header->prog_size >> 16);
+    (*str)[(*i)++] = (char)(st->header->prog_size >> 16);
 	(*str)[(*i)++] = (char)(st->header->prog_size >> 8);
 	(*str)[(*i)++] = (char)(st->header->prog_size);
 	j = -1;
-	while (++j < COMMENT_LENGTH + 4)
+	while (++j < COMMENT_LENGTH)
 		(*str)[(*i)++] = st->header->comment[j];
+    (*str)[(*i)++] = '\0';
+    (*str)[(*i)++] = '\0';
+    (*str)[(*i)++] = '\0';
+    (*str)[(*i)++] = '\0';
 }
 
 void			write_acb(t_lst *curr_l, char **str, int *i)
 {
 	int			j;
-	char		acb;
+	char	   	acb;
 
 	j = -1;
 	acb = 0;
@@ -46,7 +54,7 @@ void			write_acb(t_lst *curr_l, char **str, int *i)
 		if (curr_l->args[j].is_arg & T_DIR)
 			acb = acb | (char)T_DIR;
 		if (curr_l->args[j].is_arg & T_IND)
-			acb = acb | (char)T_IND;
+			acb = acb | (char)3;
 		acb = acb << 2;
 	}
 	(*str)[(*i)++] = acb;
@@ -82,10 +90,10 @@ void			write_op(t_lst *curr_l, char **str, int *i, t_op *op)
 	{
 		if (curr_l->args[j].is_arg & T_REG)
 			write_args(&curr_l->args[j], str, i, T_REG);
-		if (curr_l->args[j].is_arg & T_DIR)
+		else if (curr_l->args[j].is_arg & T_DIR)
 			write_args(&curr_l->args[j], str, i, op->label_size);
-		if (curr_l->args[j].is_arg & T_IND)
-			write_args(&curr_l->args[j], str, i, T_IND);
+		else if (curr_l->args[j].is_arg & T_IND)
+			write_args(&curr_l->args[j], str, i, 2);
 	}
 }
 

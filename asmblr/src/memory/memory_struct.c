@@ -58,6 +58,9 @@ t_st		*initial_st(void)
 	st = (t_st *)malloc(sizeof(t_st));
 	st->list = NULL;
 	st->header = (t_header *)malloc(sizeof(t_header));
+	while (++i <= PROG_NAME_LENGTH)
+		st->header->prog_name[i] = '\0';
+	i = -1;
 	while (++i <= COMMENT_LENGTH)
 		st->header->comment[i] = '\0';
 	st->is_header = 0;
