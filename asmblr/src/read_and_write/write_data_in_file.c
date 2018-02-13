@@ -6,7 +6,7 @@
 /*   By: obohosla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 19:05:05 by obohosla          #+#    #+#             */
-/*   Updated: 2017/12/19 19:10:03 by obohosla         ###   ########.fr       */
+/*   Updated: 2018/02/13 19:25:12 by obohosla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,27 @@ void			write_header(t_st *st, char **str, int *i)
 	j = -1;
 	while (++j < PROG_NAME_LENGTH)
 		(*str)[(*i)++] = st->header->prog_name[j];
-    (*str)[(*i)++] = '\0';
-    (*str)[(*i)++] = '\0';
-    (*str)[(*i)++] = '\0';
-    (*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
 	(*str)[(*i)++] = (char)(st->header->prog_size >> 24);
-    (*str)[(*i)++] = (char)(st->header->prog_size >> 16);
+	(*str)[(*i)++] = (char)(st->header->prog_size >> 16);
 	(*str)[(*i)++] = (char)(st->header->prog_size >> 8);
 	(*str)[(*i)++] = (char)(st->header->prog_size);
 	j = -1;
 	while (++j < COMMENT_LENGTH)
 		(*str)[(*i)++] = st->header->comment[j];
-    (*str)[(*i)++] = '\0';
-    (*str)[(*i)++] = '\0';
-    (*str)[(*i)++] = '\0';
-    (*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
+	(*str)[(*i)++] = '\0';
 }
 
 void			write_acb(t_lst *curr_l, char **str, int *i)
 {
 	int			j;
-	char	   	acb;
+	char		acb;
 
 	j = -1;
 	acb = 0;

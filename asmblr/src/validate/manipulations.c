@@ -22,8 +22,8 @@ void	delete_node(t_st *st, t_lst *curr_l)
 	if (prev_l == NULL)
 	{
 		make_free_node(curr_l);
-		if(!next_l)
-			error_(15) ;
+		if (!next_l)
+			error_(15);
 		next_l->prev = NULL;
 		st->list = next_l;
 		return ;
